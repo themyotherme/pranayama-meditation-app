@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        button { padding: 10px 20px; margin: 10px; font-size: 16px; }
+        .status { margin: 10px 0; padding: 10px; background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1>🔔 Audio System Test</h1>
+    
+    <div class="status" id="status">Click any button to test audio</div>
+    
+    <button onclick="testBell()">🔔 Test Bell</button>
+    <button onclick="testAmbient()">🎵 Test Ambient</button>
+    <button onclick="testAudioContext()">🎧 Test Audio Context</button>
+    
+    <script>
+        let audioContext = null;
+        
+        function updateStatus(message) {
+            document.getElementById('status').textContent = message;
+            console.log(message);
+        }
+        
+        function testAudioContext() {
+            try {
+                if (!audioContext) {
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    updateStatus('✅ Audio context created');
+                }
+                
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume().then(() => {
+                        updateStatus('✅ Audio context resumed');
+                    });
+                } else {
+                    updateStatus(`✅ Audio context state: ${audioContext.state}`);
+                }
+            } catch (error) {
+                updateStatus(`❌ Audio context error: ${error.message}`);
+            }
+        }
+        
+        function testBell() {
+            try {
+                if (!audioContext) {
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+                
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.type = 'sine';
+                oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.5);
+                
+                gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+                gainNode.gain.linearRampToValueAtTime(0.3, audioContext.currentTime + 0.1);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 2);
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.start();
+                oscillator.stop(audioContext.currentTime + 2);
+                
+                updateStatus('🔔 Bell sound played!');
+            } catch (error) {
+                updateStatus(`❌ Bell error: ${error.message}`);
+            }
+        }
+        
+        function testAmbient() {
+            try {
+                if (!audioContext) {
+                    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+                
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.type = 'sine';
+                oscillator.frequency.setValueAtTime(220, audioContext.currentTime);
+                
+                gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+                gainNode.gain.linearRampToValueAtTime(0.1, audioContext.currentTime + 1);
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.start();
+                oscillator.stop(audioContext.currentTime + 3);
+                
+                updateStatus('🎵 Ambient sound played!');
+            } catch (error) {
+                updateStatus(`❌ Ambient error: ${error.message}`);
+            }
+        }
+        
+        // Auto-test on page load
+        window.addEventListener('load', () => {
+            updateStatus('Page loaded - click buttons to test audio');
+        });
+    </script>
+</body>
+</html>

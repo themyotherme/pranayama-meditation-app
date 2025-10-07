@@ -1,0 +1,95 @@
+🔧 AUDIO & SERVICE WORKER DEBUG FIXES
+
+## ✅ Issues Fixed:
+
+### 1. **Service Worker Cache Error** ❌ → ✅
+**Problem**: Trying to cache non-existent files
+**Fix**: Updated service-worker.js to only cache existing files:
+- `./index.html` ✅
+- `./framework.js` ✅  
+- `./manifest.json` ✅
+- `./ai-integration.js` ✅
+
+### 2. **Audio Context Issues** ❌ → ✅
+**Problem**: Multiple AudioContext creation, suspended state
+**Fix**: 
+- Use shared audio context
+- Auto-resume suspended context
+- Better error handling
+- User interaction requirement
+
+### 3. **Bell System Not Working** ❌ → ✅
+**Problem**: Audio context not properly initialized
+**Fix**:
+- Shared audio context in createBellSound()
+- Auto-resume suspended context
+- Error handling with fallback notifications
+- Debug logging
+
+## 🧪 **Test Audio System:**
+
+### **Option 1: Simple Test Page**
+Visit: `http://localhost:8000/audio-test.html`
+- Click "🔔 Test Bell" 
+- Click "🎵 Test Ambient"
+- Check browser console for errors
+
+### **Option 2: Main App Test**
+1. **Click anywhere** on main page (enables audio)
+2. **Go to any program** → Click "🔔 Test Bells"
+3. **Check console** for debug messages
+4. **Try Audio Controls** → Menu → 🎵 Audio Controls
+
+## 🔍 **Debug Steps:**
+
+### **Check Browser Console:**
+Look for these messages:
+- ✅ `🔔 Playing bell: 1 rings, type: single`
+- ✅ `🔔 Bell 1/1 played`
+- ❌ `🔔 Bell system error:` (if audio fails)
+
+### **Check Audio Context:**
+- Open browser DevTools → Console
+- Type: `framework.audioSystem.audioContext`
+- Should show AudioContext object, not null
+
+### **Test Audio Permissions:**
+- Some browsers block audio until user interaction
+- Click anywhere on page first
+- Then try audio buttons
+
+## 🎵 **Expected Behavior:**
+
+### **Bell Test:**
+1. Click "🔔 Test Bells" button
+2. Should hear: Single bell → 3 bells → Continuous bell
+3. Visual notifications should appear
+
+### **Audio Test:**
+1. Click "🎵 Test Audio" button  
+2. Should hear: Ocean → Drone → Forest → Music
+3. Each sound plays for 3 seconds
+
+## 🚀 **If Still Not Working:**
+
+### **Check Browser:**
+- Chrome/Edge: Should work
+- Firefox: May need user interaction first
+- Safari: May have restrictions
+
+### **Check Console Errors:**
+- Look for Web Audio API errors
+- Check if AudioContext is supported
+- Verify no CORS issues
+
+### **Fallback:**
+- Visual notifications still work
+- Audio is enhancement, not critical
+- App functions without audio
+
+## 📱 **Mobile Testing:**
+- Touch screen to enable audio
+- May need to tap "Allow" for audio
+- Some mobile browsers have restrictions
+
+The audio system should now work properly! 🎵✨

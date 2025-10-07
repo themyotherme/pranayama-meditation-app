@@ -1,0 +1,458 @@
+{
+  "exercises": {
+    "ancient_wisdom_introduction": {
+      "id": "ancient_wisdom_introduction",
+      "name": "Ancient Wisdom Introduction",
+      "description": "Introduction to the spiritual and philosophical foundations of intimacy based on Vatsyayana's Kama Sutra",
+      "type": "education",
+      "category": "educational_wellness",
+      "duration": 10,
+      "instructions": "Welcome to the ancient wisdom of love and intimacy. In this sacred space, we explore the four goals of life: Dharma (righteousness), Artha (prosperity), Kama (love and pleasure), and Moksha (liberation). The Kama Sutra teaches that love is not merely physical but a spiritual journey of connection, respect, and mutual growth.",
+      "cues": [
+        "Sit together in a quiet, sacred space facing each other",
+        "Take three deep breaths together, synchronizing your breathing",
+        "Listen to the ancient wisdom of love and spiritual connection",
+        "Understand that intimacy is a sacred act of unity and respect",
+        "Feel the timeless wisdom flowing between your hearts",
+        "Recognize that love is both physical pleasure and spiritual growth",
+        "Honor each other as sacred beings on this journey together"
+      ],
+      "safety": "low_risk",
+      "intimacyLevel": "low",
+      "difficulty": "beginner",
+      "requiresPrivacy": true,
+      "audioFiles": [
+        {
+          "mediaId": "ancient_wisdom_guidance",
+          "volume": 60,
+          "duration": 10,
+          "loop": false
+        }
+      ],
+      "imageSlideshow": [
+        {
+          "mediaId": "ancient_wisdom_intro_1",
+          "startTime": 0,
+          "duration": 3,
+          "overlap": 1
+        },
+        {
+          "mediaId": "ancient_wisdom_intro_2", 
+          "startTime": 2,
+          "duration": 4,
+          "overlap": 1
+        },
+        {
+          "mediaId": "ancient_wisdom_intro_3",
+          "startTime": 5,
+          "duration": 5,
+          "overlap": 0
+        }
+      ]
+    },
+    "sama_sparsha_simple_embrace": {
+      "id": "sama_sparsha_simple_embrace",
+      "name": "Sama-Sparsha (Simple Embrace)",
+      "description": "Authentic Kama Sutra embrace technique with gentle body-to-body contact and matched breathing",
+      "type": "foreplay",
+      "category": "authentic_kamasutra",
+      "duration": 2,
+      "instructions": "Practice the ancient Sama-Sparsha embrace with gentle body-to-body contact and synchronized breathing.",
+      "cues": [
+        "Stand facing each other",
+        "Begin with gentle eye contact",
+        "Move into a gentle embrace",
+        "Focus on matched breathing",
+        "Feel the energy flowing between you"
+      ],
+      "safety": "low_risk",
+      "intimacyLevel": "medium",
+      "difficulty": "beginner",
+      "requiresPrivacy": true,
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [6, 10]
+      },
+      "communication_prompts": [
+        "Is this pressure comfortable?",
+        "Continue or adjust?"
+      ],
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 30,
+          "duration": 2,
+          "loop": true
+        }
+      ]
+    },
+    "ancient_breathing_techniques": {
+      "id": "ancient_breathing_techniques",
+      "name": "Ancient Breathing Techniques",
+      "description": "Traditional pranayama breathing practices for intimacy, connection, and energy flow",
+      "type": "breathing",
+      "category": "hybrid_approach",
+      "duration": 15,
+      "instructions": "The ancient texts teach that synchronized breathing creates a powerful energetic connection between partners. This practice, known as 'Sahaj Pranayama' (natural breath), helps align your energies and deepen your bond. As you breathe together, you create a sacred space of unity and harmony.",
+      "cues": [
+        "Sit facing each other, close enough to feel each other's breath",
+        "Place your hands on each other's hearts, feeling the rhythm",
+        "Begin with slow, deep breaths together - inhale for 4 counts",
+        "Hold the breath for 4 counts, feeling the energy build",
+        "Exhale slowly for 6 counts, releasing tension and stress",
+        "Focus on synchronizing your breathing rhythm perfectly",
+        "Feel the prana (life force) flowing between your bodies",
+        "Maintain gentle eye contact and breathe as one being",
+        "Notice how your hearts begin to beat in harmony"
+      ],
+      "safety": "low_risk",
+      "intimacyLevel": "medium",
+      "difficulty": "intermediate",
+      "requiresPrivacy": true,
+      "audioFiles": [
+        {
+          "mediaId": "calm_breathing",
+          "volume": 50,
+          "duration": 15,
+          "loop": true
+        }
+      ],
+      "imageSlideshow": [
+        {
+          "mediaId": "breathing_technique_1",
+          "startTime": 0,
+          "duration": 5,
+          "overlap": 2
+        },
+        {
+          "mediaId": "breathing_technique_2",
+          "startTime": 3,
+          "duration": 6,
+          "overlap": 2
+        },
+        {
+          "mediaId": "breathing_technique_3",
+          "startTime": 7,
+          "duration": 8,
+          "overlap": 0
+        }
+      ]
+    },
+    "front_embrace_pillow_support": {
+      "id": "front_embrace_pillow_support",
+      "name": "Front Embrace (Pillow Support)",
+      "description": "Authentic Kama Sutra position with detailed parameters for intimacy, stimulation, and safety",
+      "type": "position",
+      "category": "authentic_kamasutra",
+      "duration": 4,
+      "instructions": "Practice the Front Embrace position with pillow support for optimal comfort and stimulation.",
+      "cues": [
+        "Set up pillow support for comfort",
+        "Align bodies for optimal contact",
+        "Begin with gentle movement",
+        "Focus on the stimulation points",
+        "Maintain communication throughout"
+      ],
+      "safety": "medium_risk",
+      "intimacyLevel": "high",
+      "difficulty": "intermediate",
+      "requiresPrivacy": true,
+      "intimacy_contact": "maximum",
+      "penetration_depth": "moderate-to-deep",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "n/a",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 1,
+          "arms": 1
+        }
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 35,
+          "duration": 4,
+          "loop": true
+        }
+      ]
+    },
+    "tantric_breathing_techniques": {
+      "id": "tantric_breathing_techniques",
+      "name": "Tantric Breathing Techniques",
+      "description": "Advanced breathing techniques for spiritual and physical union",
+      "type": "breathing",
+      "category": "hybrid_approach",
+      "duration": 20,
+      "instructions": "Practice advanced tantric breathing techniques to enhance spiritual and physical connection.",
+      "cues": [
+        "Sit facing each other",
+        "Begin with synchronized breathing",
+        "Focus on the energy flow",
+        "Connect with your partner's breath",
+        "Feel the divine energy rising"
+      ],
+      "safety": "low_risk",
+      "intimacyLevel": "high",
+      "difficulty": "advanced",
+      "requiresPrivacy": true,
+      "audioFiles": [
+        {
+          "mediaId": "calm_breathing",
+          "volume": 40,
+          "duration": 20,
+          "loop": true
+        }
+      ]
+    },
+    "energy_channeling_practice": {
+      "id": "energy_channeling_practice",
+      "name": "Energy Channeling Practice",
+      "description": "Advanced energy work for spiritual and physical union",
+      "type": "energy",
+      "category": "hybrid_approach",
+      "duration": 25,
+      "instructions": "Practice advanced energy channeling techniques to enhance spiritual and physical connection.",
+      "cues": [
+        "Sit in a comfortable position",
+        "Focus on your energy centers",
+        "Channel energy through your body",
+        "Connect with your partner's energy",
+        "Feel the divine energy flowing"
+      ],
+      "safety": "low_risk",
+      "intimacyLevel": "high",
+      "difficulty": "advanced",
+      "requiresPrivacy": true,
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 25,
+          "duration": 25,
+          "loop": true
+        }
+      ]
+    },
+    "relationship_health_assessment": {
+      "id": "relationship_health_assessment",
+      "name": "Relationship Health Assessment",
+      "description": "Comprehensive assessment of relationship wellness and intimacy health based on ancient wisdom",
+      "type": "assessment",
+      "category": "educational_wellness",
+      "duration": 15,
+      "instructions": "This sacred assessment helps you evaluate your relationship's health across multiple dimensions. The ancient texts teach that a healthy relationship requires balance in physical intimacy, emotional connection, spiritual alignment, and mutual respect. Take time to honestly reflect on each aspect together.",
+      "cues": [
+        "Sit together comfortably in a quiet, private space",
+        "Hold hands and take three deep breaths together",
+        "Reflect on your emotional connection - how do you feel when together?",
+        "Assess your communication - do you feel heard and understood?",
+        "Evaluate your physical intimacy - is it satisfying for both partners?",
+        "Consider your spiritual connection - do you share values and dreams?",
+        "Identify areas where you both want to grow and improve",
+        "Create a plan for continued growth and deeper connection",
+        "Express gratitude for each other and your journey together"
+      ],
+      "safety": "low_risk",
+      "intimacyLevel": "low",
+      "difficulty": "intermediate",
+      "requiresPrivacy": true,
+      "audioFiles": [
+        {
+          "mediaId": "intimacy_guidance",
+          "volume": 60,
+          "duration": 15,
+          "loop": false
+        },
+        {
+          "mediaId": "wellness_tips",
+          "volume": 45,
+          "duration": 15,
+          "loop": false
+        }
+      ]
+    },
+    "standing_hold_wall_support": {
+      "id": "standing_hold_wall_support",
+      "name": "Standing Hold (Wall Support)",
+      "description": "Authentic standing position with wall support for stability and intimacy",
+      "type": "position",
+      "category": "authentic_kamasutra",
+      "duration": 5,
+      "instructions": "Practice the Standing Hold position with wall support for stability and intimacy.",
+      "cues": [
+        "Position with wall support",
+        "Ensure stable footing",
+        "Begin with gentle movement",
+        "Maintain balance and communication",
+        "Focus on the connection"
+      ],
+      "safety": "medium_risk",
+      "intimacyLevel": "high",
+      "difficulty": "intermediate",
+      "requiresPrivacy": true,
+      "intimacy_contact": "moderate",
+      "penetration_depth": "shallow-to-moderate",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "n/a",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 2,
+          "arms": 1
+        }
+      },
+      "communication_prompts": [
+        "Stable footing okay?",
+        "More/less depth or pace?"
+      ],
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 30,
+          "duration": 5,
+          "loop": true
+        }
+      ]
+    }
+  },
+  "mediaRegistry": {
+    "ancient_wisdom_guidance": {
+      "file": "./audio/intimacy/ancient-wisdom-guidance.mp3",
+      "name": "Ancient Wisdom Guidance",
+      "duration": 10,
+      "loopable": false,
+      "category": "guidance",
+      "defaultVolume": 60
+    },
+    "romantic_music": {
+      "file": "./audio/intimacy/romantic-music.mp3",
+      "name": "Romantic Music",
+      "duration": 8,
+      "loopable": true,
+      "category": "music",
+      "defaultVolume": 30
+    },
+    "calm_breathing": {
+      "file": "./audio/intimacy/calm-breathing.mp3",
+      "name": "Calm Breathing",
+      "duration": 10,
+      "loopable": true,
+      "category": "ambient",
+      "defaultVolume": 40
+    },
+    "intimacy_guidance": {
+      "file": "./audio/intimacy/intimacy-guidance.mp3",
+      "name": "Intimacy Guidance",
+      "duration": 15,
+      "loopable": false,
+      "category": "guidance",
+      "defaultVolume": 60
+    },
+    "communication_coaching": {
+      "file": "./audio/intimacy/communication-coaching.mp3",
+      "name": "Communication Coaching",
+      "duration": 12,
+      "loopable": false,
+      "category": "guidance",
+      "defaultVolume": 55
+    },
+    "touch_guidance": {
+      "file": "./audio/intimacy/touch-guidance.mp3",
+      "name": "Touch Guidance",
+      "duration": 8,
+      "loopable": false,
+      "category": "guidance",
+      "defaultVolume": 50
+    },
+    "wellness_tips": {
+      "file": "./audio/intimacy/wellness-tips.mp3",
+      "name": "Wellness Tips",
+      "duration": 6,
+      "loopable": false,
+      "category": "guidance",
+      "defaultVolume": 45
+    },
+    "sensual_ambient": {
+      "file": "./audio/intimacy/sensual-ambient.mp3",
+      "name": "Sensual Ambient",
+      "duration": 15,
+      "loopable": true,
+      "category": "ambient",
+      "defaultVolume": 25
+    },
+    "ancient_wisdom_intro_1": {
+      "file": "./graphics/intimacy/exercises/ancient-wisdom-intro-1.jpg",
+      "name": "Ancient Wisdom Introduction - Part 1",
+      "duration": 3,
+      "loopable": false,
+      "category": "image",
+      "defaultVolume": 0
+    },
+    "ancient_wisdom_intro_2": {
+      "file": "./graphics/intimacy/exercises/ancient-wisdom-intro-2.jpg",
+      "name": "Ancient Wisdom Introduction - Part 2",
+      "duration": 4,
+      "loopable": false,
+      "category": "image",
+      "defaultVolume": 0
+    },
+    "ancient_wisdom_intro_3": {
+      "file": "./graphics/intimacy/exercises/ancient-wisdom-intro-3.jpg",
+      "name": "Ancient Wisdom Introduction - Part 3",
+      "duration": 5,
+      "loopable": false,
+      "category": "image",
+      "defaultVolume": 0
+    },
+    "breathing_technique_1": {
+      "file": "./graphics/intimacy/exercises/breathing-technique-1.jpg",
+      "name": "Breathing Technique - Step 1",
+      "duration": 5,
+      "loopable": false,
+      "category": "image",
+      "defaultVolume": 0
+    },
+    "breathing_technique_2": {
+      "file": "./graphics/intimacy/exercises/breathing-technique-2.jpg",
+      "name": "Breathing Technique - Step 2",
+      "duration": 6,
+      "loopable": false,
+      "category": "image",
+      "defaultVolume": 0
+    },
+    "breathing_technique_3": {
+      "file": "./graphics/intimacy/exercises/breathing-technique-3.jpg",
+      "name": "Breathing Technique - Step 3",
+      "duration": 8,
+      "loopable": false,
+      "category": "image",
+      "defaultVolume": 0
+    }
+  }
+}

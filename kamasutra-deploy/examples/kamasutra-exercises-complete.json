@@ -1,0 +1,322 @@
+{
+  "exercises": {
+    "ancient_wisdom_introduction": {
+      "id": "ancient_wisdom_introduction",
+      "name": "Ancient Wisdom Introduction",
+      "description": "Introduction to the spiritual and philosophical foundations of intimacy",
+      "type": "education",
+      "category": "educational_wellness",
+      "duration": 10,
+      "instructions": "Learn about the ancient wisdom of love, the four goals of life, and spiritual connection in relationships.",
+      "cues": [
+        "Sit together in a quiet, sacred space",
+        "Listen to the ancient wisdom of love",
+        "Understand the spiritual nature of intimacy",
+        "Connect with the deeper meaning of your relationship",
+        "Feel the timeless wisdom flowing between you"
+      ],
+      "safety": "low_risk",
+      "intimacyLevel": "low",
+      "difficulty": "beginner",
+      "requiresPrivacy": true,
+      "audioFiles": [
+        {
+          "mediaId": "ancient_wisdom_guidance",
+          "volume": 60,
+          "duration": 10,
+          "loop": false
+        }
+      ]
+    },
+    "sama_sparsha_simple_embrace": {
+      "id": "sama_sparsha_simple_embrace",
+      "name": "Sama-Sparsha (Simple Embrace)",
+      "description": "Authentic Kama Sutra embrace technique with gentle body-to-body contact and matched breathing",
+      "type": "foreplay",
+      "category": "authentic_kamasutra",
+      "duration": 2,
+      "instructions": "Practice the ancient Sama-Sparsha embrace with gentle body-to-body contact and synchronized breathing.",
+      "cues": [
+        "Stand facing each other",
+        "Begin with gentle eye contact",
+        "Move into a gentle embrace",
+        "Focus on matched breathing",
+        "Feel the energy flowing between you"
+      ],
+      "safety": "low_risk",
+      "intimacyLevel": "medium",
+      "difficulty": "beginner",
+      "requiresPrivacy": true,
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [6, 10]
+      },
+      "communication_prompts": [
+        "Is this pressure comfortable?",
+        "Continue or adjust?"
+      ],
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 30,
+          "duration": 2,
+          "loop": true
+        }
+      ]
+    },
+    "ancient_breathing_techniques": {
+      "id": "ancient_breathing_techniques",
+      "name": "Ancient Breathing Techniques",
+      "description": "Traditional breathing techniques for spiritual and physical connection",
+      "type": "breathing",
+      "category": "hybrid_approach",
+      "duration": 15,
+      "instructions": "Practice ancient breathing techniques that enhance spiritual and physical connection.",
+      "cues": [
+        "Sit facing each other",
+        "Begin with natural breathing",
+        "Focus on the ancient technique",
+        "Breathe together in harmony",
+        "Feel the spiritual energy flowing"
+      ],
+      "safety": "low_risk",
+      "intimacyLevel": "medium",
+      "difficulty": "intermediate",
+      "requiresPrivacy": true,
+      "audioFiles": [
+        {
+          "mediaId": "calm_breathing",
+          "volume": 50,
+          "duration": 15,
+          "loop": true
+        }
+      ]
+    },
+    "front_embrace_pillow_support": {
+      "id": "front_embrace_pillow_support",
+      "name": "Front Embrace (Pillow Support)",
+      "description": "Authentic Kama Sutra position with detailed parameters for intimacy, stimulation, and safety",
+      "type": "position",
+      "category": "authentic_kamasutra",
+      "duration": 4,
+      "instructions": "Practice the Front Embrace position with pillow support for optimal comfort and stimulation.",
+      "cues": [
+        "Set up pillow support for comfort",
+        "Align bodies for optimal contact",
+        "Begin with gentle movement",
+        "Focus on the stimulation points",
+        "Maintain communication throughout"
+      ],
+      "safety": "medium_risk",
+      "intimacyLevel": "high",
+      "difficulty": "intermediate",
+      "requiresPrivacy": true,
+      "intimacy_contact": "maximum",
+      "penetration_depth": "moderate-to-deep",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "n/a",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 1,
+          "arms": 1
+        }
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 35,
+          "duration": 4,
+          "loop": true
+        }
+      ]
+    },
+    "tantric_breathing_techniques": {
+      "id": "tantric_breathing_techniques",
+      "name": "Tantric Breathing Techniques",
+      "description": "Advanced breathing techniques for spiritual and physical union",
+      "type": "breathing",
+      "category": "hybrid_approach",
+      "duration": 20,
+      "instructions": "Practice advanced tantric breathing techniques to enhance spiritual and physical connection.",
+      "cues": [
+        "Sit facing each other",
+        "Begin with synchronized breathing",
+        "Focus on the energy flow",
+        "Connect with your partner's breath",
+        "Feel the divine energy rising"
+      ],
+      "safety": "low_risk",
+      "intimacyLevel": "high",
+      "difficulty": "advanced",
+      "requiresPrivacy": true,
+      "audioFiles": [
+        {
+          "mediaId": "calm_breathing",
+          "volume": 40,
+          "duration": 20,
+          "loop": true
+        }
+      ]
+    },
+    "energy_channeling_practice": {
+      "id": "energy_channeling_practice",
+      "name": "Energy Channeling Practice",
+      "description": "Advanced energy work for spiritual and physical union",
+      "type": "energy",
+      "category": "hybrid_approach",
+      "duration": 25,
+      "instructions": "Practice advanced energy channeling techniques to enhance spiritual and physical connection.",
+      "cues": [
+        "Sit in a comfortable position",
+        "Focus on your energy centers",
+        "Channel energy through your body",
+        "Connect with your partner's energy",
+        "Feel the divine energy flowing"
+      ],
+      "safety": "low_risk",
+      "intimacyLevel": "high",
+      "difficulty": "advanced",
+      "requiresPrivacy": true,
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 25,
+          "duration": 25,
+          "loop": true
+        }
+      ]
+    },
+    "relationship_health_assessment": {
+      "id": "relationship_health_assessment",
+      "name": "Relationship Health Assessment",
+      "description": "Comprehensive assessment of relationship wellness and intimacy health",
+      "type": "assessment",
+      "category": "educational_wellness",
+      "duration": 15,
+      "instructions": "Assess your relationship health and intimacy wellness together.",
+      "cues": [
+        "Sit together comfortably",
+        "Reflect on your relationship",
+        "Assess your intimacy health",
+        "Identify areas for improvement",
+        "Plan for continued growth"
+      ],
+      "safety": "low_risk",
+      "intimacyLevel": "low",
+      "difficulty": "intermediate",
+      "requiresPrivacy": true,
+      "audioFiles": [
+        {
+          "mediaId": "intimacy_guidance",
+          "volume": 60,
+          "duration": 15,
+          "loop": false
+        }
+      ]
+    },
+    "standing_hold_wall_support": {
+      "id": "standing_hold_wall_support",
+      "name": "Standing Hold (Wall Support)",
+      "description": "Authentic standing position with wall support for stability and intimacy",
+      "type": "position",
+      "category": "authentic_kamasutra",
+      "duration": 5,
+      "instructions": "Practice the Standing Hold position with wall support for stability and intimacy.",
+      "cues": [
+        "Position with wall support",
+        "Ensure stable footing",
+        "Begin with gentle movement",
+        "Maintain balance and communication",
+        "Focus on the connection"
+      ],
+      "safety": "medium_risk",
+      "intimacyLevel": "high",
+      "difficulty": "intermediate",
+      "requiresPrivacy": true,
+      "intimacy_contact": "moderate",
+      "penetration_depth": "shallow-to-moderate",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "n/a",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 2,
+          "arms": 1
+        }
+      },
+      "communication_prompts": [
+        "Stable footing okay?",
+        "More/less depth or pace?"
+      ],
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 30,
+          "duration": 5,
+          "loop": true
+        }
+      ]
+    }
+  },
+  "mediaRegistry": {
+    "ancient_wisdom_guidance": {
+      "file": "./audio/intimacy/ancient-wisdom-guidance.mp3",
+      "name": "Ancient Wisdom Guidance",
+      "duration": 10,
+      "loopable": false,
+      "category": "guidance",
+      "defaultVolume": 60
+    },
+    "romantic_music": {
+      "file": "./audio/intimacy/romantic-music.mp3",
+      "name": "Romantic Music",
+      "duration": 8,
+      "loopable": true,
+      "category": "music",
+      "defaultVolume": 30
+    },
+    "calm_breathing": {
+      "file": "./audio/intimacy/calm-breathing.mp3",
+      "name": "Calm Breathing",
+      "duration": 10,
+      "loopable": true,
+      "category": "ambient",
+      "defaultVolume": 40
+    },
+    "intimacy_guidance": {
+      "file": "./audio/intimacy/intimacy-guidance.mp3",
+      "name": "Intimacy Guidance",
+      "duration": 15,
+      "loopable": false,
+      "category": "guidance",
+      "defaultVolume": 60
+    }
+  }
+}

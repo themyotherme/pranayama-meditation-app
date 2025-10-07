@@ -1,0 +1,109 @@
+{
+  "programs": {
+    "ancient_wisdom_foundation": {
+    "id": "ancient_wisdom_foundation",
+    "name": "🌿 Ancient Wisdom Foundation",
+    "description": "Based on Vatsyayana's Kama Sutra - the foundational principles of love, pleasure, and spiritual connection",
+    "exercises": [
+      "kama_sutra_introduction",
+      "dharma_artha_kama_moksha",
+      "gentle_touch_exploration", 
+      "ancient_breathing_techniques",
+      "spiritual_connection"
+    ],
+    "duration": 35,
+    "difficulty": "beginner",
+    "targetAudience": "couples",
+    "intimacyLevel": "low",
+    "safetyLevel": "high",
+    "isDefault": true,
+    "hidden": false,
+    "requiresPrivacy": true,
+    "ageRestriction": "18+"
+  },
+  "khajuraho_positions": {
+    "id": "khajuraho_positions", 
+    "name": "🏛️ Khajuraho Positions",
+    "description": "Inspired by the sacred sculptures of Khajuraho - ancient positions for spiritual and physical union",
+    "exercises": [
+      "khajuraho_introduction",
+      "sacred_embrace_positions",
+      "temple_dance_movements",
+      "spiritual_union_breathing",
+      "ancient_wisdom_reflection"
+    ],
+    "duration": 50,
+    "difficulty": "intermediate",
+    "targetAudience": "couples",
+    "intimacyLevel": "medium",
+    "safetyLevel": "high",
+    "isDefault": true,
+    "hidden": false,
+    "requiresPrivacy": true,
+    "ageRestriction": "18+"
+  },
+  "vatsyayana_positions": {
+    "id": "vatsyayana_positions",
+    "name": "📚 Vatsyayana Positions",
+    "description": "Based on the original Kama Sutra text - classical positions for pleasure and spiritual connection",
+    "exercises": [
+      "vatsyayana_introduction",
+      "classical_embrace_positions",
+      "ancient_breathing_techniques",
+      "spiritual_union_meditation",
+      "kama_sutra_wisdom"
+    ],
+    "duration": 45,
+    "difficulty": "intermediate", 
+    "targetAudience": "couples",
+    "intimacyLevel": "medium",
+    "safetyLevel": "high",
+    "isDefault": true,
+    "hidden": false,
+    "requiresPrivacy": true,
+    "ageRestriction": "18+"
+  },
+  "tantric_union": {
+    "id": "tantric_union",
+    "name": "🕉️ Tantric Union",
+    "description": "Advanced spiritual and physical union based on ancient tantric principles",
+    "exercises": [
+      "tantric_breathing_techniques",
+      "energy_channeling",
+      "spiritual_union_meditation",
+      "sacred_geometry_positions",
+      "divine_connection"
+    ],
+    "duration": 75,
+    "difficulty": "advanced",
+    "targetAudience": "couples",
+    "intimacyLevel": "high",
+    "safetyLevel": "medium",
+    "isDefault": true,
+    "hidden": false,
+    "requiresPrivacy": true,
+    "ageRestriction": "18+"
+  },
+  "ayurvedic_intimacy": {
+    "id": "ayurvedic_intimacy",
+    "name": "🌿 Ayurvedic Intimacy",
+    "description": "Based on Ayurvedic principles - balancing doshas for optimal intimacy and health",
+    "exercises": [
+      "dosha_assessment",
+      "ayurvedic_breathing",
+      "herbal_intimacy_guidance",
+      "seasonal_intimacy_practices",
+      "holistic_wellness_connection"
+    ],
+    "duration": 40,
+    "difficulty": "intermediate",
+    "targetAudience": "couples",
+    "intimacyLevel": "medium",
+    "safetyLevel": "high",
+    "isDefault": true,
+    "hidden": false,
+    "requiresPrivacy": true,
+    "ageRestriction": "18+"
+    }
+  }
+}

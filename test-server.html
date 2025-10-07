@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .status { margin: 10px 0; padding: 10px; background: #f0f0f0; }
+        button { padding: 10px 20px; margin: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Server Test Page</h1>
+    
+    <div class="status" id="status">Testing server...</div>
+    
+    <button onclick="testFiles()">Test File Access</button>
+    <button onclick="testAudio()">Test Audio</button>
+    <button onclick="goToMain()">Go to Main App</button>
+    
+    <script>
+        function updateStatus(message) {
+            document.getElementById('status').textContent = message;
+            console.log(message);
+        }
+        
+        async function testFiles() {
+            const files = ['index.html', 'framework.js', 'manifest.json', 'service-worker.js'];
+            let results = [];
+            
+            for (const file of files) {
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        results.push(`✅ ${file} - OK`);
+                    } else {
+                        results.push(`❌ ${file} - ${response.status}`);
+                    }
+                } catch (error) {
+                    results.push(`❌ ${file} - Error: ${error.message}`);
+                }
+            }
+            
+            updateStatus(results.join('\n'));
+        }
+        
+        function testAudio() {
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                updateStatus(`✅ Audio Context: ${audioContext.state}`);
+                
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume().then(() => {
+                        updateStatus(`✅ Audio Context resumed: ${audioContext.state}`);
+                    });
+                }
+            } catch (error) {
+                updateStatus(`❌ Audio Error: ${error.message}`);
+            }
+        }
+        
+        function goToMain() {
+            window.location.href = 'index.html';
+        }
+        
+        // Auto-test on load
+        window.addEventListener('load', () => {
+            updateStatus('Server test page loaded - click buttons to test');
+        });
+    </script>
+</body>
+</html>

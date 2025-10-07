@@ -1,0 +1,180 @@
+{
+  "programs": {
+    "educational_wellness_foundation": {
+      "id": "educational_wellness_foundation",
+      "name": "🌿 Educational & Wellness Foundation",
+      "description": "Ancient wisdom, spiritual connection, and relationship wellness for couples",
+      "category": "educational_wellness",
+      "exercises": [
+        "ancient_wisdom_introduction",
+        "ancient_breathing_techniques",
+        "relationship_health_assessment",
+        "ancient_wisdom_introduction",
+        "ancient_wisdom_introduction"
+      ],
+      "duration": 30,
+      "difficulty": "beginner",
+      "targetAudience": "couples",
+      "intimacyLevel": "low",
+      "safetyLevel": "high",
+      "isDefault": true,
+      "hidden": false,
+      "requiresPrivacy": true,
+      "ageRestriction": "18+"
+    },
+    "authentic_kamasutra_basics": {
+      "id": "authentic_kamasutra_basics",
+      "name": "📖 Authentic Kama Sutra Basics",
+      "description": "Direct implementation of authentic Kama Sutra exercises with modern safety adaptations",
+      "category": "authentic_kamasutra",
+      "exercises": [
+        "sama_sparsha_simple_embrace",
+        "front_embrace_pillow_support",
+        "standing_hold_wall_support",
+        "sama_sparsha_simple_embrace",
+        "sama_sparsha_simple_embrace"
+      ],
+      "duration": 25,
+      "difficulty": "beginner",
+      "targetAudience": "couples",
+      "intimacyLevel": "medium",
+      "safetyLevel": "high",
+      "isDefault": true,
+      "hidden": false,
+      "requiresPrivacy": true,
+      "ageRestriction": "18+"
+    },
+    "hybrid_connection_journey": {
+      "id": "hybrid_connection_journey",
+      "name": "🔄 Hybrid Connection Journey",
+      "description": "Combines ancient wisdom with modern safety for progressive intimacy development",
+      "category": "hybrid_approach",
+      "exercises": [
+        "ancient_breathing_techniques",
+        "tantric_breathing_techniques",
+        "energy_channeling_practice",
+        "ancient_breathing_techniques",
+        "ancient_breathing_techniques"
+      ],
+      "duration": 35,
+      "difficulty": "intermediate",
+      "targetAudience": "couples",
+      "intimacyLevel": "medium",
+      "safetyLevel": "high",
+      "isDefault": true,
+      "hidden": false,
+      "requiresPrivacy": true,
+      "ageRestriction": "18+"
+    },
+    "educational_communication_mastery": {
+      "id": "educational_communication_mastery",
+      "name": "💬 Educational Communication Mastery",
+      "description": "Advanced communication techniques for deeper emotional and physical connection",
+      "category": "educational_wellness",
+      "exercises": [
+        "ancient_wisdom_introduction",
+        "relationship_health_assessment",
+        "ancient_breathing_techniques",
+        "ancient_wisdom_introduction",
+        "relationship_health_assessment"
+      ],
+      "duration": 40,
+      "difficulty": "intermediate",
+      "targetAudience": "couples",
+      "intimacyLevel": "medium",
+      "safetyLevel": "high",
+      "isDefault": true,
+      "hidden": false,
+      "requiresPrivacy": true,
+      "ageRestriction": "18+"
+    },
+    "authentic_kamasutra_positions": {
+      "id": "authentic_kamasutra_positions",
+      "name": "🏛️ Authentic Kama Sutra Positions",
+      "description": "Classical positions from the original Kama Sutra with detailed parameters and safety guidelines",
+      "category": "authentic_kamasutra",
+      "exercises": [
+        "front_embrace_pillow_support",
+        "standing_hold_wall_support",
+        "sama_sparsha_simple_embrace",
+        "front_embrace_pillow_support",
+        "standing_hold_wall_support"
+      ],
+      "duration": 45,
+      "difficulty": "intermediate",
+      "targetAudience": "couples",
+      "intimacyLevel": "high",
+      "safetyLevel": "medium",
+      "isDefault": true,
+      "hidden": false,
+      "requiresPrivacy": true,
+      "ageRestriction": "18+"
+    },
+    "hybrid_advanced_connection": {
+      "id": "hybrid_advanced_connection",
+      "name": "🔄 Hybrid Advanced Connection",
+      "description": "Advanced techniques combining spiritual, emotional, and physical intimacy",
+      "category": "hybrid_approach",
+      "exercises": [
+        "tantric_breathing_techniques",
+        "energy_channeling_practice",
+        "ancient_breathing_techniques",
+        "tantric_breathing_techniques",
+        "energy_channeling_practice"
+      ],
+      "duration": 60,
+      "difficulty": "advanced",
+      "targetAudience": "couples",
+      "intimacyLevel": "high",
+      "safetyLevel": "medium",
+      "isDefault": true,
+      "hidden": false,
+      "requiresPrivacy": true,
+      "ageRestriction": "18+"
+    },
+    "educational_wellness_advanced": {
+      "id": "educational_wellness_advanced",
+      "name": "🌿 Educational Wellness Advanced",
+      "description": "Advanced relationship wellness, health integration, and long-term intimacy development",
+      "category": "educational_wellness",
+      "exercises": [
+        "relationship_health_assessment",
+        "ancient_wisdom_introduction",
+        "ancient_breathing_techniques",
+        "relationship_health_assessment",
+        "ancient_wisdom_introduction"
+      ],
+      "duration": 50,
+      "difficulty": "advanced",
+      "targetAudience": "couples",
+      "intimacyLevel": "medium",
+      "safetyLevel": "high",
+      "isDefault": true,
+      "hidden": false,
+      "requiresPrivacy": true,
+      "ageRestriction": "18+"
+    },
+    "authentic_kamasutra_advanced": {
+      "id": "authentic_kamasutra_advanced",
+      "name": "📖 Authentic Kama Sutra Advanced",
+      "description": "Advanced authentic positions with detailed stimulation focus and movement patterns",
+      "category": "authentic_kamasutra",
+      "exercises": [
+        "standing_hold_wall_support",
+        "front_embrace_pillow_support",
+        "sama_sparsha_simple_embrace",
+        "standing_hold_wall_support",
+        "front_embrace_pillow_support"
+      ],
+      "duration": 55,
+      "difficulty": "advanced",
+      "targetAudience": "couples",
+      "intimacyLevel": "high",
+      "safetyLevel": "medium",
+      "isDefault": true,
+      "hidden": false,
+      "requiresPrivacy": true,
+      "ageRestriction": "18+"
+    }
+  }
+}

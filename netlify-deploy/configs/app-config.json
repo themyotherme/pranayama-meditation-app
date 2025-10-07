@@ -1,0 +1,37 @@
+{
+  "app": {
+    "name": "Pranyam Meditation",
+    "description": "A comprehensive meditation and breathing exercise platform",
+    "icon": "🧘",
+    "version": "1.0.0"
+  },
+  "ui": {
+    "programsTitle": "Your Meditation Programs",
+    "controlsTitle": "Session Controls",
+    "durationLabel": "Desired Program Duration (minutes)",
+    "durationHelp": "Scale all exercises proportionally to fit this duration",
+    "startButton": "Start Selected Program",
+    "clearButton": "Clear Cache",
+    "settingsButton": "Settings"
+  },
+  "theme": {
+    "primaryColor": "#667eea",
+    "secondaryColor": "#764ba2",
+    "accentColor": "#f093fb",
+    "successColor": "#4CAF50",
+    "warningColor": "#ff9800",
+    "errorColor": "#f44336"
+  },
+  "features": {
+    "voiceNarration": true,
+    "hapticFeedback": true,
+    "darkMode": true,
+    "cacheManagement": true,
+    "programScaling": true,
+    "exerciseTimers": true
+  },
+  "data": {
+    "programsFile": "examples/pranyammeditation-programs.json",
+    "exercisesFile": "examples/pranyammeditation-exercises.json"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "appInfo": {
+    "name": "Pranayama & Meditation",
+    "version": "1.0",
+    "description": "Pranayama breathing exercises and meditation programs for wellness",
+    "theme": "meditation",
+    "icon": "🧘",
+    "customZenMusic": "./audio/meditation-music.mp3",
+    "url": "https://pranayama.lifeloveme.com/",
+    "domain": "pranayama.lifeloveme.com"
+  },
+  "ui": {
+    "programsTitle": "Your Programs",
+    "programsSubtitle": "Choose from the suggested programs below or",
+    "aiProgramsButton": "🤖 Your AI Programs"
+  },
+  "ambientSoundMapping": {
+    "exerciseTypes": {
+      "communication": "romantic_music",
+      "touch": "sensual_ambient", 
+      "breathing": "calm_breathing",
+      "meditation": "romantic_music",
+      "massage": "sensual_ambient",
+      "positions": "romantic_music",
+      "foreplay": "sensual_ambient",
+      "wellness": "calm_breathing"
+    },
+    "programTypes": {
+      "beginner_intimacy": "romantic_music",
+      "communication": "calm_breathing",
+      "touch_exploration": "sensual_ambient",
+      "advanced_connection": "romantic_music",
+      "wellness": "calm_breathing",
+      "couples_meditation": "romantic_music"
+    },
+    "defaultAmbient": "romantic_music"
+  },
+  "mediaFiles": {
+    "romantic_music": "./audio/intimacy/romantic-music.mp3",
+    "sensual_ambient": "./audio/intimacy/sensual-ambient.mp3", 
+    "calm_breathing": "./audio/intimacy/calm-breathing.mp3",
+    "intimacy_guidance": "./audio/intimacy/intimacy-guidance.mp3",
+    "communication_coaching": "./audio/intimacy/communication-coaching.mp3",
+    "touch_guidance": "./audio/intimacy/touch-guidance.mp3",
+    "wellness_tips": "./audio/intimacy/wellness-tips.mp3"
+  },
+  "audioSettings": {
+    "defaultVolume": 0.2,
+    "zenMusicVolumeMultiplier": 0.05,
+    "bellVolume": 0.1,
+    "voiceVolume": 0.6
+  },
+  "uiSettings": {
+    "showTestButtons": false,
+    "enableDraggableModals": true,
+    "enableAudioControls": true,
+    "defaultTheme": "dark",
+    "privacyMode": true
+  },
+  "bellSettings": {
+    "exerciseStartBells": 0,
+    "exerciseEndBells": 0,
+    "programEndBells": 0,
+    "continuousBellDuration": 0
+  },
+  "gpsSettings": {
+    "enableGPS": true,
+    "trackingInterval": 1000,
+    "accuracyThreshold": 10,
+    "distanceThreshold": 5,
+    "enableLocationBasedAudio": true,
+    "enableRouteMapping": true
+  },
+  "locationBasedFeatures": {
+    "enableEnvironmentDetection": true,
+    "enableWeatherIntegration": false,
+    "enableSafetyFeatures": true,
+    "enableProgressTracking": true
+  },
+  "privacySettings": {
+    "encryptData": true,
+    "localStorageOnly": true,
+    "noCloudSync": true,
+    "ageVerification": true,
+    "consentRequired": true
+  },
+  "coupleSettings": {
+    "enablePartnerProfiles": true,
+    "enableSharedSessions": true,
+    "enablePrivacyControls": true,
+    "enableSafetyFilters": true
+  },
+  "safetySettings": {
+    "enableHealthWarnings": true,
+    "enableContraindications": true,
+    "enableDifficultyRatings": true,
+    "enableRiskAssessment": true
+  },
+  "deployment": {
+    "netlifySiteName": "kamasutra",
+    "buildCommand": "echo 'No build required'",
+    "publishDirectory": ".",
+    "redirects": [
+      {
+        "from": "/*",
+        "to": "/index.html",
+        "status": 200
+      }
+    ]
+  },
+  "graphics": {
+    "logo": "./graphics/intimacy/logo.svg",
+    "favicon": "./graphics/intimacy/favicon.ico",
+    "heroImage": "./graphics/intimacy/hero-image.jpg",
+    "backgroundImages": {
+      "default": "./graphics/intimacy/background-default.jpg",
+      "dark": "./graphics/intimacy/background-dark.jpg"
+    },
+    "exerciseIcons": {
+      "communication": "./graphics/intimacy/icons/communication.svg",
+      "touch": "./graphics/intimacy/icons/touch.svg",
+      "breathing": "./graphics/intimacy/icons/breathing.svg",
+      "wellness": "./graphics/intimacy/icons/wellness.svg"
+    },
+    "programImages": {
+      "beginner_intimacy": "./graphics/intimacy/programs/beginner-intimacy.jpg",
+      "communication": "./graphics/intimacy/programs/communication.jpg",
+      "touch_exploration": "./graphics/intimacy/programs/touch-exploration.jpg",
+      "advanced_connection": "./graphics/intimacy/programs/advanced-connection.jpg"
+    }
+  }
+}

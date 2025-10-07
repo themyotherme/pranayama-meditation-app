@@ -1,0 +1,798 @@
+{
+  "programs": {
+    "first_time_user": {
+      "id": "first_time_user",
+      "name": "🌅 1st Experience",
+      "description": "Perfect for beginners - gentle guided meditation with beautiful music and chanting",
+      "duration": 10,
+      "isDefault": true,
+      "isRecommended": true,
+      "exercises": [
+        {
+          "exerciseId": "welcome_introduction",
+          "duration": 30,
+          "name": "Welcome",
+          "type": "introduction"
+        },
+        {
+          "exerciseId": "silence",
+          "duration": 120,
+          "name": "Sacred Invocation",
+          "type": "silence"
+        },
+        {
+          "exerciseId": "chanting",
+          "duration": 90,
+          "name": "OM Chanting",
+          "type": "chanting"
+        },
+        {
+          "exerciseId": "mindfulness_meditation",
+          "duration": 90,
+          "name": "Gentle Meditation",
+          "type": "meditation"
+        },
+        {
+          "exerciseId": "anulom_vilom",
+          "duration": 120,
+          "name": "Simple Breathing",
+          "type": "pranayama"
+        },
+        {
+          "exerciseId": "bhramari",
+          "duration": 120,
+          "name": "Bhramari",
+          "type": "pranayama"
+        },
+        {
+          "exerciseId": "laughter_therapy",
+          "duration": 120,
+          "name": "Laughter Therapy",
+          "type": "therapy"
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30,
+          "name": "Thank You",
+          "type": "closing"
+        }
+      ]
+    },
+    "beach_meditation": {
+      "id": "beach_meditation",
+      "name": "Beach Meditation",
+      "description": "Ocean-side breathing exercises with wave-synchronized meditation",
+      "duration": 22,
+      "isDefault": true,
+      "requiresGPS": true,
+      "locationType": "beach",
+      "exercises": [
+        {
+          "exerciseId": "ocean_awareness",
+          "duration": 180,
+          "name": "Ocean Awareness",
+          "type": "beach"
+        },
+        {
+          "exerciseId": "wave_breathing",
+          "duration": 600,
+          "name": "Wave Breathing",
+          "type": "beach"
+        },
+        {
+          "exerciseId": "ocean_meditation",
+          "duration": 540,
+          "name": "Ocean Meditation",
+          "type": "beach"
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "bp_balance": {
+      "id": "bp_balance",
+      "name": "Blood Pressure Balance",
+      "description": "Gentle cooling and balancing sequence designed to reduce internal heat and calm the nervous system.",
+      "duration": 9,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "sheetali",
+          "duration": 180
+        },
+        {
+          "exerciseId": "sheetkari",
+          "duration": 180
+        },
+        {
+          "exerciseId": "anulom_vilom",
+          "duration": 180
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "comprehensive_program": {
+      "id": "comprehensive_program",
+      "name": "Comprehensive Program",
+      "description": "Comprehensive program featuring all exercise types with full audio, video, and voice features for complete functionality testing.",
+      "duration": 45,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "anulom_vilom",
+          "duration": 300
+        },
+        {
+          "exerciseId": "bhastrika",
+          "duration": 240
+        },
+        {
+          "exerciseId": "bhramari",
+          "duration": 360
+        },
+        {
+          "exerciseId": "kapalabhati",
+          "duration": 180
+        },
+        {
+          "exerciseId": "nadi_shodhana",
+          "duration": 300
+        },
+        {
+          "exerciseId": "ujjayi",
+          "duration": 300
+        },
+        {
+          "exerciseId": "sheetali",
+          "duration": 240
+        },
+        {
+          "exerciseId": "sheetkari",
+          "duration": 240
+        },
+        {
+          "exerciseId": "mindfulness_meditation",
+          "duration": 300
+        },
+        {
+          "exerciseId": "laughter_therapy",
+          "duration": 240
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "cooling_practice": {
+      "id": "cooling_practice",
+      "name": "Cooling Practice",
+      "description": "Cool down and relax",
+      "duration": 18,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "sheetali",
+          "duration": 360
+        },
+        {
+          "exerciseId": "sheetkari",
+          "duration": 360
+        },
+        {
+          "exerciseId": "cooling_meditation",
+          "duration": 360
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "default_wellness": {
+      "id": "default_wellness",
+      "name": "Default Wellness Program",
+      "description": "Complete wellness journey with all exercises",
+      "duration": 22,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "silence",
+          "duration": 120,
+          "name": "Sacred Invocation",
+          "type": "silence"
+        },
+        {
+          "exerciseId": "chanting",
+          "duration": 180,
+          "name": "OM Chanting",
+          "type": "chanting"
+        },
+        {
+          "exerciseId": "anulom_vilom",
+          "duration": 240,
+          "name": "Anulom Vilom",
+          "type": "pranayama"
+        },
+        {
+          "exerciseId": "bhramari",
+          "duration": 180,
+          "name": "Bhramari",
+          "type": "pranayama"
+        },
+        {
+          "exerciseId": "kapalabhati",
+          "duration": 180,
+          "name": "Kapalabhati",
+          "type": "pranayama"
+        },
+        {
+          "exerciseId": "bhastrika",
+          "duration": 180,
+          "name": "Bhastrika",
+          "type": "pranayama"
+        },
+        {
+          "exerciseId": "mindfulness_meditation",
+          "duration": 240,
+          "name": "Deep Meditation",
+          "type": "meditation"
+        },
+        {
+          "exerciseId": "laughter_therapy",
+          "duration": 180,
+          "name": "Laughter Therapy",
+          "type": "laughter"
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "digestive_support": {
+      "id": "digestive_support",
+      "name": "Digestive Support",
+      "description": "Stimulates metabolism and improves digestion by activating abdominal muscles and internal fire.",
+      "duration": 11,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "kapalabhati",
+          "duration": 240
+        },
+        {
+          "exerciseId": "bhastrika",
+          "duration": 180
+        },
+        {
+          "exerciseId": "ujjayi",
+          "duration": 240
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "emotional_balance": {
+      "id": "emotional_balance",
+      "name": "Emotional Balance",
+      "description": "Stabilizes mood by harmonizing breath and calming the nervous system. A gentle blend of alternate nostril and humming.",
+      "duration": 8,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "anulom_vilom",
+          "duration": 180
+        },
+        {
+          "exerciseId": "nadi_shodhana",
+          "duration": 180
+        },
+        {
+          "exerciseId": "bhramari",
+          "duration": 120
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "energy_boost": {
+      "id": "energy_boost",
+      "name": "Energy Boost",
+      "description": "Energize your body and mind",
+      "duration": 12,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "kapalabhati",
+          "duration": 180
+        },
+        {
+          "exerciseId": "bhastrika",
+          "duration": 240
+        },
+        {
+          "exerciseId": "ujjayi",
+          "duration": 300
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "evening_wind_down": {
+      "id": "evening_wind_down",
+      "name": "Evening Wind-Down",
+      "description": "Calming program for evening relaxation",
+      "duration": 15,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "silence",
+          "duration": 60,
+          "name": "Evening Reflection",
+          "type": "silence"
+        },
+        {
+          "exerciseId": "bhramari",
+          "duration": 240,
+          "name": "Bhramari",
+          "type": "pranayama"
+        },
+        {
+          "exerciseId": "anulom_vilom",
+          "duration": 240,
+          "name": "Anulom Vilom",
+          "type": "pranayama"
+        },
+        {
+          "exerciseId": "body_scan",
+          "duration": 360,
+          "name": "Body Scan",
+          "type": "meditation"
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "focus_concentration": {
+      "id": "focus_concentration",
+      "name": "Focus & Concentration",
+      "description": "Balances left and right brain channels and sharpens awareness. Useful before study or work sessions.",
+      "duration": 11,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "nadi_shodhana",
+          "duration": 300
+        },
+        {
+          "exerciseId": "bhramari",
+          "duration": 180
+        },
+        {
+          "exerciseId": "mindfulness_meditation",
+          "duration": 180
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "morning_energizer": {
+      "id": "morning_energizer",
+      "name": "Morning Energizer",
+      "description": "Energizing program to start your day",
+      "duration": 10,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "silence",
+          "duration": 60,
+          "name": "Morning Intention",
+          "type": "silence"
+        },
+        {
+          "exerciseId": "bhastrika",
+          "duration": 180,
+          "name": "Bhastrika",
+          "type": "pranayama"
+        },
+        {
+          "exerciseId": "kapalabhati",
+          "duration": 120,
+          "name": "Kapalabhati",
+          "type": "pranayama"
+        },
+        {
+          "exerciseId": "mindfulness_meditation",
+          "duration": 240,
+          "name": "Gratitude Meditation",
+          "type": "meditation"
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "morning_meditation": {
+      "id": "morning_meditation",
+      "name": "Morning Meditation",
+      "description": "Start your day with peace and clarity",
+      "duration": 15,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "anulom_vilom",
+          "duration": 300
+        },
+        {
+          "exerciseId": "mindfulness_meditation",
+          "duration": 600
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "nature_connection": {
+      "id": "nature_connection",
+      "name": "Nature Connection",
+      "description": "Location-based nature meditation with environment-aware guidance",
+      "duration": 25,
+      "isDefault": true,
+      "requiresGPS": true,
+      "locationType": "outdoor",
+      "exercises": [
+        {
+          "exerciseId": "nature_awareness",
+          "duration": 180,
+          "name": "Nature Awareness",
+          "type": "nature"
+        },
+        {
+          "exerciseId": "environmental_breathing",
+          "duration": 600,
+          "name": "Environmental Breathing",
+          "type": "nature"
+        },
+        {
+          "exerciseId": "nature_meditation",
+          "duration": 720,
+          "name": "Nature Meditation",
+          "type": "nature"
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "park_meditation": {
+      "id": "park_meditation",
+      "name": "Park Meditation",
+      "description": "Specific to park environments with nature-based breathing exercises",
+      "duration": 18,
+      "isDefault": true,
+      "requiresGPS": true,
+      "locationType": "park",
+      "exercises": [
+        {
+          "exerciseId": "park_grounding",
+          "duration": 180,
+          "name": "Park Grounding",
+          "type": "park"
+        },
+        {
+          "exerciseId": "tree_breathing",
+          "duration": 480,
+          "name": "Tree Breathing",
+          "type": "park"
+        },
+        {
+          "exerciseId": "park_meditation",
+          "duration": 420,
+          "name": "Park Meditation",
+          "type": "park"
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "pure_meditation": {
+      "id": "pure_meditation",
+      "name": "Pure Meditation",
+      "description": "Meditation-focused program without breathing exercises",
+      "duration": 15,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "silence",
+          "duration": 60,
+          "name": "Preparation",
+          "type": "silence"
+        },
+        {
+          "exerciseId": "mindfulness_meditation",
+          "duration": 480,
+          "name": "Mindfulness Meditation",
+          "type": "meditation"
+        },
+        {
+          "exerciseId": "mindfulness_meditation",
+          "duration": 360,
+          "name": "Loving Kindness",
+          "type": "meditation"
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "quick_session": {
+      "id": "quick_session",
+      "name": "Quick 5-Minute Session",
+      "description": "Short wellness session for busy schedules",
+      "duration": 5,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "silence",
+          "duration": 60,
+          "name": "Quick Centering",
+          "type": "silence"
+        },
+        {
+          "exerciseId": "anulom_vilom",
+          "duration": 120,
+          "name": "Anulom Vilom",
+          "type": "pranayama"
+        },
+        {
+          "exerciseId": "mindfulness_meditation",
+          "duration": 120,
+          "name": "Brief Meditation",
+          "type": "meditation"
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "quick_energy": {
+      "id": "quick_energy",
+      "name": "Quick Energy Recharge",
+      "description": "Energizing breaths to wake up the body and clear mental fog. Combines cleansing, expansion, and ocean breath.",
+      "duration": 10,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "kapalabhati",
+          "duration": 180
+        },
+        {
+          "exerciseId": "bhastrika",
+          "duration": 180
+        },
+        {
+          "exerciseId": "ujjayi",
+          "duration": 240
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "respiratory_health": {
+      "id": "respiratory_health",
+      "name": "Respiratory Health",
+      "description": "Strengthens lungs and clears airways. Ideal for building respiratory resilience with cleansing and balancing.",
+      "duration": 10,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "kapalabhati",
+          "duration": 180
+        },
+        {
+          "exerciseId": "bhastrika",
+          "duration": 180
+        },
+        {
+          "exerciseId": "anulom_vilom",
+          "duration": 240
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "insomnia_relief": {
+      "id": "insomnia_relief",
+      "name": "Sleep & Insomnia Relief",
+      "description": "Soothing practice for winding down, balancing both hemispheres of the brain, and preparing for deep sleep.",
+      "duration": 12,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "nadi_shodhana",
+          "duration": 300
+        },
+        {
+          "exerciseId": "bhramari",
+          "duration": 180
+        },
+        {
+          "exerciseId": "body_scan",
+          "duration": 240
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "sleep_preparation": {
+      "id": "sleep_preparation",
+      "name": "Sleep Preparation",
+      "description": "Wind down for a restful night",
+      "duration": 25,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "nadi_shodhana",
+          "duration": 480
+        },
+        {
+          "exerciseId": "bhramari",
+          "duration": 360
+        },
+        {
+          "exerciseId": "body_scan",
+          "duration": 660
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "stress_anxiety_relief": {
+      "id": "stress_anxiety_relief",
+      "name": "Stress & Anxiety Relief",
+      "description": "Calming sequence to quiet the mind and release tension. Focuses on humming and cooling breath to activate the parasympathetic system.",
+      "duration": 10,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "bhramari",
+          "duration": 240
+        },
+        {
+          "exerciseId": "anulom_vilom",
+          "duration": 180
+        },
+        {
+          "exerciseId": "sheetali",
+          "duration": 180
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "stress_relief": {
+      "id": "stress_relief",
+      "name": "Stress Relief",
+      "description": "Release tension and find calm",
+      "duration": 20,
+      "isDefault": true,
+      "exercises": [
+        {
+          "exerciseId": "bhramari",
+          "duration": 360
+        },
+        {
+          "exerciseId": "sheetali",
+          "duration": 360
+        },
+        {
+          "exerciseId": "progressive_relaxation",
+          "duration": 480
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "urban_mindfulness": {
+      "id": "urban_mindfulness",
+      "name": "Urban Mindfulness",
+      "description": "City walking meditation with urban environment awareness",
+      "duration": 15,
+      "isDefault": true,
+      "requiresGPS": true,
+      "locationType": "urban",
+      "exercises": [
+        {
+          "exerciseId": "urban_centering",
+          "duration": 120,
+          "name": "Urban Centering",
+          "type": "urban"
+        },
+        {
+          "exerciseId": "city_walking_meditation",
+          "duration": 600,
+          "name": "City Walking Meditation",
+          "type": "urban"
+        },
+        {
+          "exerciseId": "urban_integration",
+          "duration": 180,
+          "name": "Urban Integration",
+          "type": "urban"
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    },
+    "walking_meditation": {
+      "id": "walking_meditation",
+      "name": "Walking Meditation",
+      "description": "GPS-guided mindful walking meditation with distance tracking and route mapping",
+      "duration": 20,
+      "isDefault": true,
+      "requiresGPS": true,
+      "locationType": "any",
+      "exercises": [
+        {
+          "exerciseId": "walking_preparation",
+          "duration": 120,
+          "name": "Walking Preparation",
+          "type": "walking"
+        },
+        {
+          "exerciseId": "mindful_walking",
+          "duration": 900,
+          "name": "Mindful Walking",
+          "type": "walking"
+        },
+        {
+          "exerciseId": "walking_integration",
+          "duration": 180,
+          "name": "Walking Integration",
+          "type": "walking"
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30
+        }
+      ]
+    }
+  }
+}

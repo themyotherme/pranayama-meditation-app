@@ -1,0 +1,63 @@
+{
+  "appInfo": {
+    "name": "Your App Name",
+    "version": "1.0",
+    "description": "Your app description",
+    "theme": "your-theme",
+    "customZenMusic": "./audio/your-custom-music.mp3"
+  },
+  "ambientSoundMapping": {
+    "exerciseTypes": {
+      "breathing": "om_chanting",
+      "meditation": "mantra_music", 
+      "relaxation": "sitar_music",
+      "energy": "flute_music",
+      "cooling": "rain_sounds",
+      "focus": "singing_bowls",
+      "sleep": "om_chanting"
+    },
+    "programTypes": {
+      "morning": "mantra_music",
+      "evening": "om_chanting",
+      "stress_relief": "sitar_music",
+      "energy_boost": "flute_music",
+      "sleep_preparation": "om_chanting",
+      "cooling": "rain_sounds",
+      "balance": "om_chanting",
+      "healing": "mantra_music",
+      "mindfulness": "sitar_music"
+    },
+    "defaultAmbient": "soft_drone"
+  },
+  "mediaFiles": {
+    "ocean_waves": "./audio/nature/ocean-waves.mp3",
+    "soft_drone": "./audio/ambient/soft-drone.mp3", 
+    "forest_night": "./audio/nature/forest-night.mp3",
+    "meditation_music": "./audio/meditation-music.mp3",
+    "breathing_guidance": "./audio/breathing-guidance.mp3",
+    "rain_sounds": "./audio/nature/rain-sounds.mp3",
+    "singing_bowls": "./audio/meditation/singing-bowls.mp3",
+    "flute_music": "./audio/music/flute-meditation.mp3",
+    "sitar_music": "./audio/spiritual/sitar-meditation.mp3",
+    "om_chanting": "./audio/spiritual/om-chanting.mp3",
+    "mantra_music": "./audio/spiritual/mantra-music.mp3"
+  },
+  "audioSettings": {
+    "defaultVolume": 0.3,
+    "zenMusicVolumeMultiplier": 0.1,
+    "bellVolume": 0.3,
+    "voiceVolume": 0.8
+  },
+  "uiSettings": {
+    "showTestButtons": true,
+    "enableDraggableModals": true,
+    "enableAudioControls": true,
+    "defaultTheme": "dark"
+  },
+  "bellSettings": {
+    "exerciseStartBells": 1,
+    "exerciseEndBells": 1,
+    "programEndBells": 0,
+    "continuousBellDuration": 5000
+  }
+}

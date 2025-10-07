@@ -1,0 +1,3543 @@
+{
+  "schema_version": "1.0",
+  "units": "minutes",
+  "exercises": [
+    {
+      "id": "fore-39d46a4f",
+      "type": "foreplay",
+      "name": "Sama–Sparsha (Simple Embrace)",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "gentle body-to-body contact with matched breathing"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-99e54327",
+      "type": "foreplay",
+      "name": "Vina–Bandha (Warm Wrap)",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "close wrap, sway slowly for relaxation"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-6a242898",
+      "type": "foreplay",
+      "name": "Latāveṣṭitaka (Vine Embrace)",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "arms entwined, soft pressure"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-e2f73617",
+      "type": "foreplay",
+      "name": "Pratiloma (Alternating Hold)",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "alternate tight/loose hug with breath"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-b3035f7a",
+      "type": "foreplay",
+      "name": "Corner Kiss",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "light kiss at lip corner"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-97127efe",
+      "type": "foreplay",
+      "name": "Upper Lip Kiss",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "focus on upper lip, very light pressure"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-0c691af7",
+      "type": "foreplay",
+      "name": "Silent Kiss",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "hover and exhale softly"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-c4dfa852",
+      "type": "foreplay",
+      "name": "Forehead Kiss",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "calming, reassurance"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-8e9852cc",
+      "type": "foreplay",
+      "name": "Neck Kiss",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "gentle, avoid bite/marks"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-43acf727",
+      "type": "foreplay",
+      "name": "Sensate Focus I",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "broad palms over back/arms"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-e842417e",
+      "type": "foreplay",
+      "name": "Sensate Focus II",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "slow strokes along legs/hips"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-537a7800",
+      "type": "foreplay",
+      "name": "Head & Scalp Massage",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "circular fingertips, no oil needed"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-4c3eb33e",
+      "type": "foreplay",
+      "name": "Foot Massage",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "arches and toes, light pressure"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-0e8de1bd",
+      "type": "foreplay",
+      "name": "Shoulder Release",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "trapezius squeeze & release"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-32a134b3",
+      "type": "foreplay",
+      "name": "Oil Massage (Unscented)",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "thin layer of oil, broad strokes"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-e532d6cb",
+      "type": "foreplay",
+      "name": "Breath Sync",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "4–4 nasal breathing together"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-a96c6752",
+      "type": "foreplay",
+      "name": "Eye Gaze",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "quiet gaze, blink soft"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-97a34a53",
+      "type": "foreplay",
+      "name": "Whispered Appreciation",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "exchange one appreciation each"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-beeebac9",
+      "type": "foreplay",
+      "name": "Hand Mapping",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "trace hands/fingers, explore comfort signals"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-67742c73",
+      "type": "foreplay",
+      "name": "Feather Touch",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "light fingertip tracing over arms/torso"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-065d7973",
+      "type": "foreplay",
+      "name": "Warm Towel Press",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "place warm towel briefly on shoulders"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-d6079100",
+      "type": "foreplay",
+      "name": "Music Sway",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "slow dance, minimal steps"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-a7a14463",
+      "type": "foreplay",
+      "name": "Aromas (Mild)",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "optional mild aroma if no sensitivities"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "fore-83fcd7ca",
+      "type": "foreplay",
+      "name": "Shower Warmup",
+      "source": {
+        "work": "Kamasutra, Book II (inspiration for embraces, kisses, preliminaries)",
+        "topic": "Foreplay",
+        "notes": "Modern, safety-first interpretation"
+      },
+      "goals": [
+        "arousal",
+        "connection",
+        "relaxation"
+      ],
+      "setup": [
+        "warm water relax, mindful touch"
+      ],
+      "timing": {
+        "default": 2,
+        "min": 1,
+        "max": 5
+      },
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [
+          6,
+          10
+        ]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": [
+          "Avoid sensitive or injured areas; reduce pressure if any discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "tags": [
+        "book2-inspired",
+        "gentle",
+        "warmup"
+      ]
+    },
+    {
+      "id": "pos-620c8992",
+      "type": "position",
+      "name": "Front Embrace (Pillow Support)",
+      "family": "face-to-face: partner A on top",
+      "intimacy_contact": "maximum",
+      "penetration_depth": "moderate-to-deep",
+      "movement_range": "limited",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "n/a",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Receiver lies on back; optional pillow under hips for angle.",
+        "Giver aligns above; support with forearms to reduce wrist load."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-e7888beb",
+      "type": "position",
+      "name": "Close Cover",
+      "family": "face-to-face: partner A on top",
+      "intimacy_contact": "maximum",
+      "penetration_depth": "moderate-to-deep",
+      "movement_range": "limited",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "n/a",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Receiver lies on back; optional pillow under hips for angle.",
+        "Giver aligns above; support with forearms to reduce wrist load."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-ce83269a",
+      "type": "position",
+      "name": "Seated Rider",
+      "family": "face-to-face: partner B on top",
+      "intimacy_contact": "high",
+      "penetration_depth": "moderate-to-deep",
+      "movement_range": "wide",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "n/a",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 3,
+          "knees": 2,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 3,
+          "legs": 2,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Giver reclines or sits supported.",
+        "Receiver straddles; lower gradually and lead rhythm."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-923255bc",
+      "type": "position",
+      "name": "Slow Arc Rider",
+      "family": "face-to-face: partner B on top",
+      "intimacy_contact": "high",
+      "penetration_depth": "moderate-to-deep",
+      "movement_range": "wide",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "n/a",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 3,
+          "knees": 2,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 3,
+          "legs": 2,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Giver reclines or sits supported.",
+        "Receiver straddles; lower gradually and lead rhythm."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-a012796c",
+      "type": "position",
+      "name": "Side-Lying Spooning",
+      "family": "side-by-side",
+      "intimacy_contact": "high",
+      "penetration_depth": "shallow-to-moderate",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "medium",
+        "g_spot": "variable",
+        "prostate": "possible",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 1,
+      "requirements": {
+        "flexibility": {
+          "hips": 1,
+          "knees": 1,
+          "back": 1,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 1,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Both partners lie on their sides facing the same direction.",
+        "Align hips; add pillow between knees if desired."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort.",
+          "Place pillow between knees for hip/low-back comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "quiet"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-1c8bdc28",
+      "type": "position",
+      "name": "Facing Slide",
+      "family": "side-by-side",
+      "intimacy_contact": "high",
+      "penetration_depth": "shallow-to-moderate",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "medium",
+        "g_spot": "variable",
+        "prostate": "possible",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 1,
+      "requirements": {
+        "flexibility": {
+          "hips": 1,
+          "knees": 1,
+          "back": 1,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 1,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Both partners lie on their sides facing the same direction.",
+        "Align hips; add pillow between knees if desired."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort.",
+          "Place pillow between knees for hip/low-back comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "quiet"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-4c9fe0b3",
+      "type": "position",
+      "name": "Kneeling Rear-Entry (Cushioned)",
+      "family": "rear-entry (kneeling)",
+      "intimacy_contact": "moderate",
+      "penetration_depth": "deep",
+      "movement_range": "wide",
+      "stimulation_focus": {
+        "clitoral": "variable",
+        "g_spot": "often",
+        "prostate": "often",
+        "perineal": "possible"
+      },
+      "control": "partner behind",
+      "difficulty": 3,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 2,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 2,
+          "arms": 1
+        },
+        "supports": [
+          "wall support",
+          "cushions"
+        ]
+      },
+      "entry": [
+        "Receiver positions on hands/knees or supported low kneel with cushions.",
+        "Giver aligns behind; start slowly and adjust depth."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "shallow–deep cycles",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort.",
+          "Control depth carefully to avoid impact discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-2c3d9b1e",
+      "type": "position",
+      "name": "Low Kneel Rear-Entry",
+      "family": "rear-entry (kneeling)",
+      "intimacy_contact": "moderate",
+      "penetration_depth": "deep",
+      "movement_range": "wide",
+      "stimulation_focus": {
+        "clitoral": "variable",
+        "g_spot": "often",
+        "prostate": "often",
+        "perineal": "possible"
+      },
+      "control": "partner behind",
+      "difficulty": 3,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 2,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 2,
+          "arms": 1
+        },
+        "supports": [
+          "wall support",
+          "cushions"
+        ]
+      },
+      "entry": [
+        "Receiver positions on hands/knees or supported low kneel with cushions.",
+        "Giver aligns behind; start slowly and adjust depth."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "shallow–deep cycles",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort.",
+          "Control depth carefully to avoid impact discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-da02ffa8",
+      "type": "position",
+      "name": "Lotus Embrace",
+      "family": "seated facing",
+      "intimacy_contact": "high",
+      "penetration_depth": "shallow-to-moderate",
+      "movement_range": "limited",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "possible",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 3,
+      "requirements": {
+        "flexibility": {
+          "hips": 3,
+          "knees": 2,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": [
+          "wall support",
+          "cushions"
+        ]
+      },
+      "entry": [
+        "One partner sits supported; the other sits facing on lap or close-in.",
+        "Keep torsos close; adjust leg wrap for comfort."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "grinding",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-b1e47dc1",
+      "type": "position",
+      "name": "Supported Lotus",
+      "family": "seated facing",
+      "intimacy_contact": "high",
+      "penetration_depth": "shallow-to-moderate",
+      "movement_range": "limited",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "possible",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 3,
+      "requirements": {
+        "flexibility": {
+          "hips": 3,
+          "knees": 2,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": [
+          "wall support",
+          "cushions"
+        ]
+      },
+      "entry": [
+        "One partner sits supported; the other sits facing on lap or close-in.",
+        "Keep torsos close; adjust leg wrap for comfort."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "grinding",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-1b641e24",
+      "type": "position",
+      "name": "Standing Hold (Wall Support)",
+      "family": "standing face-to-face",
+      "intimacy_contact": "moderate",
+      "penetration_depth": "shallow-to-moderate",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "n/a",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 2,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Stand facing with wall support behind one partner.",
+        "Lean slightly for balance; keep knees soft."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "micro-thrust with knee flex",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort.",
+          "Ensure stable, non-slip footing; use wall support."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-1e5839a0",
+      "type": "position",
+      "name": "Leaning Sway",
+      "family": "standing face-to-face",
+      "intimacy_contact": "moderate",
+      "penetration_depth": "shallow-to-moderate",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "n/a",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 2,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Stand facing with wall support behind one partner.",
+        "Lean slightly for balance; keep knees soft."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "micro-thrust with knee flex",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort.",
+          "Ensure stable, non-slip footing; use wall support."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-8b84d027",
+      "type": "position",
+      "name": "Standing Behind (Hip Support)",
+      "family": "standing rear-entry",
+      "intimacy_contact": "moderate",
+      "penetration_depth": "moderate-to-deep",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "variable",
+        "g_spot": "often",
+        "prostate": "often",
+        "perineal": "possible"
+      },
+      "control": "partner behind",
+      "difficulty": 3,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 2,
+          "arms": 1
+        },
+        "supports": [
+          "wall support",
+          "cushions"
+        ]
+      },
+      "entry": [
+        "Receiver positions on hands/knees or supported low kneel with cushions.",
+        "Giver aligns behind; start slowly and adjust depth."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "micro-thrust with knee flex",
+        "shallow–deep cycles",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort.",
+          "Ensure stable, non-slip footing; use wall support.",
+          "Control depth carefully to avoid impact discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-41e40e02",
+      "type": "position",
+      "name": "Half-Step Behind",
+      "family": "standing rear-entry",
+      "intimacy_contact": "moderate",
+      "penetration_depth": "moderate-to-deep",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "variable",
+        "g_spot": "often",
+        "prostate": "often",
+        "perineal": "possible"
+      },
+      "control": "partner behind",
+      "difficulty": 3,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 2,
+          "arms": 1
+        },
+        "supports": [
+          "wall support",
+          "cushions"
+        ]
+      },
+      "entry": [
+        "Receiver positions on hands/knees or supported low kneel with cushions.",
+        "Giver aligns behind; start slowly and adjust depth."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "micro-thrust with knee flex",
+        "shallow–deep cycles",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort.",
+          "Ensure stable, non-slip footing; use wall support.",
+          "Control depth carefully to avoid impact discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-dc0659d6",
+      "type": "position",
+      "name": "Prone Pillow Angle",
+      "family": "prone with support",
+      "intimacy_contact": "moderate",
+      "penetration_depth": "shallow-to-moderate",
+      "movement_range": "limited",
+      "stimulation_focus": {
+        "clitoral": "variable",
+        "g_spot": "possible",
+        "prostate": "possible",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Receiver lies face-down with pillow under hips for angle.",
+        "Giver aligns carefully; use shallow motions first."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-7b917f34",
+      "type": "position",
+      "name": "Gentle Prone Rock",
+      "family": "prone with support",
+      "intimacy_contact": "moderate",
+      "penetration_depth": "shallow-to-moderate",
+      "movement_range": "limited",
+      "stimulation_focus": {
+        "clitoral": "variable",
+        "g_spot": "possible",
+        "prostate": "possible",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Receiver lies face-down with pillow under hips for angle.",
+        "Giver aligns carefully; use shallow motions first."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-4a7f3d16",
+      "type": "position",
+      "name": "Edge Alignment (Knees Bent)",
+      "family": "edge-of-bed",
+      "intimacy_contact": "high",
+      "penetration_depth": "moderate",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "possible",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Receiver near bed edge; hips close to edge with knee or foot support.",
+        "Giver stands or kneels; adjust height with cushions."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-fd099a0f",
+      "type": "position",
+      "name": "Edge Alignment (Extended)",
+      "family": "edge-of-bed",
+      "intimacy_contact": "high",
+      "penetration_depth": "moderate",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "possible",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Receiver near bed edge; hips close to edge with knee or foot support.",
+        "Giver stands or kneels; adjust height with cushions."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-1e7e63c8",
+      "type": "position",
+      "name": "Kneeling Facing (Cushions)",
+      "family": "kneeling upright",
+      "intimacy_contact": "moderate",
+      "penetration_depth": "moderate",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "variable",
+        "g_spot": "variable",
+        "prostate": "variable",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 2,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 2,
+          "arms": 1
+        },
+        "supports": [
+          "wall support",
+          "cushions"
+        ]
+      },
+      "entry": [
+        "Both partners kneel facing with cushions under knees.",
+        "Maintain upright posture; engage core for support."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-cc1d6405",
+      "type": "position",
+      "name": "Upright Kneel Close",
+      "family": "kneeling upright",
+      "intimacy_contact": "moderate",
+      "penetration_depth": "moderate",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "variable",
+        "g_spot": "variable",
+        "prostate": "variable",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 2,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 2,
+          "arms": 1
+        },
+        "supports": [
+          "wall support",
+          "cushions"
+        ]
+      },
+      "entry": [
+        "Both partners kneel facing with cushions under knees.",
+        "Maintain upright posture; engage core for support."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-5341db1a",
+      "type": "position",
+      "name": "Side Tuck (Top Leg Support)",
+      "family": "side-by-side",
+      "intimacy_contact": "high",
+      "penetration_depth": "shallow-to-moderate",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "medium",
+        "g_spot": "variable",
+        "prostate": "possible",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 1,
+      "requirements": {
+        "flexibility": {
+          "hips": 1,
+          "knees": 1,
+          "back": 1,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 1,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Both partners lie on their sides facing the same direction.",
+        "Align hips; add pillow between knees if desired."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort.",
+          "Place pillow between knees for hip/low-back comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "quiet"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-7a803fd1",
+      "type": "position",
+      "name": "Chair Sit-Face",
+      "family": "seated facing",
+      "intimacy_contact": "high",
+      "penetration_depth": "shallow-to-moderate",
+      "movement_range": "limited",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "possible",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 3,
+      "requirements": {
+        "flexibility": {
+          "hips": 3,
+          "knees": 2,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": [
+          "wall support",
+          "cushions"
+        ]
+      },
+      "entry": [
+        "One partner sits supported; the other sits facing on lap or close-in.",
+        "Keep torsos close; adjust leg wrap for comfort."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "grinding",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-d4d1ad5e",
+      "type": "position",
+      "name": "Chair Sit-Behind",
+      "family": "standing rear-entry",
+      "intimacy_contact": "moderate",
+      "penetration_depth": "moderate-to-deep",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "variable",
+        "g_spot": "often",
+        "prostate": "often",
+        "perineal": "possible"
+      },
+      "control": "partner behind",
+      "difficulty": 3,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 2,
+          "arms": 1
+        },
+        "supports": [
+          "wall support",
+          "cushions"
+        ]
+      },
+      "entry": [
+        "Receiver positions on hands/knees or supported low kneel with cushions.",
+        "Giver aligns behind; start slowly and adjust depth."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "micro-thrust with knee flex",
+        "shallow–deep cycles",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort.",
+          "Ensure stable, non-slip footing; use wall support.",
+          "Control depth carefully to avoid impact discomfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "pos-4a3455fc",
+      "type": "position",
+      "name": "Wall Angle (Supported)",
+      "family": "standing face-to-face",
+      "intimacy_contact": "moderate",
+      "penetration_depth": "shallow-to-moderate",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "n/a",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 2,
+          "arms": 1
+        },
+        "supports": [
+          "bed",
+          "pillow"
+        ]
+      },
+      "entry": [
+        "Stand facing with wall support behind one partner.",
+        "Lean slightly for balance; keep knees soft."
+      ],
+      "motion_patterns": [
+        "gentle rocking",
+        "micro-thrust with knee flex",
+        "short pulses",
+        "small circles"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort.",
+          "Ensure stable, non-slip footing; use wall support."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [
+            1,
+            2
+          ],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": [
+          "pain",
+          "numbness",
+          "dizziness"
+        ]
+      },
+      "props": [
+        "pillow under hips",
+        "knee cushions"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "source": {
+        "work": "Book II themes + modern sexology mechanics",
+        "notes": "Non-graphic guidance; adjust to comfort and safety."
+      }
+    },
+    {
+      "id": "after-hydrate-stretch",
+      "type": "aftercare",
+      "name": "Aftercare: Hydrate & Stretch",
+      "setup": [
+        "Drink water",
+        "Gentle hip/low-back stretch",
+        "Share one positive moment"
+      ],
+      "timing": {
+        "default": 4,
+        "min": 2,
+        "max": 10
+      },
+      "tags": [
+        "cooldown",
+        "recovery"
+      ]
+    },
+    {
+      "id": "after-breathdown",
+      "type": "aftercare",
+      "name": "Aftercare: Breath Downshift",
+      "setup": [
+        "Lie side-by-side",
+        "Inhale 4, exhale 6 for 1–2 min"
+      ],
+      "timing": {
+        "default": 3,
+        "min": 2,
+        "max": 8
+      },
+      "tags": [
+        "cooldown",
+        "breath"
+      ]
+    },
+    {
+      "id": "after-checkin",
+      "type": "aftercare",
+      "name": "Aftercare: Check-in & Notes",
+      "setup": [
+        "Ask: Any soreness?",
+        "What to repeat next time?"
+      ],
+      "timing": {
+        "default": 3,
+        "min": 2,
+        "max": 10
+      },
+      "tags": [
+        "cooldown",
+        "reflection"
+      ]
+    }
+  ]
+}

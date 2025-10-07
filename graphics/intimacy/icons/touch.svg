@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="touchGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9a9e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fecfef;stop-opacity:1" />
+    </linearGradient>
+    <filter id="gentleGlow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="45" fill="url(#touchGradient)" opacity="0.1"/>
+  
+  <!-- Hands -->
+  <g filter="url(#gentleGlow)">
+    <!-- Left Hand -->
+    <ellipse cx="35" cy="50" rx="8" ry="15" fill="url(#touchGradient)" opacity="0.8" transform="rotate(-15 35 50)"/>
+    <!-- Right Hand -->
+    <ellipse cx="65" cy="50" rx="8" ry="15" fill="url(#touchGradient)" opacity="0.8" transform="rotate(15 65 50)"/>
+  </g>
+  
+  <!-- Fingers -->
+  <g opacity="0.7">
+    <!-- Left Fingers -->
+    <circle cx="30" cy="40" r="3" fill="url(#touchGradient)"/>
+    <circle cx="32" cy="35" r="2.5" fill="url(#touchGradient)"/>
+    <circle cx="34" cy="30" r="2" fill="url(#touchGradient)"/>
+    <circle cx="36" cy="25" r="2" fill="url(#touchGradient)"/>
+    
+    <!-- Right Fingers -->
+    <circle cx="70" cy="40" r="3" fill="url(#touchGradient)"/>
+    <circle cx="68" cy="35" r="2.5" fill="url(#touchGradient)"/>
+    <circle cx="66" cy="30" r="2" fill="url(#touchGradient)"/>
+    <circle cx="64" cy="25" r="2" fill="url(#touchGradient)"/>
+  </g>
+  
+  <!-- Touch Energy -->
+  <g opacity="0.6">
+    <circle cx="50" cy="50" r="3" fill="url(#touchGradient)">
+      <animate attributeName="r" values="3;8;3" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Heart Symbol -->
+  <path d="M50,70 C50,70 45,65 45,60 C45,55 47,50 50,50 C53,50 55,55 55,60 C55,65 50,70 50,70 Z" 
+        fill="url(#touchGradient)" 
+        opacity="0.8"/>
+</svg>

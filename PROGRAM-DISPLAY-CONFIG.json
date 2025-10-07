@@ -1,0 +1,14 @@
+{
+  "displaySettings": {
+    "sortAlphabetically": true,
+    "pinnedPrograms": ["first_time_user"],
+    "hiddenPrograms": ["karaoke_test"],
+    "showOnlyDefault": true
+  },
+  "programOrder": {
+    "first": "first_time_user",
+    "sortRest": "alphabetically",
+    "hideTest": true
+  },
+  "notes": "This configuration controls how programs are displayed on the main page"
+}

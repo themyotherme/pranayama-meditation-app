@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Generic Wellness Framework</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            background-color: #f7fafc;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hamburger-menu {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .hamburger-menu:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .logo-icon {
+            font-size: 1.5rem;
+        }
+
+        .header-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .home-btn, .theme-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .home-btn:hover, .theme-toggle:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Hamburger Menu Panel */
+        .hamburger-menu-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            z-index: 1001;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .hamburger-menu-panel.show {
+            transform: translateX(0);
+        }
+
+        .menu-header {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f7fafc;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #4a5568;
+        }
+
+        .menu-items {
+            list-style: none;
+            padding: 1rem 0;
+        }
+
+        .menu-items li {
+            margin: 0;
+        }
+
+        .menu-items a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #4a5568;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .menu-items a:hover {
+            background-color: #f7fafc;
+            color: #1a202c;
+        }
+
+        .menu-divider {
+            height: 1px;
+            background: #e2e8f0;
+            margin: 0.5rem 0;
+        }
+
+        .menu-section-title {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+        }
+
+        /* Programs Section */
+        .programs-section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .section-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-header h2 {
+            color: #1a202c;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .programs-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .program-card {
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .program-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+
+        .program-card.selected {
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+
+        .program-card h3 {
+            color: #1a202c;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .program-card p {
+            color: #4a5568;
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .program-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: #718096;
+        }
+
+        .program-duration {
+            background: #e2e8f0;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .select-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: background-color 0.2s;
+        }
+
+        .select-btn:hover {
+            background: #5a67d8;
+        }
+
+        .select-btn:disabled {
+            background: #a0aec0;
+            cursor: not-allowed;
+        }
+
+        /* Controls Section */
+        .controls-section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            height: fit-content;
+        }
+
+        .control-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .control-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1a202c;
+            font-weight: 500;
+        }
+
+        .control-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .control-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        #duration-help {
+            font-size: 0.75rem;
+            color: #718096;
+            margin-top: 0.25rem;
+        }
+
+        .control-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+
+        .btn-danger {
+            background: #e53e3e;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c53030;
+        }
+
+        .btn-success {
+            background: #38a169;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #2f855a;
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 25px rgba(0,0,0,0.1);
+        }
+
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            color: #1a202c;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .modal-footer {
+            padding: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 0.75rem;
+            justify-content: flex-end;
+        }
+
+        /* Settings Styles */
+        .settings-section {
+            margin-bottom: 2rem;
+        }
+
+        .settings-section h3 {
+            color: #1a202c;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .setting-item label {
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        .setting-item input[type="checkbox"] {
+            width: auto;
+        }
+
+        .setting-item input[type="range"] {
+            width: 100px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .programs-list {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                padding: 0 0.5rem;
+            }
+
+            .logo span {
+                display: none;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 1rem;
+            }
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+
+        .dark-mode .header {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+        }
+
+        .dark-mode .programs-section,
+        .dark-mode .controls-section {
+            background: #2d3748;
+            color: #e2e8f0;
+        }
+
+        .dark-mode .program-card {
+            background: #4a5568;
+            border-color: #718096;
+            color: #e2e8f0;
+        }
+
+        .dark-mode .program-card:hover {
+            border-color: #90cdf4;
+        }
+
+        .dark-mode .program-card.selected {
+            background: #2b6cb0;
+            border-color: #90cdf4;
+        }
+
+        .dark-mode .modal-content {
+            background: #2d3748;
+            color: #e2e8f0;
+        }
+
+        .dark-mode .modal-header {
+            border-bottom-color: #4a5568;
+        }
+
+        .dark-mode .modal-footer {
+            border-top-color: #4a5568;
+        }
+
+        .dark-mode .hamburger-menu-panel {
+            background: #2d3748;
+            color: #e2e8f0;
+        }
+
+        .dark-mode .menu-header {
+            background: #4a5568;
+            border-bottom-color: #718096;
+        }
+
+        .dark-mode .menu-items a {
+            color: #e2e8f0;
+        }
+
+        .dark-mode .menu-items a:hover {
+            background-color: #4a5568;
+        }
+
+        .dark-mode .section-header h2 {
+            color: #e2e8f0;
+        }
+
+        .dark-mode .control-group label {
+            color: #e2e8f0;
+        }
+
+        .dark-mode .control-group input {
+            background: #4a5568;
+            border-color: #718096;
+            color: #e2e8f0;
+        }
+
+        .dark-mode .control-group input:focus {
+            border-color: #90cdf4;
+        }
+
+        .dark-mode .modal-header h2 {
+            color: #e2e8f0;
+        }
+
+        .dark-mode .settings-section h3 {
+            color: #e2e8f0;
+        }
+
+        .dark-mode .setting-item label {
+            color: #e2e8f0;
+        }
+
+        /* Loading and Status Styles */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            color: #718096;
+        }
+
+        .status-message {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .status-success {
+            background: #f0fff4;
+            color: #22543d;
+            border: 1px solid #9ae6b4;
+        }
+
+        .status-error {
+            background: #fed7d7;
+            color: #742a2a;
+            border: 1px solid #feb2b2;
+        }
+
+        .status-info {
+            background: #ebf8ff;
+            color: #2a4365;
+            border: 1px solid #90cdf4;
+        }
+
+        /* Exercise Selector Styles */
+        .exercise-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            background: #f7fafc;
+        }
+
+        .exercise-item input[type="checkbox"] {
+            margin-right: 0.75rem;
+        }
+
+        .exercise-item label {
+            flex: 1;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .dark-mode .exercise-item {
+            background: #4a5568;
+            border-color: #718096;
+        }
+
+        /* Program Editor Styles */
+        .program-exercise-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            background: #f7fafc;
+        }
+
+        .program-exercise-item .exercise-info {
+            flex: 1;
+        }
+
+        .program-exercise-item .exercise-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .dark-mode .program-exercise-item {
+            background: #4a5568;
+            border-color: #718096;
+        }
+
+        /* JSON Editor Styles */
+        #exercise-json-editor {
+            font-family: 'Courier New', monospace;
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .dark-mode #exercise-json-editor {
+            background: #4a5568;
+            border-color: #718096;
+            color: #e2e8f0;
+        }
+
+        /* Progress and History Styles */
+        .progress-item, .history-item {
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            background: #f7fafc;
+        }
+
+        .progress-item h4, .history-item h4 {
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-item p, .history-item p {
+            color: #4a5568;
+            font-size: 0.875rem;
+        }
+
+        .dark-mode .progress-item, .dark-mode .history-item {
+            background: #4a5568;
+            border-color: #718096;
+        }
+
+        .dark-mode .progress-item h4, .dark-mode .history-item h4 {
+            color: #e2e8f0;
+        }
+
+        .dark-mode .progress-item p, .dark-mode .history-item p {
+            color: #cbd5e0;
+        }
+
+        /* AI Generator Styles */
+        .ai-result {
+            background: #f0fff4;
+            border: 1px solid #9ae6b4;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .ai-result h4 {
+            color: #22543d;
+            margin-bottom: 0.5rem;
+        }
+
+        .ai-result p {
+            color: #2f855a;
+            font-size: 0.875rem;
+        }
+
+        .dark-mode .ai-result {
+            background: #1a202c;
+            border-color: #38a169;
+        }
+
+        .dark-mode .ai-result h4 {
+            color: #68d391;
+        }
+
+        .dark-mode .ai-result p {
+            color: #9ae6b4;
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-muted {
+            color: #718096;
+        }
+
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1rem; }
+
+        .mt-1 { margin-top: 0.25rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-3 { margin-top: 0.75rem; }
+        .mt-4 { margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <button class="hamburger-menu" id="hamburger-btn" onclick="framework.toggleMenu()">☰</button>
+            <div class="logo">
+                <div class="logo-icon">🧘</div>
+                <span id="app-name">Generic Wellness Framework</span>
+            </div>
+            <div class="header-controls">
+                <button class="home-btn" id="home-btn" onclick="framework.goHome()" title="Home">🏠</button>
+                <button class="theme-toggle" id="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hamburger Menu -->
+    <nav id="hamburger-menu" class="hamburger-menu-panel" style="display: none;">
+        <div class="menu-header">
+            <h3 style="color: #1a202c; margin: 0;">Menu</h3>
+            <button class="close-btn" onclick="framework.closeMenu()" style="color: #1a202c;">&times;</button>
+        </div>
+        <ul class="menu-items">
+            <li><a href="#" onclick="framework.goHome(); return false;">🏠 Home</a></li>
+            <li><a href="#" onclick="framework.showHelp(); return false;">❓ Help & Guide</a></li>
+            <li><a href="#" onclick="framework.showProgress(); return false;">📊 My Progress</a></li>
+            <li><a href="#" onclick="framework.showHistory(); return false;">📜 Session History</a></li>
+            <li><a href="#" onclick="framework.openSettings(); return false;">⚙️ Settings</a></li>
+            <li class="menu-divider"></li>
+            <li class="menu-section-title">AI Tools</li>
+            <li><a href="#" onclick="framework.openAIProgramGenerator(); return false;">🤖 AI Program Generator</a></li>
+            <li><a href="#" onclick="framework.openAIRecommendations(); return false;">💡 AI Recommendations</a></li>
+            <li class="menu-divider"></li>
+            <li class="menu-section-title">Admin Tools</li>
+            <li><a href="#" onclick="framework.openProgramManager(); return false;">📋 Program Manager</a></li>
+            <li><a href="#" onclick="framework.openExerciseManager(); return false;">🏋️ Exercise Manager</a></li>
+            <li><a href="#" onclick="framework.openProgramBuilder(); return false;">🔧 Program Builder</a></li>
+            <li><a href="#" onclick="framework.openExerciseEditor(); return false;">✏️ Exercise Editor</a></li>
+            <li class="menu-divider"></li>
+            <li><a href="#" onclick="framework.showAbout(); return false;">ℹ️ About</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-container">
+        <section class="programs-section">
+            <div class="section-header">
+                <h2 id="programs-title">Your Programs</h2>
+            </div>
+            <div class="programs-list" id="programs-list">
+                <!-- Programs loaded dynamically -->
+            </div>
+        </section>
+
+        <aside class="controls-section">
+            <div class="section-header">
+                <h2 id="controls-title">Controls</h2>
+            </div>
+            
+            <div class="control-group">
+                <label for="program-duration" id="duration-label">Desired Program Duration (minutes)</label>
+                <input type="number" id="program-duration" min="1" max="120" value="12">
+                <div id="duration-help">Scale all exercises proportionally to fit this duration</div>
+            </div>
+            
+            <div class="control-buttons">
+                <button class="btn btn-primary" id="start-program-btn">Start Selected Program</button>
+                <button class="btn btn-danger" id="clear-cache-btn">Clear Cache</button>
+                <button class="btn btn-secondary" id="settings-btn">Settings</button>
+            </div>
+            
+            <div class="control-group">
+                <h3 style="margin-bottom: 1rem; color: #1a202c; font-size: 1rem;">Admin Tools</h3>
+                <div class="control-buttons">
+                    <button class="btn btn-secondary" id="program-manager-btn">📋 Program Manager</button>
+                    <button class="btn btn-secondary" id="exercise-manager-btn">🏋️ Exercise Manager</button>
+                    <button class="btn btn-secondary" id="program-builder-btn">🔧 Program Builder</button>
+                    <button class="btn btn-secondary" id="exercise-editor-btn">✏️ Exercise Editor</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button class="close-btn" onclick="framework.closeSettings()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Voice Settings -->
+                <div class="settings-section">
+                    <h3>Voice Narration</h3>
+                    <div class="setting-item">
+                        <label for="voice-enabled">Enable Voice</label>
+                        <input type="checkbox" id="voice-enabled" checked>
+                    </div>
+                    <div class="setting-item">
+                        <label for="voice-volume">Voice Volume</label>
+                        <input type="range" id="voice-volume" min="0" max="100" value="80">
+                        <span id="voice-volume-display">80%</span>
+                    </div>
+                    <div class="setting-item">
+                        <label for="voice-speed">Voice Speed</label>
+                        <input type="range" id="voice-speed" min="50" max="150" value="100">
+                        <span id="voice-speed-display">1.0x</span>
+                    </div>
+                </div>
+                
+                <!-- Music Settings -->
+                <div class="settings-section">
+                    <h3>Background Music</h3>
+                    <div class="setting-item">
+                        <label for="music-enabled">Enable Background Music</label>
+                        <input type="checkbox" id="music-enabled">
+                    </div>
+                    <div class="setting-item">
+                        <label for="music-volume">Music Volume</label>
+                        <input type="range" id="music-volume" min="0" max="100" value="30">
+                        <span id="music-volume-display">30%</span>
+                    </div>
+                </div>
+                
+                <!-- User Profile -->
+                <div class="settings-section">
+                    <h3>User Profile</h3>
+                    <div class="setting-item">
+                        <label for="user-name">Your Name</label>
+                        <input type="text" id="user-name" placeholder="Enter your name">
+                    </div>
+                    <div class="setting-item">
+                        <label>Total Sessions Completed</label>
+                        <span id="sessions-completed">0</span>
+                    </div>
+                    <div class="setting-item">
+                        <label>Total Time Practiced</label>
+                        <span id="total-time-practiced">0 minutes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="framework.saveSettings()">Save Settings</button>
+                <button class="btn btn-secondary" onclick="framework.closeSettings()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Program Manager Modal -->
+    <div id="program-manager-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 900px;">
+            <div class="modal-header">
+                <h2>Program Manager</h2>
+                <button class="close-btn" onclick="framework.closeProgramManager()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="program-manager-content"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="framework.exportPrograms()">💾 Export Programs</button>
+                <button class="btn btn-secondary" onclick="framework.closeProgramManager()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exercise Manager Modal -->
+    <div id="exercise-manager-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 900px;">
+            <div class="modal-header">
+                <h2>Exercise Manager</h2>
+                <button class="close-btn" onclick="framework.closeExerciseManager()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="exercise-manager-content"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="framework.exportExercises()">💾 Export Exercises</button>
+                <button class="btn btn-secondary" onclick="framework.closeExerciseManager()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Program Builder Modal -->
+    <div id="program-builder-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 800px;">
+            <div class="modal-header">
+                <h2>Program Builder</h2>
+                <button class="close-btn" onclick="framework.closeProgramBuilder()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-item">
+                    <label for="new-program-name">Program Name</label>
+                    <input type="text" id="new-program-name" placeholder="e.g., Morning Energy">
+                </div>
+                <div class="setting-item">
+                    <label for="new-program-desc">Description</label>
+                    <input type="text" id="new-program-desc" placeholder="Brief description">
+                </div>
+                <div class="setting-item">
+                    <label>Select Exercises</label>
+                </div>
+                <div id="exercise-selector" style="max-height: 400px; overflow-y: auto;"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="framework.saveNewProgram()">💾 Save Program</button>
+                <button class="btn btn-secondary" onclick="framework.closeProgramBuilder()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Program Editor Modal -->
+    <div id="program-editor-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 800px;">
+            <div class="modal-header">
+                <h2>Edit Program</h2>
+                <button class="close-btn" onclick="framework.closeProgramEditor()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-item">
+                    <label for="edit-program-name">Program Name</label>
+                    <input type="text" id="edit-program-name">
+                </div>
+                <div class="setting-item">
+                    <label for="edit-program-desc">Description</label>
+                    <input type="text" id="edit-program-desc">
+                </div>
+                <div class="setting-item">
+                    <label>Exercises in this Program</label>
+                </div>
+                <div id="program-exercises-editor" style="max-height: 400px; overflow-y: auto;"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="framework.saveEditedProgram()">💾 Save Changes</button>
+                <button class="btn btn-secondary" onclick="framework.closeProgramEditor()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exercise Editor Modal -->
+    <div id="exercise-editor-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 800px;">
+            <div class="modal-header">
+                <h2>Exercise Editor</h2>
+                <button class="close-btn" onclick="framework.closeExerciseEditor()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: #4a5568; margin-bottom: 1rem;">Create or edit exercises by modifying the JSON directly:</p>
+                <textarea id="exercise-json-editor" style="width: 100%; height: 400px; font-family: 'Courier New', monospace; padding: 1rem; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 0.875rem;"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" onclick="framework.validateExerciseJSON()">✅ Validate JSON</button>
+                <button class="btn btn-primary" onclick="framework.saveExerciseJSON()">💾 Save</button>
+                <button class="btn btn-secondary" onclick="framework.closeExerciseEditor()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 800px;">
+            <div class="modal-header">
+                <h2>Help & Guide</h2>
+                <button class="close-btn" onclick="framework.closeHelp()">&times;</button>
+            </div>
+            <div class="modal-body" id="help-content"></div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="framework.closeHelp()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Report Modal -->
+    <div id="progress-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 700px;">
+            <div class="modal-header">
+                <h2>My Progress Report</h2>
+                <button class="close-btn" onclick="framework.closeProgress()">&times;</button>
+            </div>
+            <div class="modal-body" id="progress-content"></div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="framework.exportProgress()">📥 Export Report</button>
+                <button class="btn btn-secondary" onclick="framework.closeProgress()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Session History Modal -->
+    <div id="history-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 800px;">
+            <div class="modal-header">
+                <h2>Session History</h2>
+                <button class="close-btn" onclick="framework.closeHistory()">&times;</button>
+            </div>
+            <div class="modal-body" id="history-content"></div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" onclick="framework.clearHistory()">🗑️ Clear History</button>
+                <button class="btn btn-secondary" onclick="framework.closeHistory()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 600px;">
+            <div class="modal-header">
+                <h2>About</h2>
+                <button class="close-btn" onclick="framework.closeAbout()">&times;</button>
+            </div>
+            <div class="modal-body" id="about-content"></div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="framework.closeAbout()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Program Generator Modal -->
+    <div id="ai-program-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 700px;">
+            <div class="modal-header">
+                <h2>🤖 AI Program Generator</h2>
+                <button class="close-btn" onclick="framework.closeAIProgramGenerator()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: #4a5568; margin-bottom: 1.5rem;">Describe what you want to achieve, and AI will create a personalized program for you!</p>
+                
+                <div class="setting-item" style="display: block; margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem;">What is your goal?</label>
+                    <select id="ai-goal" style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;">
+                        <option value="stress">Reduce Stress & Anxiety</option>
+                        <option value="energy">Increase Energy & Focus</option>
+                        <option value="sleep">Better Sleep Quality</option>
+                        <option value="healing">Physical Healing</option>
+                        <option value="spiritual">Spiritual Growth</option>
+                        <option value="custom">Custom Goal...</option>
+                    </select>
+                </div>
+                
+                <div class="setting-item" style="display: block; margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem;">How much time do you have?</label>
+                    <input type="number" id="ai-duration" min="5" max="60" value="15" style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;"> 
+                    <span style="color: #718096; font-size: 0.875rem;">minutes</span>
+                </div>
+                
+                <div class="setting-item" style="display: block; margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem;">Experience level</label>
+                    <select id="ai-level" style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                
+                <div class="setting-item" style="display: block; margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem;">Additional preferences (optional)</label>
+                    <textarea id="ai-preferences" placeholder="e.g., Focus on breathing, include meditation, avoid intense exercises..." style="width: 100%; height: 80px; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;"></textarea>
+                </div>
+                
+                <div id="ai-result" style="margin-top: 1.5rem; display: none;"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" onclick="framework.generateAIProgram()">✨ Generate Program</button>
+                <button class="btn btn-secondary" onclick="framework.closeAIProgramGenerator()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Recommendations Modal -->
+    <div id="ai-recommendations-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="max-width: 700px;">
+            <div class="modal-header">
+                <h2>💡 AI Recommendations</h2>
+                <button class="close-btn" onclick="framework.closeAIRecommendations()">&times;</button>
+            </div>
+            <div class="modal-body" id="ai-recommendations-content"></div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="framework.closeAIRecommendations()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="framework.js?v=2.0"></script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+{
+  "schema_version": "1.0",
+  "programs": [
+    {
+      "id": "beginner-quiet-10",
+      "name": "Beginner Quiet (10 min)",
+      "description": "Gentle warmup, side-lying focus, and short aftercare.",
+      "goals": [
+        "beginner",
+        "low-strain",
+        "quiet"
+      ],
+      "duration": 10,
+      "steps": [
+        {
+          "exercise_id": "fore-8e9852cc",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-537a7800",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "pos-a012796c",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "after-hydrate-stretch",
+          "minutes": 2
+        }
+      ],
+      "tags": [
+        "beginner",
+        "quiet",
+        "book2-inspired"
+      ]
+    },
+    {
+      "id": "back-friendly-12",
+      "name": "Back-Friendly (12 min)",
+      "description": "Cushioned side-lying and edge-of-bed angles with minimal arching.",
+      "goals": [
+        "back-friendly",
+        "supportive"
+      ],
+      "duration": 12,
+      "steps": [
+        {
+          "exercise_id": "fore-c4dfa852",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-4c3eb33e",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "pos-620c8992",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "pos-b1e47dc1",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "after-hydrate-stretch",
+          "minutes": 2
+        }
+      ],
+      "tags": [
+        "back-friendly"
+      ]
+    },
+    {
+      "id": "shared-gaze-12",
+      "name": "Shared Gaze (12 min)",
+      "description": "Eye-contact modules and face-to-face positions.",
+      "goals": [
+        "eye-contact",
+        "connection"
+      ],
+      "duration": 12,
+      "steps": [
+        {
+          "exercise_id": "fore-b3035f7a",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-99e54327",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "pos-fd099a0f",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "pos-7b917f34",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "after-hydrate-stretch",
+          "minutes": 2
+        }
+      ],
+      "tags": [
+        "eye-contact"
+      ]
+    },
+    {
+      "id": "breath-led-12",
+      "name": "Breath-Led (12 min)",
+      "description": "Slow nasal breathing paired with gentle rhythm.",
+      "goals": [
+        "breath",
+        "steady-pace"
+      ],
+      "duration": 12,
+      "steps": [
+        {
+          "exercise_id": "fore-43acf727",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-39d46a4f",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "pos-b1e47dc1",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "pos-4c9fe0b3",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "after-hydrate-stretch",
+          "minutes": 2
+        }
+      ],
+      "tags": [
+        "breathwork"
+      ]
+    },
+    {
+      "id": "steady-rhythm-14",
+      "name": "Steady Rhythm (14 min)",
+      "description": "Builds a steady pace with shared control.",
+      "goals": [
+        "rhythm",
+        "shared-control"
+      ],
+      "duration": 14,
+      "steps": [
+        {
+          "exercise_id": "fore-6a242898",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-0c691af7",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-e532d6cb",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "pos-2c3d9b1e",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "pos-5341db1a",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "after-hydrate-stretch",
+          "minutes": 2
+        }
+      ],
+      "tags": [
+        "rhythm"
+      ]
+    },
+    {
+      "id": "soft-strength-14",
+      "name": "Soft Strength (14 min)",
+      "description": "Seated facing with minimal strain and clear support.",
+      "goals": [
+        "support",
+        "seated"
+      ],
+      "duration": 14,
+      "steps": [
+        {
+          "exercise_id": "fore-c4dfa852",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-4c3eb33e",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "pos-4a3455fc",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "pos-da02ffa8",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "after-hydrate-stretch",
+          "minutes": 2
+        }
+      ],
+      "tags": [
+        "seated"
+      ]
+    },
+    {
+      "id": "cuddly-15",
+      "name": "Cuddly Flow (15 min)",
+      "description": "Warm embraces, side-lying, and generous aftercare.",
+      "goals": [
+        "cuddly",
+        "relaxed"
+      ],
+      "duration": 15,
+      "steps": [
+        {
+          "exercise_id": "fore-83fcd7ca",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-0e8de1bd",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-97a34a53",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "pos-620c8992",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "pos-1e7e63c8",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "after-hydrate-stretch",
+          "minutes": 3
+        }
+      ],
+      "tags": [
+        "cuddly",
+        "relaxed"
+      ]
+    },
+    {
+      "id": "angle-explorer-15",
+      "name": "Angle Explorer (15 min)",
+      "description": "Edge-of-bed and pillow angles with constant feedback.",
+      "goals": [
+        "angles",
+        "exploration"
+      ],
+      "duration": 15,
+      "steps": [
+        {
+          "exercise_id": "fore-e842417e",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-c4dfa852",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "pos-4c9fe0b3",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "pos-a012796c",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "pos-1c8bdc28",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "after-hydrate-stretch",
+          "minutes": 3
+        }
+      ],
+      "tags": [
+        "exploration"
+      ]
+    },
+    {
+      "id": "standing-support-16",
+      "name": "Standing with Support (16 min)",
+      "description": "Wall-supported standing positions; prioritize stability.",
+      "goals": [
+        "standing",
+        "stability"
+      ],
+      "duration": 16,
+      "steps": [
+        {
+          "exercise_id": "fore-537a7800",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-83fcd7ca",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "pos-5341db1a",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "pos-e7888beb",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "pos-a012796c",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "after-hydrate-stretch",
+          "minutes": 2
+        }
+      ],
+      "tags": [
+        "standing"
+      ]
+    },
+    {
+      "id": "rear-entry-gentle-16",
+      "name": "Rear-Entry Gentle (16 min)",
+      "description": "Cushioned kneeling with depth control and slow pacing.",
+      "goals": [
+        "rear-entry",
+        "depth-control"
+      ],
+      "duration": 16,
+      "steps": [
+        {
+          "exercise_id": "fore-b3035f7a",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-e532d6cb",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "pos-620c8992",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "pos-7b917f34",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "pos-4c9fe0b3",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "after-hydrate-stretch",
+          "minutes": 2
+        }
+      ],
+      "tags": [
+        "rear-entry"
+      ]
+    },
+    {
+      "id": "seated-intimacy-18",
+      "name": "Seated Intimacy (18 min)",
+      "description": "Lotus variations and breath focus; deep connection.",
+      "goals": [
+        "seated",
+        "eye-contact",
+        "breath"
+      ],
+      "duration": 18,
+      "steps": [
+        {
+          "exercise_id": "fore-0c691af7",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-6a242898",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-67742c73",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "pos-7b917f34",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "pos-4c9fe0b3",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "pos-4a3455fc",
+          "minutes": 5
+        },
+        {
+          "exercise_id": "after-hydrate-stretch",
+          "minutes": 3
+        }
+      ],
+      "tags": [
+        "seated",
+        "eye-contact"
+      ]
+    },
+    {
+      "id": "mix-and-match-18",
+      "name": "Mix & Match (18 min)",
+      "description": "A balanced sampler: warmup, 3 positions, full aftercare.",
+      "goals": [
+        "balanced"
+      ],
+      "duration": 18,
+      "steps": [
+        {
+          "exercise_id": "fore-0c691af7",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-0e8de1bd",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "fore-e532d6cb",
+          "minutes": 2
+        },
+        {
+          "exercise_id": "pos-8b84d027",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "pos-1e7e63c8",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "pos-b1e47dc1",
+          "minutes": 4
+        },
+        {
+          "exercise_id": "after-hydrate-stretch",
+          "minutes": 4
+        }
+      ],
+      "tags": [
+        "balanced"
+      ]
+    }
+  ]
+}

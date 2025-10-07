@@ -1,0 +1,440 @@
+{
+  "exercises": {
+    "sama_sparsha": {
+      "id": "sama_sparsha",
+      "name": "Sama–Sparsha (Simple Embrace)",
+      "description": "Gentle body-to-body contact with matched breathing - the foundation of intimate connection",
+      "type": "foreplay",
+      "duration": 2,
+      "instructions": "Stand or sit facing each other. Gently embrace with your bodies touching. Focus on synchronized breathing and the warmth of connection.",
+      "cues": [
+        "Stand facing each other, about 6 inches apart",
+        "Gently wrap your arms around each other",
+        "Feel the warmth and connection",
+        "Breathe together slowly and deeply",
+        "Focus on the present moment"
+      ],
+      "goals": ["arousal", "connection", "relaxation"],
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [6, 10]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": ["Avoid sensitive or injured areas; reduce pressure if any discomfort."],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [1, 2, 3],
+          "mods": "Use extra cushions for support"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": ["pain", "numbness", "dizziness"]
+      },
+      "intimacy_parameters": {
+        "intimacy_contact": "maximum",
+        "eye_contact": "high",
+        "skin_contact": "high",
+        "emotional_connection": "high"
+      },
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 25,
+          "duration": 2,
+          "loop": true
+        }
+      ]
+    },
+    "vina_bandha": {
+      "id": "vina_bandha", 
+      "name": "Vina–Bandha (Warm Wrap)",
+      "description": "Close wrap with gentle swaying for deep relaxation and connection",
+      "type": "foreplay",
+      "duration": 2,
+      "instructions": "Stand close together and wrap your arms around each other. Sway gently from side to side, feeling the rhythm of your connection.",
+      "cues": [
+        "Stand close together, chest to chest",
+        "Wrap your arms around each other's waist",
+        "Begin gentle swaying motion",
+        "Feel the rhythm of your connection",
+        "Breathe together in harmony"
+      ],
+      "goals": ["arousal", "connection", "relaxation"],
+      "breath": {
+        "pattern": "slow-nasal", 
+        "rate_range_bpm": [6, 10]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": ["Avoid sensitive or injured areas; reduce pressure if any discomfort."],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [1, 2, 3],
+          "mods": "Use extra cushions for support"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": ["pain", "numbness", "dizziness"]
+      },
+      "intimacy_parameters": {
+        "intimacy_contact": "maximum",
+        "eye_contact": "medium",
+        "skin_contact": "high",
+        "emotional_connection": "high"
+      },
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 30,
+          "duration": 2,
+          "loop": true
+        }
+      ]
+    },
+    "corner_kiss": {
+      "id": "corner_kiss",
+      "name": "Corner Kiss",
+      "description": "Light, gentle kiss at the corner of the lips - a tender beginning to intimate connection",
+      "type": "foreplay",
+      "duration": 2,
+      "instructions": "Gently kiss the corner of your partner's lips. Keep it light and tender, focusing on the softness and connection.",
+      "cues": [
+        "Look into each other's eyes",
+        "Move slowly toward your partner's lips",
+        "Gently kiss the corner of their mouth",
+        "Feel the softness and warmth",
+        "Pull back slowly and smile"
+      ],
+      "goals": ["arousal", "connection", "relaxation"],
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [6, 10]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": ["Avoid sensitive or injured areas; reduce pressure if any discomfort."],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [1, 2, 3],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": ["pain", "numbness", "dizziness"]
+      },
+      "intimacy_parameters": {
+        "intimacy_contact": "high",
+        "eye_contact": "high",
+        "skin_contact": "medium",
+        "emotional_connection": "high"
+      },
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 20,
+          "duration": 2,
+          "loop": true
+        }
+      ]
+    },
+    "sensate_focus": {
+      "id": "sensate_focus",
+      "name": "Sensate Focus I",
+      "description": "Broad palm contact over back and arms - building trust and connection through touch",
+      "type": "foreplay",
+      "duration": 2,
+      "instructions": "Use broad palms to gently touch your partner's back and arms. Focus on the sensation of touch and connection.",
+      "cues": [
+        "Sit or stand behind your partner",
+        "Place your palms gently on their back",
+        "Move in slow, broad strokes",
+        "Focus on the sensation of touch",
+        "Listen to your partner's breathing"
+      ],
+      "goals": ["arousal", "connection", "relaxation"],
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [6, 10]
+      },
+      "communication_prompts": [
+        "Is this pressure/speed okay?",
+        "Continue or switch?"
+      ],
+      "safety": {
+        "notes": ["Avoid sensitive or injured areas; reduce pressure if any discomfort."],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [1, 2, 3],
+          "mods": "Use extra cushions for support"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": ["pain", "numbness", "dizziness"]
+      },
+      "intimacy_parameters": {
+        "intimacy_contact": "medium",
+        "eye_contact": "low",
+        "skin_contact": "high",
+        "emotional_connection": "high"
+      },
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 25,
+          "duration": 2,
+          "loop": true
+        }
+      ]
+    },
+    "front_embrace_position": {
+      "id": "front_embrace_position",
+      "name": "Front Embrace (Pillow Support)",
+      "description": "Face-to-face position with partner A on top, offering maximum intimacy and connection",
+      "type": "position",
+      "duration": 4,
+      "instructions": "Lie down with your partner on top, using pillows for support. Focus on gentle movement and deep connection.",
+      "cues": [
+        "Lie on your back with pillow under hips",
+        "Partner lies on top, supporting with forearms",
+        "Begin with gentle rocking motion",
+        "Focus on the connection and rhythm",
+        "Communicate about comfort and pace"
+      ],
+      "goals": ["arousal", "connection", "intimacy"],
+      "intimacy_contact": "maximum",
+      "penetration_depth": "moderate-to-deep",
+      "movement_range": "limited",
+      "stimulation_focus": {
+        "clitoral": "high",
+        "g_spot": "often",
+        "prostate": "n/a",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 2,
+      "requirements": {
+        "flexibility": {
+          "hips": 2,
+          "knees": 1,
+          "back": 2,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 2,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": ["bed", "pillow"]
+      },
+      "motion_patterns": ["gentle rocking", "short pulses", "small circles"],
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [1, 2],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": ["pain", "numbness", "dizziness"]
+      },
+      "props": ["pillow under hips", "knee cushions"],
+      "intimacy_parameters": {
+        "intimacy_contact": "maximum",
+        "eye_contact": "high",
+        "skin_contact": "maximum",
+        "emotional_connection": "maximum"
+      },
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 35,
+          "duration": 4,
+          "loop": true
+        }
+      ]
+    },
+    "side_lying_spooning": {
+      "id": "side_lying_spooning",
+      "name": "Side-Lying Spooning",
+      "description": "Gentle side-by-side position offering comfort and intimacy with moderate movement",
+      "type": "position",
+      "duration": 4,
+      "instructions": "Lie on your sides facing the same direction. Use gentle rocking motions and focus on the connection.",
+      "cues": [
+        "Lie on your sides facing the same direction",
+        "Align your hips comfortably",
+        "Add pillow between knees if desired",
+        "Begin with gentle rocking motion",
+        "Focus on the rhythm and connection"
+      ],
+      "goals": ["arousal", "connection", "comfort"],
+      "intimacy_contact": "high",
+      "penetration_depth": "shallow-to-moderate",
+      "movement_range": "moderate",
+      "stimulation_focus": {
+        "clitoral": "medium",
+        "g_spot": "variable",
+        "prostate": "possible",
+        "perineal": "possible"
+      },
+      "control": "shared",
+      "difficulty": 1,
+      "requirements": {
+        "flexibility": {
+          "hips": 1,
+          "knees": 1,
+          "back": 1,
+          "shoulders": 1
+        },
+        "strength": {
+          "core": 1,
+          "legs": 1,
+          "arms": 1
+        },
+        "supports": ["bed", "pillow"]
+      },
+      "motion_patterns": ["gentle rocking", "short pulses", "small circles"],
+      "communication_prompts": [
+        "Angle okay?",
+        "More/less depth or pace?"
+      ],
+      "safety": {
+        "notes": [
+          "Use lubrication to reduce friction.",
+          "Adjust angle and pace to comfort.",
+          "Place pillow between knees for hip/low-back comfort."
+        ],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [1, 2],
+          "mods": "extra cushions as needed"
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": ["pain", "numbness", "dizziness"]
+      },
+      "props": ["pillow under hips", "knee cushions"],
+      "intimacy_parameters": {
+        "intimacy_contact": "high",
+        "eye_contact": "low",
+        "skin_contact": "high",
+        "emotional_connection": "high"
+      },
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 30,
+          "duration": 4,
+          "loop": true
+        }
+      ]
+    },
+    "aftercare_hydrate": {
+      "id": "aftercare_hydrate",
+      "name": "Aftercare: Hydrate & Stretch",
+      "description": "Essential aftercare including hydration, gentle stretching, and positive reflection",
+      "type": "aftercare",
+      "duration": 4,
+      "instructions": "Take time for proper aftercare including hydration, gentle stretching, and sharing positive moments.",
+      "cues": [
+        "Drink water together",
+        "Gentle hip and low-back stretch",
+        "Share one positive moment from your time together",
+        "Express gratitude for your partner",
+        "Rest and connect"
+      ],
+      "goals": ["recovery", "connection", "wellness"],
+      "breath": {
+        "pattern": "slow-nasal",
+        "rate_range_bpm": [6, 10]
+      },
+      "communication_prompts": [
+        "How are you feeling?",
+        "What did you enjoy most?"
+      ],
+      "safety": {
+        "notes": ["Listen to your body and rest as needed."],
+        "contraindications": [],
+        "pregnancy": {
+          "trimester_safe": [1, 2, 3],
+          "mods": ""
+        },
+        "sti_barriers": {
+          "condom_feasible": true,
+          "dental_dam_feasible": false
+        },
+        "stop_rules": []
+      },
+      "intimacy_parameters": {
+        "intimacy_contact": "medium",
+        "eye_contact": "high",
+        "skin_contact": "medium",
+        "emotional_connection": "high"
+      },
+      "audioFiles": [
+        {
+          "mediaId": "romantic_music",
+          "volume": 20,
+          "duration": 4,
+          "loop": true
+        }
+      ]
+    }
+  },
+  "mediaRegistry": {
+    "romantic_music": {
+      "file": "./audio/intimacy/romantic-music.mp3",
+      "name": "Romantic Music",
+      "duration": 8,
+      "loopable": true,
+      "category": "music",
+      "defaultVolume": 25
+    },
+    "intimacy_guidance": {
+      "file": "./audio/intimacy/intimacy-guidance.mp3",
+      "name": "Intimacy Guidance",
+      "duration": 15,
+      "loopable": false,
+      "category": "guidance",
+      "defaultVolume": 60
+    },
+    "calm_breathing": {
+      "file": "./audio/intimacy/calm-breathing.mp3",
+      "name": "Calm Breathing",
+      "duration": 10,
+      "loopable": true,
+      "category": "ambient",
+      "defaultVolume": 30
+    }
+  }
+}

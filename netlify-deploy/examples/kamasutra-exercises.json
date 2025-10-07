@@ -1,0 +1,777 @@
+{
+  "exercises": {
+    "kama_sutra_introduction": {
+    "id": "kama_sutra_introduction",
+    "name": "Kama Sutra Introduction",
+    "description": "Introduction to the ancient wisdom of Vatsyayana's Kama Sutra - the science of love and pleasure",
+    "type": "education",
+    "duration": 20,
+    "instructions": "Learn about the ancient principles of love, the four goals of life (Dharma, Artha, Kama, Moksha), and the spiritual aspects of intimacy.",
+    "cues": [
+      "Sit comfortably together in a sacred space",
+      "Listen to the ancient wisdom of love",
+      "Understand the spiritual nature of intimacy",
+      "Learn about the four goals of life",
+      "Connect with the deeper meaning of love"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "low",
+    "difficulty": "beginner",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "intimacy_guidance",
+        "volume": 60,
+        "duration": 20,
+        "loop": false
+      }
+    ],
+    "mediaRegistry": {
+      "communication_coaching": {
+        "file": "./audio/intimacy/communication-coaching.mp3",
+        "name": "Communication Coaching",
+        "duration": 15,
+        "loopable": false,
+        "category": "guidance",
+        "defaultVolume": 60
+      }
+    }
+  },
+  "gentle_touch_exploration": {
+    "id": "gentle_touch_exploration", 
+    "name": "Gentle Touch Exploration",
+    "description": "Learn to give and receive touch with intention and care",
+    "type": "touch",
+    "duration": 20,
+    "instructions": "Take turns giving gentle, caring touch. Focus on presence, intention, and receiving feedback.",
+    "cues": [
+      "Choose who will give touch first",
+      "Start with gentle, slow movements",
+      "Focus on presence and intention",
+      "Give feedback about what feels good",
+      "Switch roles after 10 minutes"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "medium",
+    "difficulty": "beginner",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "touch_guidance",
+        "volume": 50,
+        "duration": 20,
+        "loop": false
+      }
+    ],
+    "mediaRegistry": {
+      "touch_guidance": {
+        "file": "./audio/intimacy/touch-guidance.mp3",
+        "name": "Touch Guidance",
+        "duration": 20,
+        "loopable": false,
+        "category": "guidance",
+        "defaultVolume": 50
+      }
+    }
+  },
+  "eye_contact_connection": {
+    "id": "eye_contact_connection",
+    "name": "Eye Contact Connection",
+    "description": "Build intimacy through sustained, loving eye contact",
+    "type": "connection",
+    "duration": 10,
+    "instructions": "Sit comfortably and maintain gentle eye contact. Allow yourself to be seen and to see your partner deeply.",
+    "cues": [
+      "Sit comfortably facing each other",
+      "Begin with soft, gentle eye contact",
+      "Breathe together slowly",
+      "Allow yourself to be seen",
+      "Notice what you feel in your heart"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "high",
+    "difficulty": "beginner",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "calm_breathing",
+        "volume": 30,
+        "duration": 10,
+        "loop": true
+      }
+    ],
+    "mediaRegistry": {
+      "calm_breathing": {
+        "file": "./audio/intimacy/calm-breathing.mp3",
+        "name": "Calm Breathing",
+        "duration": 10,
+        "loopable": true,
+        "category": "ambient",
+        "defaultVolume": 30
+      }
+    }
+  },
+  "breathing_together": {
+    "id": "breathing_together",
+    "name": "Synchronized Breathing",
+    "description": "Connect through shared breath and rhythm",
+    "type": "breathing",
+    "duration": 12,
+    "instructions": "Sit close together and synchronize your breathing. Feel the connection through shared rhythm.",
+    "cues": [
+      "Sit close together, backs touching or facing each other",
+      "Begin to notice your natural breath",
+      "Gradually synchronize your breathing",
+      "Feel the connection through shared rhythm",
+      "Continue for the full duration"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "medium",
+    "difficulty": "beginner",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "calm_breathing",
+        "volume": 40,
+        "duration": 12,
+        "loop": true
+      }
+    ]
+  },
+  "gratitude_sharing": {
+    "id": "gratitude_sharing",
+    "name": "Gratitude Sharing",
+    "description": "Express appreciation and gratitude for your partner",
+    "type": "communication",
+    "duration": 8,
+    "instructions": "Take turns sharing what you appreciate about each other. Be specific and heartfelt.",
+    "cues": [
+      "Sit comfortably facing each other",
+      "Take turns sharing appreciation",
+      "Be specific about what you value",
+      "Speak from the heart",
+      "Listen with full attention"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "high",
+    "difficulty": "beginner",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "romantic_music",
+        "volume": 25,
+        "duration": 8,
+        "loop": true
+      }
+    ]
+  },
+  "dharma_artha_kama_moksha": {
+    "id": "dharma_artha_kama_moksha",
+    "name": "The Four Goals of Life",
+    "description": "Understanding Dharma (duty), Artha (prosperity), Kama (pleasure), and Moksha (liberation) in the context of love",
+    "type": "education",
+    "duration": 15,
+    "instructions": "Learn about the four goals of life according to ancient Indian philosophy and how they relate to intimate relationships.",
+    "cues": [
+      "Sit together in a quiet space",
+      "Listen to the explanation of the four goals",
+      "Understand how each goal relates to love",
+      "Reflect on your own relationship goals",
+      "Connect with the spiritual aspect of intimacy"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "low",
+    "difficulty": "beginner",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "intimacy_guidance",
+        "volume": 60,
+        "duration": 15,
+        "loop": false
+      }
+    ]
+  },
+  "khajuraho_introduction": {
+    "id": "khajuraho_introduction",
+    "name": "Khajuraho Temple Introduction",
+    "description": "Introduction to the sacred sculptures of Khajuraho and their spiritual significance",
+    "type": "education",
+    "duration": 20,
+    "instructions": "Learn about the ancient Khajuraho temples and their beautiful sculptures that depict the divine union of masculine and feminine energies.",
+    "cues": [
+      "Sit comfortably together",
+      "Listen to the history of Khajuraho",
+      "Understand the spiritual meaning of the sculptures",
+      "Connect with the divine aspect of love",
+      "Feel the sacred energy of union"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "low",
+    "difficulty": "beginner",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "intimacy_guidance",
+        "volume": 60,
+        "duration": 20,
+        "loop": false
+      }
+    ]
+  },
+  "sacred_embrace_positions": {
+    "id": "sacred_embrace_positions",
+    "name": "Sacred Embrace Positions",
+    "description": "Ancient positions inspired by Khajuraho sculptures for spiritual and physical union",
+    "type": "position",
+    "duration": 30,
+    "instructions": "Practice sacred embrace positions that honor the divine feminine and masculine energies within each partner.",
+    "cues": [
+      "Start with gentle eye contact",
+      "Move into the sacred embrace",
+      "Feel the divine energy flowing",
+      "Breathe together in harmony",
+      "Honor the sacredness of the moment"
+    ],
+    "safety": "medium_risk",
+    "intimacyLevel": "high",
+    "difficulty": "intermediate",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "romantic_music",
+        "volume": 30,
+        "duration": 30,
+        "loop": true
+      }
+    ]
+  },
+  "vatsyayana_introduction": {
+    "id": "vatsyayana_introduction",
+    "name": "Vatsyayana's Wisdom",
+    "description": "Introduction to the classical positions and techniques from the original Kama Sutra text",
+    "type": "education",
+    "duration": 25,
+    "instructions": "Learn about the classical positions and techniques described by Vatsyayana in the original Kama Sutra text.",
+    "cues": [
+      "Sit together in a comfortable position",
+      "Listen to Vatsyayana's ancient wisdom",
+      "Understand the classical techniques",
+      "Learn about the spiritual aspects",
+      "Connect with the timeless wisdom"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "low",
+    "difficulty": "beginner",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "intimacy_guidance",
+        "volume": 60,
+        "duration": 25,
+        "loop": false
+      }
+    ]
+  },
+  "classical_embrace_positions": {
+    "id": "classical_embrace_positions",
+    "name": "Classical Embrace Positions",
+    "description": "Traditional positions from the Kama Sutra for pleasure and spiritual connection",
+    "type": "position",
+    "duration": 35,
+    "instructions": "Practice the classical embrace positions as described in the original Kama Sutra text.",
+    "cues": [
+      "Begin with gentle preparation",
+      "Move into the classical embrace",
+      "Focus on the spiritual connection",
+      "Breathe together in harmony",
+      "Feel the ancient wisdom flowing"
+    ],
+    "safety": "medium_risk",
+    "intimacyLevel": "high",
+    "difficulty": "intermediate",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "romantic_music",
+        "volume": 35,
+        "duration": 35,
+        "loop": true
+      }
+    ]
+  },
+  "tantric_breathing_techniques": {
+    "id": "tantric_breathing_techniques",
+    "name": "Tantric Breathing Techniques",
+    "description": "Advanced breathing techniques for spiritual and physical union",
+    "type": "breathing",
+    "duration": 40,
+    "instructions": "Practice advanced tantric breathing techniques to enhance spiritual and physical connection.",
+    "cues": [
+      "Sit facing each other",
+      "Begin with synchronized breathing",
+      "Focus on the energy flow",
+      "Connect with your partner's breath",
+      "Feel the divine energy rising"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "high",
+    "difficulty": "advanced",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "calm_breathing",
+        "volume": 40,
+        "duration": 40,
+        "loop": true
+      }
+    ]
+  },
+  "energy_channeling": {
+    "id": "energy_channeling",
+    "name": "Energy Channeling",
+    "description": "Advanced energy work for spiritual and physical union",
+    "type": "energy",
+    "duration": 45,
+    "instructions": "Practice advanced energy channeling techniques to enhance spiritual and physical connection.",
+    "cues": [
+      "Sit in a comfortable position",
+      "Focus on your energy centers",
+      "Channel energy through your body",
+      "Connect with your partner's energy",
+      "Feel the divine energy flowing"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "high",
+    "difficulty": "advanced",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "romantic_music",
+        "volume": 25,
+        "duration": 45,
+        "loop": true
+      }
+    ]
+  },
+  "dosha_assessment": {
+    "id": "dosha_assessment",
+    "name": "Dosha Assessment",
+    "description": "Understanding your Ayurvedic constitution for optimal intimacy",
+    "type": "assessment",
+    "duration": 20,
+    "instructions": "Learn about your Ayurvedic constitution (Vata, Pitta, Kapha) and how it affects your intimate relationships.",
+    "cues": [
+      "Sit together comfortably",
+      "Listen to the dosha explanations",
+      "Identify your primary dosha",
+      "Understand your partner's dosha",
+      "Learn how to balance together"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "low",
+    "difficulty": "beginner",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "intimacy_guidance",
+        "volume": 60,
+        "duration": 20,
+        "loop": false
+      }
+    ]
+  },
+  "ayurvedic_breathing": {
+    "id": "ayurvedic_breathing",
+    "name": "Ayurvedic Breathing",
+    "description": "Breathing techniques based on Ayurvedic principles for optimal intimacy",
+    "type": "breathing",
+    "duration": 25,
+    "instructions": "Practice Ayurvedic breathing techniques tailored to your dosha for enhanced intimacy.",
+    "cues": [
+      "Sit in a comfortable position",
+      "Begin with natural breathing",
+      "Focus on your dosha-specific technique",
+      "Breathe together in harmony",
+      "Feel the energy balancing"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "medium",
+    "difficulty": "intermediate",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "calm_breathing",
+        "volume": 50,
+        "duration": 25,
+        "loop": true
+      }
+    ]
+  },
+  "ancient_breathing_techniques": {
+    "id": "ancient_breathing_techniques",
+    "name": "Ancient Breathing Techniques",
+    "description": "Traditional breathing techniques from ancient texts for spiritual and physical connection",
+    "type": "breathing",
+    "duration": 20,
+    "instructions": "Practice ancient breathing techniques that enhance spiritual and physical connection.",
+    "cues": [
+      "Sit in a comfortable position",
+      "Begin with natural breathing",
+      "Focus on the ancient technique",
+      "Breathe together in harmony",
+      "Feel the spiritual energy flowing"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "medium",
+    "difficulty": "beginner",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "calm_breathing",
+        "volume": 50,
+        "duration": 20,
+        "loop": true
+      }
+    ]
+  },
+  "spiritual_connection": {
+    "id": "spiritual_connection",
+    "name": "Spiritual Connection",
+    "description": "Deep spiritual connection practices for couples",
+    "type": "spiritual",
+    "duration": 25,
+    "instructions": "Practice deep spiritual connection techniques to enhance your relationship.",
+    "cues": [
+      "Sit facing each other",
+      "Begin with eye contact",
+      "Focus on spiritual connection",
+      "Feel the divine energy",
+      "Connect with your partner's soul"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "high",
+    "difficulty": "intermediate",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "romantic_music",
+        "volume": 30,
+        "duration": 25,
+        "loop": true
+      }
+    ]
+  },
+  "temple_dance_movements": {
+    "id": "temple_dance_movements",
+    "name": "Temple Dance Movements",
+    "description": "Sacred dance movements inspired by temple traditions",
+    "type": "movement",
+    "duration": 30,
+    "instructions": "Practice sacred dance movements that honor the divine feminine and masculine energies.",
+    "cues": [
+      "Stand facing each other",
+      "Begin with gentle movements",
+      "Focus on the sacred energy",
+      "Move together in harmony",
+      "Feel the divine connection"
+    ],
+    "safety": "medium_risk",
+    "intimacyLevel": "high",
+    "difficulty": "intermediate",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "romantic_music",
+        "volume": 40,
+        "duration": 30,
+        "loop": true
+      }
+    ]
+  },
+  "spiritual_union_breathing": {
+    "id": "spiritual_union_breathing",
+    "name": "Spiritual Union Breathing",
+    "description": "Advanced breathing techniques for spiritual union",
+    "type": "breathing",
+    "duration": 35,
+    "instructions": "Practice advanced breathing techniques for deep spiritual union.",
+    "cues": [
+      "Sit in a comfortable position",
+      "Begin with synchronized breathing",
+      "Focus on the spiritual energy",
+      "Breathe together in harmony",
+      "Feel the divine union"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "high",
+    "difficulty": "advanced",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "calm_breathing",
+        "volume": 45,
+        "duration": 35,
+        "loop": true
+      }
+    ]
+  },
+  "ancient_wisdom_reflection": {
+    "id": "ancient_wisdom_reflection",
+    "name": "Ancient Wisdom Reflection",
+    "description": "Reflection on ancient wisdom and its application to modern relationships",
+    "type": "reflection",
+    "duration": 20,
+    "instructions": "Reflect on ancient wisdom and how it applies to your modern relationship.",
+    "cues": [
+      "Sit together comfortably",
+      "Listen to the ancient wisdom",
+      "Reflect on your relationship",
+      "Apply the wisdom to your life",
+      "Feel the timeless connection"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "medium",
+    "difficulty": "beginner",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "intimacy_guidance",
+        "volume": 60,
+        "duration": 20,
+        "loop": false
+      }
+    ]
+  },
+  "spiritual_union_meditation": {
+    "id": "spiritual_union_meditation",
+    "name": "Spiritual Union Meditation",
+    "description": "Deep meditation for spiritual union between partners",
+    "type": "meditation",
+    "duration": 40,
+    "instructions": "Practice deep meditation for spiritual union with your partner.",
+    "cues": [
+      "Sit in a comfortable position",
+      "Begin with deep breathing",
+      "Focus on spiritual union",
+      "Meditate together in harmony",
+      "Feel the divine connection"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "high",
+    "difficulty": "advanced",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "romantic_music",
+        "volume": 25,
+        "duration": 40,
+        "loop": true
+      }
+    ]
+  },
+  "kama_sutra_wisdom": {
+    "id": "kama_sutra_wisdom",
+    "name": "Kama Sutra Wisdom",
+    "description": "Deep wisdom from the Kama Sutra for modern relationships",
+    "type": "education",
+    "duration": 25,
+    "instructions": "Learn deep wisdom from the Kama Sutra and how it applies to modern relationships.",
+    "cues": [
+      "Sit together comfortably",
+      "Listen to the ancient wisdom",
+      "Understand the timeless principles",
+      "Apply the wisdom to your relationship",
+      "Feel the eternal connection"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "medium",
+    "difficulty": "intermediate",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "intimacy_guidance",
+        "volume": 60,
+        "duration": 25,
+        "loop": false
+      }
+    ]
+  },
+  "sacred_geometry_positions": {
+    "id": "sacred_geometry_positions",
+    "name": "Sacred Geometry Positions",
+    "description": "Advanced positions based on sacred geometry principles",
+    "type": "position",
+    "duration": 50,
+    "instructions": "Practice advanced positions based on sacred geometry principles for spiritual and physical union.",
+    "cues": [
+      "Begin with gentle preparation",
+      "Move into the sacred geometry position",
+      "Focus on the spiritual energy",
+      "Feel the divine connection",
+      "Honor the sacred geometry"
+    ],
+    "safety": "high_risk",
+    "intimacyLevel": "high",
+    "difficulty": "advanced",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "romantic_music",
+        "volume": 30,
+        "duration": 50,
+        "loop": true
+      }
+    ]
+  },
+  "divine_connection": {
+    "id": "divine_connection",
+    "name": "Divine Connection",
+    "description": "Ultimate spiritual connection practice for couples",
+    "type": "spiritual",
+    "duration": 60,
+    "instructions": "Practice the ultimate spiritual connection with your partner.",
+    "cues": [
+      "Sit in a comfortable position",
+      "Begin with deep breathing",
+      "Focus on divine connection",
+      "Feel the spiritual energy",
+      "Connect with the divine"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "high",
+    "difficulty": "advanced",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "romantic_music",
+        "volume": 20,
+        "duration": 60,
+        "loop": true
+      }
+    ]
+  },
+  "herbal_intimacy_guidance": {
+    "id": "herbal_intimacy_guidance",
+    "name": "Herbal Intimacy Guidance",
+    "description": "Ayurvedic herbal guidance for enhanced intimacy",
+    "type": "education",
+    "duration": 20,
+    "instructions": "Learn about Ayurvedic herbs and their benefits for intimacy and health.",
+    "cues": [
+      "Sit together comfortably",
+      "Listen to the herbal guidance",
+      "Understand the benefits",
+      "Learn about safe usage",
+      "Connect with nature's wisdom"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "low",
+    "difficulty": "beginner",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "intimacy_guidance",
+        "volume": 60,
+        "duration": 20,
+        "loop": false
+      }
+    ]
+  },
+  "seasonal_intimacy_practices": {
+    "id": "seasonal_intimacy_practices",
+    "name": "Seasonal Intimacy Practices",
+    "description": "Ayurvedic seasonal practices for optimal intimacy",
+    "type": "education",
+    "duration": 25,
+    "instructions": "Learn about seasonal practices that enhance intimacy according to Ayurvedic principles.",
+    "cues": [
+      "Sit together comfortably",
+      "Listen to the seasonal guidance",
+      "Understand the seasonal cycles",
+      "Learn about seasonal practices",
+      "Connect with nature's rhythms"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "medium",
+    "difficulty": "intermediate",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "intimacy_guidance",
+        "volume": 60,
+        "duration": 25,
+        "loop": false
+      }
+    ]
+  },
+  "holistic_wellness_connection": {
+    "id": "holistic_wellness_connection",
+    "name": "Holistic Wellness Connection",
+    "description": "Holistic approach to intimacy and wellness",
+    "type": "wellness",
+    "duration": 30,
+    "instructions": "Practice holistic wellness techniques that enhance intimacy and overall health.",
+    "cues": [
+      "Sit together comfortably",
+      "Begin with wellness check-in",
+      "Focus on holistic health",
+      "Practice wellness together",
+      "Feel the wellness connection"
+    ],
+    "safety": "low_risk",
+    "intimacyLevel": "medium",
+    "difficulty": "intermediate",
+    "requiresPrivacy": true,
+    "audioFiles": [
+      {
+        "mediaId": "wellness_tips",
+        "volume": 50,
+        "duration": 30,
+        "loop": true
+      }
+    ]
+  },
+  "mediaRegistry": {
+    "communication_coaching": {
+      "file": "./audio/intimacy/communication-coaching.mp3",
+      "name": "Communication Coaching",
+      "duration": 15,
+      "loopable": false,
+      "category": "guidance",
+      "defaultVolume": 60
+    },
+    "touch_guidance": {
+      "file": "./audio/intimacy/touch-guidance.mp3",
+      "name": "Touch Guidance",
+      "duration": 20,
+      "loopable": false,
+      "category": "guidance",
+      "defaultVolume": 50
+    },
+    "calm_breathing": {
+      "file": "./audio/intimacy/calm-breathing.mp3",
+      "name": "Calm Breathing",
+      "duration": 10,
+      "loopable": true,
+      "category": "ambient",
+      "defaultVolume": 30
+    },
+    "romantic_music": {
+      "file": "./audio/intimacy/romantic-music.mp3",
+      "name": "Romantic Music",
+      "duration": 8,
+      "loopable": true,
+      "category": "music",
+      "defaultVolume": 25
+    },
+    "wellness_tips": {
+      "file": "./audio/intimacy/wellness-tips.mp3",
+      "name": "Wellness Tips",
+      "duration": 30,
+      "loopable": true,
+      "category": "guidance",
+      "defaultVolume": 50
+    }
+  }
+}

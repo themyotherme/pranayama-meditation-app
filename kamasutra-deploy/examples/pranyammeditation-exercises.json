@@ -1,0 +1,2054 @@
+{
+  "mediaRegistry": {
+    "ocean_waves": {
+      "id": "ocean_waves",
+      "name": "Ocean Waves",
+      "type": "audio",
+      "file": "audio/nature/ocean-waves.mp3",
+      "duration": 300,
+      "loopable": true,
+      "category": "nature"
+    },
+    "soft_drone": {
+      "id": "soft_drone",
+      "name": "Soft Drone",
+      "type": "audio",
+      "file": "audio/ambient/soft-drone.mp3",
+      "duration": 600,
+      "loopable": true,
+      "category": "ambient"
+    },
+    "forest_night": {
+      "id": "forest_night",
+      "name": "Forest Night",
+      "type": "audio",
+      "file": "audio/nature/forest-night.mp3",
+      "duration": 480,
+      "loopable": true,
+      "category": "nature"
+    },
+    "meditation_music": {
+      "id": "meditation_music",
+      "name": "Meditation Music",
+      "type": "audio",
+      "file": "audio/meditation-music.mp3",
+      "duration": 600,
+      "loopable": true,
+      "category": "music"
+    },
+    "ravi_shankar_sitar": {
+      "id": "ravi_shankar_sitar",
+      "name": "Ravi Shankar Sitar Violin Duet",
+      "type": "audio",
+      "file": "audio/Ravi_Shankar_-_Sitar_Violin_Duet.mp3",
+      "duration": 1800,
+      "loopable": true,
+      "category": "spiritual",
+      "isBackgroundMusic": true,
+      "defaultVolume": 0.15
+    },
+    "om_chanting": {
+      "id": "om_chanting",
+      "name": "OM Chanting",
+      "type": "audio",
+      "file": "audio/om-chanting.mp3",
+      "duration": 300,
+      "loopable": true,
+      "category": "spiritual",
+      "defaultVolume": 0.7
+    },
+    "breathing_guidance": {
+      "id": "breathing_guidance",
+      "name": "Breathing Guidance",
+      "type": "audio",
+      "file": "audio/breathing-guidance.mp3",
+      "duration": 300,
+      "loopable": false,
+      "category": "guidance"
+    },
+    "rain_sounds": {
+      "id": "rain_sounds",
+      "name": "Gentle Rain",
+      "type": "audio",
+      "file": "audio/nature/gentle-rain.mp3",
+      "duration": 600,
+      "loopable": true,
+      "category": "nature"
+    },
+    "singing_bowls": {
+      "id": "singing_bowls",
+      "name": "Singing Bowls",
+      "type": "audio",
+      "file": "audio/meditation/singing-bowls.mp3",
+      "duration": 480,
+      "loopable": true,
+      "category": "meditation"
+    },
+    "flute_music": {
+      "id": "flute_music",
+      "name": "Flute Meditation",
+      "type": "audio",
+      "file": "audio/music/flute-meditation.mp3",
+      "duration": 600,
+      "loopable": true,
+      "category": "music"
+    },
+    "mindfulness_invocation": {
+      "id": "mindfulness_invocation",
+      "name": "Mindfulness Invocation",
+      "type": "audio",
+      "file": "audio/mindfulness-invocation.mp3",
+      "duration": 180,
+      "loopable": true,
+      "category": "music"
+    },
+    "lag_ja_gale": {
+      "id": "lag_ja_gale",
+      "name": "Lag Ja Gale",
+      "type": "audio",
+      "file": "audio/Lag Ja Gale.mp3",
+      "duration": 240,
+      "loopable": true,
+      "category": "music"
+    },
+    "our_father_english": {
+      "id": "our_father_english",
+      "name": "Our Father (English)",
+      "type": "audio",
+      "file": "audio/sa-ch-ourfather-english.mp3",
+      "duration": 120,
+      "loopable": true,
+      "category": "music"
+    }
+  },
+  "exercises": {
+    "anulom_vilom": {
+      "id": "anulom_vilom",
+      "name": "Anulom Vilom",
+      "description": "Prāṇāyāma: Alternate nostril breathing for balance and purification",
+      "type": "breathing",
+      "duration": 5,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 4,
+        "hold": 0,
+        "exhale": 4,
+        "bpm": 60,
+        "metronome": true
+      },
+      "instructions": "Close right nostril with thumb, inhale (pūraka) through left nostril for 4 counts. Close left nostril with ring finger, exhale (recaka) through right nostril for 4 counts. Repeat alternating.",
+      "benefits": "Balances nervous system, purifies energy channels, reduces stress",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 300,
+          "volume": 70
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 10,
+          "fileStart": 0,
+          "playDuration": 300,
+          "volume": 40
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 20,
+          "fileStart": 0,
+          "playDuration": 240,
+          "volume": 50
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 30,
+          "fileStart": 0,
+          "playDuration": 120,
+          "volume": 60
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 40,
+          "fileStart": 0,
+          "playDuration": 300,
+          "volume": 45
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 50,
+          "fileStart": 0,
+          "playDuration": 180,
+          "volume": 55
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 57,
+          "playDuration": 300,
+          "volume": 70
+        },
+        {
+          "file": null,
+          "exerciseStart": 30,
+          "fileStart": 2890,
+          "playDuration": 180,
+          "volume": 60
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 1.0,
+      "captions": false,
+      "tags": [
+        "balance",
+        "purification",
+        "calming"
+      ],
+      "contraindications": [
+        "nasal congestion",
+        "recent nose surgery"
+      ],
+      "cues": [
+        "Keep spine straight",
+        "Breathe naturally",
+        "Don't force the breath"
+      ],
+      "notes": "Start with shorter durations and gradually increase"
+    },
+    "bhastrika": {
+      "id": "bhastrika",
+      "name": "Bhastrika",
+      "description": "Bellows breath for energy and warmth",
+      "type": "breathing",
+      "duration": 4,
+      "isDefault": true,
+      "safetyLevel": "intermediate",
+      "pattern": {
+        "inhale": 2,
+        "hold": 0,
+        "exhale": 2,
+        "bpm": 60,
+        "metronome": true
+      },
+      "instructions": "Rapid, forceful breathing through both nostrils. Inhale and exhale with equal force and duration, like a bellows.",
+      "benefits": "Increases energy, warms the body, clears respiratory passages",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": "flute_music",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 240,
+          "volume": 30
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 1.0,
+      "captions": false,
+      "tags": [
+        "energy",
+        "warming",
+        "cleansing"
+      ],
+      "contraindications": [
+        "high blood pressure",
+        "heart conditions",
+        "pregnancy"
+      ],
+      "cues": [
+        "Keep shoulders relaxed",
+        "Breathe from diaphragm",
+        "Stop if dizzy"
+      ],
+      "notes": "Practice on empty stomach, avoid if feeling unwell"
+    },
+    "bhramari": {
+      "id": "bhramari",
+      "name": "Bhramari",
+      "description": "Prāṇāyāma: Bee breathing (Bhramari) for calming the mind",
+      "type": "breathing",
+      "duration": 6,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 5,
+        "hold": 0,
+        "exhale": 10,
+        "bpm": 60,
+        "metronome": true
+      },
+      "instructions": "Inhale (pūraka) deeply for 4-5 counts, close ears with fingers, exhale (recaka) slowly making a humming sound like a bee for 8-10 counts.",
+      "benefits": "Reduces anxiety, calms mind, improves concentration",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 240,
+          "volume": 65
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 360,
+          "volume": 35
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 1.0,
+      "captions": false,
+      "tags": [
+        "calming",
+        "anxiety relief",
+        "concentration"
+      ],
+      "contraindications": [
+        "ear infections",
+        "severe tinnitus"
+      ],
+      "cues": [
+        "Hum like a bee",
+        "Feel the vibration",
+        "Keep mouth closed"
+      ],
+      "notes": "Very effective for anxiety and stress relief"
+    },
+    "body_scan": {
+      "id": "body_scan",
+      "name": "Body Scan",
+      "description": "Mindful body awareness meditation",
+      "type": "meditation",
+      "duration": 11,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 0,
+        "hold": 0,
+        "exhale": 0
+      },
+      "instructions": "Lie down comfortably and slowly scan your body from head to toe, noticing sensations without judgment.",
+      "benefits": "Reduces stress, improves body awareness, promotes relaxation",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": "soft_drone",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 660,
+          "volume": 25
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 0.8,
+      "captions": false,
+      "tags": [
+        "relaxation",
+        "mindfulness",
+        "body awareness"
+      ],
+      "contraindications": [],
+      "cues": [
+        "Move slowly through each body part",
+        "Notice without judgment",
+        "Stay present"
+      ],
+      "notes": "Excellent for sleep preparation and stress relief"
+    },
+    "city_walking_meditation": {
+      "id": "city_walking_meditation",
+      "name": "City Walking Meditation",
+      "description": "GPS-tracked walking meditation adapted for urban environments",
+      "type": "urban",
+      "duration": 10,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Practice walking meditation in urban settings, using GPS to navigate safely while maintaining mindfulness.",
+      "benefits": "Urban mindfulness, safe navigation, GPS-guided meditation",
+      "tags": [
+        "walking",
+        "urban",
+        "meditation",
+        "GPS"
+      ],
+      "cues": [
+        "Walk mindfully through the city",
+        "Stay aware of your surroundings",
+        "Maintain inner peace in urban chaos"
+      ]
+    },
+    "cooling_meditation": {
+      "id": "cooling_meditation",
+      "name": "Cooling Meditation",
+      "description": "Cooling breath and visualization meditation",
+      "type": "meditation",
+      "duration": 6,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 0,
+        "hold": 0,
+        "exhale": 0
+      },
+      "instructions": "Visualize cool, refreshing energy flowing through your body, bringing calm and peace to every cell.",
+      "benefits": "Reduces body heat, calms the mind, promotes inner peace",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": "rain_sounds",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 360,
+          "volume": 30
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 0.8,
+      "captions": false,
+      "tags": [
+        "cooling",
+        "visualization",
+        "peace"
+      ],
+      "contraindications": [],
+      "cues": [
+        "Imagine cool blue light",
+        "Feel the cooling sensation",
+        "Stay relaxed"
+      ],
+      "notes": "Perfect for hot weather or when feeling overheated"
+    },
+    "environmental_breathing": {
+      "id": "environmental_breathing",
+      "name": "Environmental Breathing",
+      "description": "Location-based breathing exercises synchronized with natural environment",
+      "type": "nature",
+      "duration": 10,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Practice breathing exercises that synchronize with your natural environment, using GPS to adapt to your location.",
+      "benefits": "Synchronizes breathing with nature, adapts to environment",
+      "tags": [
+        "breathing",
+        "nature",
+        "environment",
+        "GPS"
+      ],
+      "cues": [
+        "Breathe with the rhythm of nature",
+        "Feel the air quality around you",
+        "Synchronize with natural cycles"
+      ]
+    },
+    "kapalabhati": {
+      "id": "kapalabhati",
+      "name": "Kapalabhati",
+      "description": "Skull shining breath for energy and purification",
+      "type": "breathing",
+      "duration": 3,
+      "isDefault": true,
+      "safetyLevel": "intermediate",
+      "pattern": {
+        "inhale": 1,
+        "hold": 0,
+        "exhale": 0.5,
+        "rapid": true,
+        "bpm": 60,
+        "metronome": true
+      },
+      "instructions": "Passive inhalation, active forceful exhalation in rapid cycles. Focus on the exhale, let inhale happen naturally.",
+      "benefits": "Energizes body, clears sinuses, improves lung capacity",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": "flute_music",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 180,
+          "volume": 25
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 1.0,
+      "captions": false,
+      "tags": [
+        "energy",
+        "purification",
+        "cleansing"
+      ],
+      "contraindications": [
+        "high blood pressure",
+        "heart conditions",
+        "pregnancy",
+        "hernia"
+      ],
+      "cues": [
+        "Focus on exhalation",
+        "Keep abdomen active",
+        "Stop if dizzy"
+      ],
+      "notes": "Practice on empty stomach, avoid if feeling unwell"
+    },
+    "laughter_therapy": {
+      "id": "laughter_therapy",
+      "name": "Laughter Therapy",
+      "description": "Joyful laughter exercise for stress relief and happiness",
+      "type": "therapy",
+      "duration": 5,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 0,
+        "hold": 0,
+        "exhale": 0
+      },
+      "instructions": "Laugh freely and joyfully. Let the laughter come naturally from your belly. Feel the joy and happiness fill your being.",
+      "benefits": "Reduces stress, boosts mood, strengthens immune system, releases endorphins",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": "https://www.youtube.com/watch?v=Fq4kTZuLops&t=115s",
+          "exerciseStart": 0,
+          "fileStart": 57,
+          "playDuration": 300,
+          "volume": 80
+        },
+        {
+          "file": "https://www.youtube.com/watch?v=lIQrUZLyATo",
+          "exerciseStart": 0,
+          "fileStart": 2890,
+          "playDuration": 300,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 1.2,
+      "captions": false,
+      "tags": [
+        "laughter",
+        "joy",
+        "stress relief",
+        "happiness"
+      ],
+      "contraindications": [
+        "recent abdominal surgery",
+        "severe respiratory issues"
+      ],
+      "cues": [
+        "Laugh from your belly",
+        "Let joy flow naturally",
+        "Don't force the laughter"
+      ],
+      "notes": "Even fake laughter can trigger real benefits. Start with 'ha-ha-ha' and let it become natural"
+    },
+    "mindful_walking": {
+      "id": "mindful_walking",
+      "name": "Mindful Walking",
+      "description": "GPS-tracked mindful walking meditation with distance and pace awareness",
+      "type": "walking",
+      "duration": 15,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Walk mindfully, paying attention to each step. Let GPS track your movement while maintaining awareness of your body and surroundings.",
+      "benefits": "Combines meditation with movement, tracks progress, enhances mindfulness",
+      "tags": [
+        "walking",
+        "meditation",
+        "GPS",
+        "movement"
+      ],
+      "cues": [
+        "Walk slowly and deliberately",
+        "Feel each step connecting to earth",
+        "Maintain awareness of your surroundings"
+      ]
+    },
+    "mindfulness_meditation": {
+      "id": "mindfulness_meditation",
+      "name": "Mindfulness Meditation",
+      "description": "Present moment awareness meditation",
+      "type": "meditation",
+      "duration": 10,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 0,
+        "hold": 0,
+        "exhale": 0
+      },
+      "instructions": "Sit comfortably and focus on your breath, gently returning attention to the present moment whenever your mind wanders.",
+      "benefits": "Reduces stress, improves focus, enhances emotional regulation",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": "meditation_music",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 600,
+          "volume": 20
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 0.8,
+      "captions": false,
+      "tags": [
+        "mindfulness",
+        "present moment",
+        "awareness"
+      ],
+      "contraindications": [],
+      "cues": [
+        "Notice your breath",
+        "Return to present",
+        "Be kind to yourself"
+      ],
+      "notes": "Foundation practice for all meditation techniques"
+    },
+    "nadi_shodhana": {
+      "id": "nadi_shodhana",
+      "name": "Nadi Shodhana",
+      "description": "Channel purification breathing for energy balance",
+      "type": "breathing",
+      "duration": 8,
+      "isDefault": true,
+      "safetyLevel": "advanced",
+      "pattern": {
+        "inhale": 4,
+        "hold": 16,
+        "exhale": 8,
+        "bpm": 60,
+        "metronome": true
+      },
+      "instructions": "Inhale through left nostril for 4 counts, hold breath for 16 counts, exhale through right nostril for 8 counts. Repeat with opposite nostril.",
+      "benefits": "Purifies energy channels, enhances focus, balances left and right brain",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": "singing_bowls",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 480,
+          "volume": 30
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 1.0,
+      "captions": false,
+      "tags": [
+        "purification",
+        "balance",
+        "focus"
+      ],
+      "contraindications": [
+        "nasal congestion",
+        "recent nose surgery",
+        "high blood pressure"
+      ],
+      "cues": [
+        "Inhale 4, hold 16, exhale 8; keep face soft",
+        "Reduce counts if any discomfort"
+      ],
+      "notes": "Build toward 1:4:2 very gradually"
+    },
+    "nature_awareness": {
+      "id": "nature_awareness",
+      "name": "Nature Awareness",
+      "description": "GPS-enhanced nature awareness meditation with environment detection",
+      "type": "nature",
+      "duration": 3,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Use GPS to identify your natural environment and practice nature awareness meditation.",
+      "benefits": "Connects with nature, uses location for environmental awareness",
+      "tags": [
+        "nature",
+        "awareness",
+        "GPS",
+        "environment"
+      ],
+      "cues": [
+        "Notice the natural sounds around you",
+        "Feel the air and temperature",
+        "Connect with your natural environment"
+      ]
+    },
+    "nature_meditation": {
+      "id": "nature_meditation",
+      "name": "Nature Meditation",
+      "description": "Deep nature meditation with GPS-enhanced environmental awareness",
+      "type": "nature",
+      "duration": 12,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Practice deep meditation while being aware of your natural surroundings, using GPS to enhance environmental connection.",
+      "benefits": "Deep nature connection, environmental mindfulness, GPS-enhanced awareness",
+      "tags": [
+        "meditation",
+        "nature",
+        "environment",
+        "GPS"
+      ],
+      "cues": [
+        "Sit comfortably in nature",
+        "Feel connected to the earth",
+        "Meditate with environmental awareness"
+      ]
+    },
+    "ocean_awareness": {
+      "id": "ocean_awareness",
+      "name": "Ocean Awareness",
+      "description": "GPS-enhanced ocean awareness meditation for beach environments",
+      "type": "beach",
+      "duration": 3,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Use GPS to confirm your beach location and practice ocean awareness meditation.",
+      "benefits": "Connects with ocean energy, beach environment awareness",
+      "tags": [
+        "ocean",
+        "beach",
+        "awareness",
+        "GPS"
+      ],
+      "cues": [
+        "Listen to the ocean waves",
+        "Feel the ocean breeze",
+        "Connect with the vast ocean energy"
+      ]
+    },
+    "ocean_meditation": {
+      "id": "ocean_meditation",
+      "name": "Ocean Meditation",
+      "description": "Deep meditation practice enhanced by ocean environment and GPS awareness",
+      "type": "beach",
+      "duration": 9,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Practice deep meditation by the ocean, using GPS to enhance awareness of your beach environment.",
+      "benefits": "Deep ocean meditation, beach environment awareness, GPS-enhanced experience",
+      "tags": [
+        "meditation",
+        "ocean",
+        "beach",
+        "GPS"
+      ],
+      "cues": [
+        "Sit comfortably by the ocean",
+        "Feel the vast ocean energy",
+        "Meditate with ocean awareness"
+      ]
+    },
+    "chanting": {
+      "id": "chanting",
+      "name": "OM Chanting",
+      "description": "Beautiful OM chanting with music - just listen and feel the peaceful vibrations",
+      "type": "chanting",
+      "duration": 3,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 0,
+        "hold": 0,
+        "exhale": 0
+      },
+      "instructions": "Welcome to the sacred practice of OM chanting. As the beautiful sitar plays in the background, let the powerful OM chanting wash over you like a divine wave. You can join in softly if you feel comfortable, chanting 'AUM' with devotion, or simply listen and feel the peaceful vibrations. The OM sound represents the entire universe - the past, present, and future. Feel how it connects you to the divine source of all creation. Let this sacred sound purify your mind, open your heart, and bring you into perfect harmony with the cosmos. Chant with love, chant with gratitude, and feel the infinite peace that flows through you.",
+      "benefits": "Creates spiritual connection, calms the mind, brings inner peace, connects to divine source, purifies consciousness",
+      "audioFiles": [
+        {
+          "mediaId": "ravi_shankar_sitar",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 120,
+          "volume": 15,
+          "isBackgroundMusic": true
+        },
+        {
+          "mediaId": "om_chanting",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 120,
+          "volume": 70
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 57,
+          "playDuration": 180,
+          "volume": 70
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 2890,
+          "playDuration": 180,
+          "volume": 60
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 0.8,
+      "captions": false,
+      "tags": [
+        "chanting",
+        "sacred",
+        "spiritual",
+        "OM"
+      ],
+      "contraindications": [],
+      "cues": [
+        "Sit comfortably and close your eyes gently",
+        "Listen to the sacred OM chanting",
+        "Feel the divine vibrations flowing through you",
+        "Chant 'AUM' softly if you feel called",
+        "Let the OM sound purify your consciousness",
+        "Connect to the infinite source of all creation",
+        "Feel the peace and love flowing through your being"
+      ],
+      "notes": "Sacred practice for spiritual connection and purification"
+    },
+    "park_grounding": {
+      "id": "park_grounding",
+      "name": "Park Grounding",
+      "description": "GPS-enhanced grounding practice in park environments",
+      "type": "park",
+      "duration": 3,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Use GPS to identify park features and practice grounding techniques specific to park environments.",
+      "benefits": "Grounds in park environment, connects with nature",
+      "tags": [
+        "park",
+        "grounding",
+        "nature",
+        "GPS"
+      ],
+      "cues": [
+        "Feel your feet on the park ground",
+        "Connect with the park's natural energy",
+        "Ground yourself in this green space"
+      ]
+    },
+    "park_meditation": {
+      "id": "park_meditation",
+      "name": "Park Meditation",
+      "description": "Deep meditation practice enhanced by park environment and GPS awareness",
+      "type": "park",
+      "duration": 7,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Practice deep meditation in the park environment, using GPS to enhance awareness of your natural surroundings.",
+      "benefits": "Deep park meditation, environmental awareness, GPS-enhanced experience",
+      "tags": [
+        "meditation",
+        "park",
+        "nature",
+        "GPS"
+      ],
+      "cues": [
+        "Sit comfortably in the park",
+        "Feel the natural energy around you",
+        "Meditate with park awareness"
+      ]
+    },
+    "progressive_relaxation": {
+      "id": "progressive_relaxation",
+      "name": "Progressive Relaxation",
+      "description": "Systematic muscle relaxation technique",
+      "type": "meditation",
+      "duration": 8,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 0,
+        "hold": 0,
+        "exhale": 0
+      },
+      "instructions": "Tense and release each muscle group systematically, starting from your toes and working up to your head.",
+      "benefits": "Reduces muscle tension, promotes deep relaxation, improves sleep",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": "soft_drone",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 480,
+          "volume": 25
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 0.8,
+      "captions": false,
+      "tags": [
+        "relaxation",
+        "muscle tension",
+        "sleep"
+      ],
+      "contraindications": [
+        "severe muscle injuries"
+      ],
+      "cues": [
+        "Tense gently",
+        "Hold for 5 seconds",
+        "Release slowly"
+      ],
+      "notes": "Excellent for stress relief and sleep preparation"
+    },
+    "silence": {
+      "id": "silence",
+      "name": "Sacred Invocation",
+      "description": "Begin your meditation journey with peaceful silence and beautiful music",
+      "type": "silence",
+      "duration": 2,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 0,
+        "hold": 0,
+        "exhale": 0
+      },
+      "instructions": "Sit comfortably, close your eyes gently, and let the beautiful music guide you into a peaceful state. No need to do anything - just listen and relax. Feel the sacred energy flowing through you as you continue this beautiful practice.",
+      "benefits": "Creates sacred space, calms the mind, prepares for meditation",
+      "audioFiles": [
+        {
+          "mediaId": "ravi_shankar_sitar",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 60,
+          "volume": 15,
+          "isBackgroundMusic": true
+        },
+        {
+          "mediaId": "India_Master_-_Zen_Music_Namast",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 60,
+          "volume": 80
+        },
+        {
+          "mediaId": "mindfulness_invocation",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 60,
+          "volume": 70
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": false,
+      "voiceLanguage": "en-US",
+      "voiceRate": 0.8,
+      "captions": false,
+      "tags": [
+        "silence",
+        "reflection",
+        "preparation",
+        "sacred"
+      ],
+      "contraindications": [],
+      "cues": [
+        "Sit comfortably",
+        "Allow mind to settle",
+        "Be present in the moment"
+      ],
+      "notes": "Essential preparation time before any practice"
+    },
+    "sanskrit_closing": {
+      "id": "sanskrit_closing",
+      "name": "Sacred Sanskrit Closing",
+      "description": "Beautiful closing with divine blessings and sacred Sanskrit mantras",
+      "type": "closing",
+      "duration": 0.5,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "instructions": "Join your hands in prayer position (Anjali Mudra) and recite these sacred mantras with gratitude and devotion. Feel the divine blessings flowing through you. This is your moment of gratitude and spiritual completion.",
+      "benefits": "Divine blessings, spiritual completion, gratitude, peace, and sacred closure",
+      "tags": [
+        "closing",
+        "sanskrit",
+        "mantras",
+        "blessings",
+        "gratitude"
+      ],
+      "cues": [
+        "Bring your hands together in prayer position",
+        "Take a deep breath and feel gratitude",
+        "Recite: 'Shāntiḥ, Shāntiḥ, Shāntiḥ' (Peace, Peace, Peace)",
+        "Recite: 'Sarve Bhavantu Sukhinam' (May all beings be happy)",
+        "Recite: 'Sarve Santu Niraamaya' (May all be free from disease)",
+        "Recite: 'Sarve Bhadraani Pashyantu' (May all see auspiciousness)",
+        "Recite: 'Maa Kashchit Duhkha Bhaag Bhavet' (May none suffer sorrow)",
+        "Bow your head in gratitude and say 'Namaste'"
+      ],
+      "audioFiles": [
+        {
+          "mediaId": "ravi_shankar_sitar",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 30,
+          "volume": 15,
+          "isBackgroundMusic": true
+        },
+        {
+          "mediaId": "India_Master_-_Zen_Music_Namast",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 30,
+          "volume": 60
+        },
+        {
+          "mediaId": "om_chanting",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 30,
+          "volume": 80
+        }
+      ],
+      "mantras": [
+        {
+          "sanskrit": "शान्तिः शान्तिः शान्तिः",
+          "transliteration": "Shāntiḥ, Shāntiḥ, Shāntiḥ",
+          "meaning": "Peace, Peace, Peace",
+          "repetitions": 3
+        },
+        {
+          "sanskrit": "सर्वे भवन्तु सुखिनः",
+          "transliteration": "Sarve Bhavantu Sukhinam",
+          "meaning": "May all beings be happy",
+          "repetitions": 1
+        },
+        {
+          "sanskrit": "सर्वे सन्तु निरामयाः",
+          "transliteration": "Sarve Santu Niraamaya",
+          "meaning": "May all be free from disease",
+          "repetitions": 1
+        },
+        {
+          "sanskrit": "सर्वे भद्राणि पश्यन्तु",
+          "transliteration": "Sarve Bhadraani Pashyantu",
+          "meaning": "May all see auspiciousness",
+          "repetitions": 1
+        },
+        {
+          "sanskrit": "मा कश्चित् दुःख भाग्भवेत्",
+          "transliteration": "Maa Kashchit Duhkha Bhaag Bhavet",
+          "meaning": "May none suffer sorrow",
+          "repetitions": 1
+        }
+      ],
+      "closingMessage": "Thank you for your practice. May divine blessings be with you. Namaste 🙏"
+    },
+    "sheetali": {
+      "id": "sheetali",
+      "name": "Sheetali",
+      "description": "Cooling breath for relaxation and cooling",
+      "type": "breathing",
+      "duration": 6,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 4,
+        "hold": 0,
+        "exhale": 6,
+        "bpm": 60,
+        "metronome": true
+      },
+      "instructions": "Roll tongue into a tube, inhale through the tongue, close mouth, exhale through nose. If you can't roll tongue, purse lips and inhale through mouth.",
+      "benefits": "Cools the body, reduces stress, calms the mind",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": "rain_sounds",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 360,
+          "volume": 30
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 1.0,
+      "captions": false,
+      "tags": [
+        "cooling",
+        "stress relief",
+        "calming"
+      ],
+      "contraindications": [
+        "low blood pressure",
+        "respiratory issues"
+      ],
+      "cues": [
+        "Roll tongue if possible",
+        "Feel the cooling sensation",
+        "Breathe slowly"
+      ],
+      "notes": "Perfect for hot weather or when feeling overheated"
+    },
+    "sheetkari": {
+      "id": "sheetkari",
+      "name": "Sheetkari",
+      "description": "Hissing breath for cooling and relaxation",
+      "type": "breathing",
+      "duration": 6,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 4,
+        "hold": 0,
+        "exhale": 6,
+        "bpm": 60,
+        "metronome": true
+      },
+      "instructions": "Open mouth slightly, place tongue behind upper teeth, inhale through teeth making a hissing sound, close mouth, exhale through nose.",
+      "benefits": "Cools the body, reduces stress, calms the nervous system",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": "forest_night",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 360,
+          "volume": 30
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 1.0,
+      "captions": false,
+      "tags": [
+        "cooling",
+        "hissing",
+        "relaxation"
+      ],
+      "contraindications": [
+        "low blood pressure",
+        "respiratory issues"
+      ],
+      "cues": [
+        "Make hissing sound",
+        "Feel the cooling effect",
+        "Keep mouth slightly open"
+      ],
+      "notes": "Alternative to Sheetali if you can't roll your tongue"
+    },
+    "tree_breathing": {
+      "id": "tree_breathing",
+      "name": "Tree Breathing",
+      "description": "Breathing exercises synchronized with park trees and natural rhythms",
+      "type": "park",
+      "duration": 8,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Practice breathing exercises that synchronize with the natural rhythms of park trees and environment.",
+      "benefits": "Synchronizes with nature, enhances park experience",
+      "tags": [
+        "breathing",
+        "trees",
+        "park",
+        "nature"
+      ],
+      "cues": [
+        "Breathe with the rhythm of the trees",
+        "Feel the oxygen from the park",
+        "Synchronize with natural cycles"
+      ]
+    },
+    "ujjayi": {
+      "id": "ujjayi",
+      "name": "Ujjayi",
+      "description": "Victorious breath for focus and strength",
+      "type": "breathing",
+      "duration": 7,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 4,
+        "hold": 2,
+        "exhale": 6,
+        "bpm": 60,
+        "metronome": true
+      },
+      "instructions": "Constrict the back of your throat slightly, breathe through nose making a soft ocean-like sound. Focus on the sound and rhythm.",
+      "benefits": "Builds internal heat, improves focus, strengthens respiratory system",
+      "audioFiles": [
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": "ocean_waves",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 420,
+          "volume": 35
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "mediaId": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "videoSources": [
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        },
+        {
+          "file": null,
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 99999,
+          "volume": 80
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 1.0,
+      "captions": false,
+      "tags": [
+        "victorious",
+        "focus",
+        "strength"
+      ],
+      "contraindications": [
+        "throat infections",
+        "severe respiratory issues"
+      ],
+      "cues": [
+        "Create ocean sound",
+        "Feel the throat constriction",
+        "Breathe deeply"
+      ],
+      "notes": "Foundation breath for many yoga practices"
+    },
+    "urban_centering": {
+      "id": "urban_centering",
+      "name": "Urban Centering",
+      "description": "GPS-guided centering practice for urban environments",
+      "type": "urban",
+      "duration": 2,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Use GPS to identify your urban environment and practice centering techniques adapted for city settings.",
+      "benefits": "Centers in urban environment, adapts to city energy",
+      "tags": [
+        "urban",
+        "centering",
+        "GPS",
+        "city"
+      ],
+      "cues": [
+        "Find your center in the urban environment",
+        "Breathe with the city rhythm",
+        "Ground yourself in the urban setting"
+      ]
+    },
+    "urban_integration": {
+      "id": "urban_integration",
+      "name": "Urban Integration",
+      "description": "Integration of urban meditation experience with GPS route reflection",
+      "type": "urban",
+      "duration": 3,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Reflect on your urban meditation experience and integrate the insights gained from your GPS-tracked journey.",
+      "benefits": "Integrates urban meditation, reflects on city journey",
+      "tags": [
+        "urban",
+        "integration",
+        "reflection",
+        "GPS"
+      ],
+      "cues": [
+        "Reflect on your urban meditation",
+        "Notice how you feel in the city",
+        "Integrate the experience"
+      ]
+    },
+    "walking_integration": {
+      "id": "walking_integration",
+      "name": "Walking Integration",
+      "description": "Integration phase for walking meditation with GPS route reflection",
+      "type": "walking",
+      "duration": 3,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Stand still and reflect on your walking meditation. Notice the route you've taken and integrate the experience.",
+      "benefits": "Integrates walking meditation experience, reflects on GPS-tracked journey",
+      "tags": [
+        "walking",
+        "integration",
+        "reflection",
+        "GPS"
+      ],
+      "cues": [
+        "Stand still and breathe",
+        "Reflect on your walking journey",
+        "Feel gratitude for the experience"
+      ]
+    },
+    "walking_preparation": {
+      "id": "walking_preparation",
+      "name": "Walking Preparation",
+      "description": "GPS-enhanced preparation for mindful walking meditation",
+      "type": "walking",
+      "duration": 2,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Stand comfortably and prepare for mindful walking. Check your GPS location and set your intention for the walking meditation.",
+      "benefits": "Prepares body and mind for walking meditation, establishes GPS tracking",
+      "tags": [
+        "walking",
+        "preparation",
+        "GPS",
+        "mindfulness"
+      ],
+      "cues": [
+        "Stand with feet hip-width apart",
+        "Feel your connection to the earth",
+        "Set your walking intention"
+      ]
+    },
+    "wave_breathing": {
+      "id": "wave_breathing",
+      "name": "Wave Breathing",
+      "description": "Breathing exercises synchronized with ocean waves and beach rhythms",
+      "type": "beach",
+      "duration": 10,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "requiresGPS": true,
+      "instructions": "Practice breathing exercises that synchronize with the rhythm of ocean waves and beach environment.",
+      "benefits": "Synchronizes with ocean waves, enhances beach meditation",
+      "tags": [
+        "breathing",
+        "waves",
+        "ocean",
+        "beach"
+      ],
+      "cues": [
+        "Breathe with the rhythm of the waves",
+        "Feel the ocean air in your lungs",
+        "Synchronize with the tide"
+      ]
+    },
+    "welcome_introduction": {
+      "id": "welcome_introduction",
+      "name": "Welcome",
+      "description": "Beautiful welcome and introduction to your meditation journey",
+      "type": "introduction",
+      "duration": 0.5,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 0,
+        "hold": 0,
+        "exhale": 0
+      },
+      "instructions": "Welcome to your journey of self-discovery and inner peace. You've taken the first step toward transformation, and every moment you dedicate to this practice brings you closer to your highest self. For the next few minutes, this beautiful program will guide you gently through exercises designed to calm your mind, energize your body, and awaken your spirit. Trust the process, let go of all worries, and know that this practice will help you tremendously. You are safe, you are guided, and you are loved. Let us begin this sacred journey together.",
+      "benefits": "Creates welcoming atmosphere, sets intention, inspires commitment",
+      "audioFiles": [
+        {
+          "mediaId": "ravi_shankar_sitar",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 30,
+          "volume": 15,
+          "isBackgroundMusic": true
+        },
+        {
+          "mediaId": "India_Master_-_Zen_Music_Namast",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 30,
+          "volume": 60
+        }
+      ],
+      "tags": [
+        "welcome",
+        "introduction",
+        "inspiration",
+        "sacred"
+      ],
+      "contraindications": [],
+      "cues": [
+        "Sit comfortably and take a deep breath",
+        "Open your heart to receive this gift",
+        "Trust in the power of this practice"
+      ],
+      "notes": "Powerful welcome message to inspire and motivate practitioners"
+    }
+  }
+}

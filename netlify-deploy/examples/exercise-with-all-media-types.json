@@ -1,0 +1,242 @@
+{
+  "mediaRegistry": {
+    "ocean_waves": {
+      "id": "ocean_waves",
+      "name": "Ocean Waves",
+      "type": "audio",
+      "file": "audio/nature/ocean-waves.mp3",
+      "duration": 300,
+      "loopable": true,
+      "category": "nature"
+    },
+    "meditation_video": {
+      "id": "meditation_video",
+      "name": "Meditation Visual Guide",
+      "type": "video",
+      "file": "video/meditation-guide.mp4",
+      "duration": 600,
+      "category": "instruction"
+    },
+    "meditation_guide_pdf": {
+      "id": "meditation_guide_pdf",
+      "name": "Meditation Guide",
+      "type": "document",
+      "file": "docs/meditation-guide.pdf",
+      "fileType": "pdf",
+      "category": "reference"
+    },
+    "breathing_chart": {
+      "id": "breathing_chart",
+      "name": "Breathing Patterns Chart",
+      "type": "document",
+      "file": "docs/breathing-patterns.pptx",
+      "fileType": "pptx",
+      "category": "educational"
+    },
+    "progress_tracker": {
+      "id": "progress_tracker",
+      "name": "Progress Tracker",
+      "type": "document",
+      "file": "docs/progress-tracker.xlsx",
+      "fileType": "xlsx",
+      "category": "tracking"
+    },
+    "exercise_notes": {
+      "id": "exercise_notes",
+      "name": "Exercise Notes",
+      "type": "document",
+      "file": "docs/exercise-notes.txt",
+      "fileType": "txt",
+      "category": "notes"
+    },
+    "chakra_diagram": {
+      "id": "chakra_diagram",
+      "name": "Chakra Diagram",
+      "type": "image",
+      "file": "images/chakra-diagram.jpg",
+      "fileType": "jpg",
+      "width": 1920,
+      "height": 1080,
+      "category": "reference"
+    },
+    "posture_guide": {
+      "id": "posture_guide",
+      "name": "Correct Sitting Posture",
+      "type": "image",
+      "file": "images/sitting-posture.png",
+      "fileType": "png",
+      "width": 800,
+      "height": 600,
+      "category": "instruction"
+    },
+    "breathing_diagram": {
+      "id": "breathing_diagram",
+      "name": "Breathing Technique Diagram",
+      "type": "image",
+      "file": "images/breathing-technique.svg",
+      "fileType": "svg",
+      "category": "instruction"
+    },
+    "completion_badge": {
+      "id": "completion_badge",
+      "name": "Completion Certificate",
+      "type": "image",
+      "file": "images/completion-badge.png",
+      "fileType": "png",
+      "width": 600,
+      "height": 400,
+      "category": "achievement"
+    }
+  },
+  "exercises": {
+    "comprehensive_meditation": {
+      "id": "comprehensive_meditation",
+      "name": "Comprehensive Guided Meditation",
+      "description": "Complete meditation session with visual aids, audio guidance, reference materials, and progress tracking",
+      "type": "meditation",
+      "duration": 10,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "instructions": "Sit comfortably, close your eyes, and follow the guided meditation. Reference materials will be provided before and after the session.",
+      "benefits": "Deep relaxation, stress reduction, mental clarity, mindfulness development",
+      
+      "audioFiles": [
+        {
+          "mediaId": "ocean_waves",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 600,
+          "volume": 50
+        }
+      ],
+      
+      "videoSources": [
+        {
+          "mediaId": "meditation_video",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 600,
+          "volume": 60
+        }
+      ],
+      
+      "documentFiles": [
+        {
+          "mediaId": "meditation_guide_pdf",
+          "displayTiming": "before",
+          "openInNewWindow": true,
+          "position": { "x": 100, "y": 100, "width": 800, "height": 600 },
+          "description": "Complete meditation guide - read before starting"
+        },
+        {
+          "mediaId": "breathing_chart",
+          "displayTiming": "before",
+          "openInNewWindow": true,
+          "position": { "x": 920, "y": 100, "width": 600, "height": 800 },
+          "description": "Breathing patterns reference chart"
+        },
+        {
+          "mediaId": "exercise_notes",
+          "displayTiming": "during",
+          "openInNewWindow": true,
+          "position": { "x": 50, "y": 50, "width": 400, "height": 300 },
+          "description": "Quick reference notes (keep open during practice)"
+        },
+        {
+          "mediaId": "progress_tracker",
+          "displayTiming": "after",
+          "openInNewWindow": false,
+          "displayMode": "download",
+          "description": "Download to track your progress"
+        }
+      ],
+      
+      "imageFiles": [
+        {
+          "mediaId": "chakra_diagram",
+          "displayTiming": "before",
+          "displayMode": "overlay",
+          "position": "center",
+          "size": "large",
+          "duration": 10,
+          "description": "Chakra visualization - shown for 10 seconds before exercise"
+        },
+        {
+          "mediaId": "posture_guide",
+          "displayTiming": "during",
+          "displayMode": "sidebar",
+          "position": "right",
+          "size": "medium",
+          "description": "Posture reference - stays visible during exercise"
+        },
+        {
+          "mediaId": "breathing_diagram",
+          "displayTiming": "during",
+          "displayMode": "sidebar",
+          "position": "left",
+          "size": "small",
+          "description": "Breathing technique guide"
+        },
+        {
+          "mediaId": "completion_badge",
+          "displayTiming": "after",
+          "displayMode": "popup",
+          "position": "center",
+          "size": "medium",
+          "duration": 5,
+          "description": "Congratulations! You've completed the session"
+        }
+      ],
+      
+      "voiceEnabled": true,
+      "voiceRate": 0.9,
+      "voiceLanguage": "en-US"
+    },
+    
+    "simple_breathing": {
+      "id": "simple_breathing",
+      "name": "Simple Breathing Exercise",
+      "description": "Basic breathing exercise with minimal media",
+      "type": "breathing",
+      "duration": 5,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 4,
+        "hold": 4,
+        "exhale": 4,
+        "bpm": 60,
+        "metronome": true
+      },
+      "instructions": "Follow the breathing pattern: Inhale for 4, Hold for 4, Exhale for 4",
+      "benefits": "Calming, stress reduction, improved focus",
+      
+      "audioFiles": [
+        {
+          "mediaId": "ocean_waves",
+          "exerciseStart": 0,
+          "playDuration": 300,
+          "volume": 40
+        }
+      ],
+      
+      "documentFiles": [],
+      
+      "imageFiles": [
+        {
+          "mediaId": "breathing_diagram",
+          "displayTiming": "before",
+          "displayMode": "overlay",
+          "position": "center",
+          "size": "large",
+          "duration": 8,
+          "description": "Breathing pattern guide"
+        }
+      ],
+      
+      "voiceEnabled": true,
+      "voiceRate": 1.0,
+      "voiceLanguage": "en-US"
+    }
+  }
+}
