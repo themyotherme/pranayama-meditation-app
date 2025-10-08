@@ -35,7 +35,7 @@ class WellnessFramework {
         this.totalTimePracticed = parseInt(localStorage.getItem('totalTimePracticed') || '0');
         
         // AI Integration
-        this.ai = null;
+        this.ai = new AIIntegration();
         
         // Media system
         this.mediaRegistry = null;
@@ -2865,6 +2865,12 @@ class WellnessFramework {
         document.getElementById('ai-enabled').checked = aiEnabled;
         document.getElementById('ai-model').value = aiModel;
         
+        // Auto-enable AI if API key is present but AI is not enabled
+        if (apiKey && !aiEnabled) {
+            document.getElementById('ai-enabled').checked = true;
+            this.showNotification('🔑 API key detected! AI features have been automatically enabled.', 'info');
+        }
+        
         // Setup real-time slider updates
         document.getElementById('voice-volume').oninput = (e) => {
             document.getElementById('voice-volume-display').textContent = e.target.value + '%';
@@ -2875,6 +2881,14 @@ class WellnessFramework {
         };
         document.getElementById('music-volume').oninput = (e) => {
             document.getElementById('music-volume-display').textContent = e.target.value + '%';
+        };
+        
+        // Auto-enable AI when API key is entered
+        document.getElementById('openai-api-key').oninput = (e) => {
+            if (e.target.value.trim() && !document.getElementById('ai-enabled').checked) {
+                document.getElementById('ai-enabled').checked = true;
+                this.showNotification('🔑 API key entered! AI features have been automatically enabled.', 'info');
+            }
         };
         
         // Show modal
@@ -3849,7 +3863,7 @@ class WellnessFramework {
             statusDiv.style.background = '#fef3c7';
             statusDiv.style.borderColor = '#f59e0b';
             statusDiv.querySelector('p').style.color = '#92400e';
-            statusDiv.querySelector('p').textContent = 'ℹ️ AI not configured. Using smart rule-based selection. Add OpenAI API key in Settings for true AI generation!';
+            statusDiv.querySelector('p').textContent = 'ℹ️ Using Smart Logic (not AI). Go to Settings → AI Integration to add your OpenAI API key and enable AI features for true AI generation!';
             
             selectedExercises = this.selectExercisesForGoal('custom', duration, level, userInput);
         }
