@@ -96,6 +96,9 @@ class WellnessFramework {
             
             this.isInitialized = true;
             console.log('Wellness Framework initialized successfully');
+            
+            // Add iPhone audio unlock button if needed
+            this.addAudioUnlockButton();
         } catch (error) {
             console.error('Framework initialization failed:', error);
         }
@@ -6360,8 +6363,14 @@ class WellnessFramework {
             this.audioUnlocked = true;
             console.log('📱 iPhone audio system manually unlocked');
             
+            // Remove floating button if it exists
+            const floatingBtn = document.getElementById('iphone-audio-unlock-btn');
+            if (floatingBtn) {
+                floatingBtn.remove();
+            }
+            
             // Show success message
-            this.showNotification('🔊 Audio unlocked! You can now start exercises.', 'success');
+            this.showNotification('🔊 Audio unlocked! MP3 files should now play on iPhone.', 'success');
             
             // Refresh the execution view to hide the unlock button
             if (this.isRunning) {
@@ -7565,6 +7574,77 @@ class WellnessFramework {
         setTimeout(() => {
             this.executeExerciseWithMantras(exercises, currentIndex + 1);
         }, exercise.duration * 1000);
+    }
+    
+    // Add floating audio unlock button for iPhone users
+    addAudioUnlockButton() {
+        // Check if we're on iPhone/iOS
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        if (!isIOS) return;
+        
+        // Don't add if already unlocked
+        if (this.audioUnlocked) return;
+        
+        // Create floating button
+        const audioBtn = document.createElement('button');
+        audioBtn.id = 'iphone-audio-unlock-btn';
+        audioBtn.innerHTML = '🔊 Unlock Audio';
+        audioBtn.style.cssText = `
+            position: fixed;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            z-index: 9999;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        `;
+        
+        // Add pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% { transform: translateY(-50%) scale(1); }
+                50% { transform: translateY(-50%) scale(1.05); }
+                100% { transform: translateY(-50%) scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        audioBtn.onclick = () => {
+            this.unlockAudio();
+            audioBtn.remove();
+        };
+        
+        // Add hover effect
+        audioBtn.onmouseover = () => {
+            audioBtn.style.background = 'linear-gradient(135deg, #45a049, #4CAF50)';
+            audioBtn.style.transform = 'translateY(-50%) scale(1.05)';
+        };
+        
+        audioBtn.onmouseout = () => {
+            audioBtn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+            audioBtn.style.transform = 'translateY(-50%) scale(1)';
+        };
+        
+        document.body.appendChild(audioBtn);
+        console.log('📱 iPhone audio unlock button added');
+        
+        // Auto-remove after 10 seconds if not clicked
+        setTimeout(() => {
+            if (audioBtn.parentNode && !this.audioUnlocked) {
+                audioBtn.style.opacity = '0.7';
+                audioBtn.innerHTML = '🔊 Tap to Unlock';
+            }
+        }, 10000);
     }
     
     // Offer to download new AI-generated exercises as JSON
