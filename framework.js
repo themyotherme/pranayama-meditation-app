@@ -3790,8 +3790,15 @@ class WellnessFramework {
         // Check if AI is configured - force refresh from localStorage
         if (this.ai) {
             const apiKey = localStorage.getItem('openaiAPIKey') || '';
-            const aiEnabled = localStorage.getItem('aiEnabled') === 'true';
+            let aiEnabled = localStorage.getItem('aiEnabled') === 'true';
             const aiModel = localStorage.getItem('aiModel') || 'gpt-3.5-turbo';
+            
+            // Auto-enable AI if API key exists but AI is not enabled
+            if (apiKey && !aiEnabled) {
+                aiEnabled = true;
+                localStorage.setItem('aiEnabled', 'true');
+                this.showNotification('🔑 API key detected! AI features have been automatically enabled.', 'success');
+            }
             
             this.ai.setAPIKey(apiKey);
             this.ai.setEnabled(aiEnabled);
