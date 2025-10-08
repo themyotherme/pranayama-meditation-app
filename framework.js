@@ -466,7 +466,8 @@ class WellnessFramework {
         
         // Check if this is an AI-generated program
         const isAIProgram = program.id.includes('ai_program_');
-        const aiBadge = isAIProgram ? '<span style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-left: 0.5rem;">🤖 AI</span>' : '';
+        const isSmartProgram = isAIProgram && program.name && program.name.includes('Smart');
+        const aiBadge = isAIProgram ? (isSmartProgram ? '<span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-left: 0.5rem;">🧠 Smart</span>' : '<span style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-left: 0.5rem;">🤖 AI</span>') : '';
         
         card.innerHTML = `
             <div class="program-header">
@@ -3859,7 +3860,7 @@ class WellnessFramework {
         }
         
         // Create unique program ID based on timestamp
-        const programName = aiProgramName || 'Custom Program - AI Generated';
+        const programName = aiProgramName || (useRealAI ? 'Custom Program - AI Generated' : 'Custom Program - Smart Generated');
         const programId = 'ai_program_' + Date.now();
         
         const aiProgram = {
@@ -3878,7 +3879,7 @@ class WellnessFramework {
         const resultDiv = document.getElementById('ai-result');
         resultDiv.style.display = 'block';
         
-        const aiPoweredBadge = useRealAI ? '<span style="background: linear-gradient(135deg, #8b5cf6, #6366f1); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.7rem; margin-left: 0.5rem;">🤖 AI Powered</span>' : '';
+        const aiPoweredBadge = useRealAI ? '<span style="background: linear-gradient(135deg, #8b5cf6, #6366f1); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.7rem; margin-left: 0.5rem;">🤖 AI Powered</span>' : '<span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.7rem; margin-left: 0.5rem;">🧠 Smart Logic</span>';
         
         resultDiv.innerHTML = `
             <div style="background: linear-gradient(135deg, #22c55e, #10b981); color: #ffffff; padding: 1.5rem; border-radius: 12px; margin-bottom: 1rem;">
@@ -3919,7 +3920,7 @@ class WellnessFramework {
                 
                 <div style="margin-top: 1.5rem; padding: 1rem; background: #d4edda; border-radius: 8px; border: 1px solid #28a745;">
                     <p style="color: #155724; font-size: 0.875rem; margin: 0;">
-                        <strong>✅ Program Saved!</strong> Your ${useRealAI ? 'AI-generated' : 'rule-based'} program has been automatically saved and is now available with a 🤖 AI badge. You can access it anytime from "AI Program Builder" or the main program list.
+                        <strong>✅ Program Saved!</strong> Your ${useRealAI ? 'AI-generated' : 'smart rule-based'} program has been automatically saved and is now available with a ${useRealAI ? '🤖 AI' : '🧠 Smart'} badge. You can access it anytime from "AI Program Builder" or the main program list.
                     </p>
                 </div>
             </div>
