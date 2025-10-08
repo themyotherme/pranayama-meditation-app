@@ -7579,8 +7579,12 @@ class WellnessFramework {
     
     // Show/hide header audio unlock button for iPhone users
     addAudioUnlockButton() {
-        // Check if we're on iPhone/iOS
-        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        // Check if we're on iPhone/iOS - use multiple detection methods
+        const userAgent = navigator.userAgent;
+        const isIOS = /iPad|iPhone|iPod/.test(userAgent) || 
+                      /iPhone|iPad|iPod|iOS/.test(userAgent) ||
+                      (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform));
+        
         const audioBtn = document.getElementById('audio-unlock-btn');
         
         if (!audioBtn) {
@@ -7592,17 +7596,21 @@ class WellnessFramework {
             isIOS: isIOS,
             audioUnlocked: this.audioUnlocked,
             buttonExists: !!audioBtn,
-            userAgent: navigator.userAgent
+            userAgent: userAgent,
+            platform: navigator.platform,
+            isTouchDevice: 'ontouchstart' in window
         });
         
-        // Always show button on iOS devices, regardless of unlock status
-        if (isIOS) {
+        // Show button for touch devices or iOS (broader detection)
+        const isTouchDevice = 'ontouchstart' in window;
+        const shouldShowButton = isIOS || isTouchDevice;
+        
+        if (shouldShowButton) {
             audioBtn.style.display = 'block';
-            console.log('📱 iPhone audio unlock button shown in header (iOS detected)');
+            console.log('📱 Audio unlock button shown (iOS or touch device detected)');
         } else {
-            // Hide the button for non-iOS
             audioBtn.style.display = 'none';
-            console.log('📱 Audio unlock button hidden (not iOS device)');
+            console.log('📱 Audio unlock button hidden (not iOS or touch device)');
         }
     }
     
