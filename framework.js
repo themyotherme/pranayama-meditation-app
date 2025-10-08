@@ -6263,7 +6263,10 @@ class WellnessFramework {
             document.addEventListener('touchstart', enableAudio, { once: true });
             document.addEventListener('click', enableAudio, { once: true });
             
-        console.log('📱 Mobile audio compatibility initialized');
+            console.log('📱 Mobile audio compatibility initialized');
+        } catch (error) {
+            console.error('Error initializing mobile audio:', error);
+        }
     }
     
     // Extract YouTube video ID from URL
