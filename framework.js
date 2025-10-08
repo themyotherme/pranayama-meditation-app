@@ -1867,9 +1867,9 @@ class WellnessFramework {
     
     resumeProgram() {
         if (this.isPaused) {
-            const exerciseRef = this.currentProgramData.exercises[this.currentExerciseIndex];
-            const exercise = this.exercises[exerciseRef.exerciseId];
-            const duration = exerciseRef.duration;
+        const exerciseRef = this.currentProgramData.exercises[this.currentExerciseIndex];
+        const exercise = this.exercises[exerciseRef.exerciseId];
+        const duration = exerciseRef.duration;
             
             // Resume all audio elements
             this.resumeAllAudioElements();
@@ -1879,25 +1879,25 @@ class WellnessFramework {
             
             // Resume slideshow
             this.resumeSlideshow();
-            
-            // Restart breathing cues if this is a breathing exercise
-            if (exercise.pattern && exercise.pattern.inhale) {
-                this.startBreathingCues(exercise.pattern);
-            }
-            
+        
+        // Restart breathing cues if this is a breathing exercise
+        if (exercise.pattern && exercise.pattern.inhale) {
+            this.startBreathingCues(exercise.pattern);
+        }
+        
             this.isPaused = false;
-            this.exerciseTimer = setInterval(() => {
-                this.elapsedTime++;
-                this.updateTimer(duration - this.elapsedTime);
-                this.updateProgress();
-                
-                if (this.elapsedTime >= duration) {
-                    this.finishExercise();
-                }
-            }, 1000);
+        this.exerciseTimer = setInterval(() => {
+            this.elapsedTime++;
+            this.updateTimer(duration - this.elapsedTime);
+            this.updateProgress();
             
-            document.getElementById('pause-btn').textContent = '⏸️ Pause';
-            document.getElementById('pause-btn').onclick = () => this.pauseProgram();
+            if (this.elapsedTime >= duration) {
+                this.finishExercise();
+            }
+        }, 1000);
+        
+        document.getElementById('pause-btn').textContent = '⏸️ Pause';
+        document.getElementById('pause-btn').onclick = () => this.pauseProgram();
             
             console.log('▶️ Program resumed');
         }
@@ -2419,11 +2419,11 @@ class WellnessFramework {
             
             // Stop audio when exercise ends (not after playDuration)
             const stopTime = (audioConfig.exerciseStart + exerciseDuration) * 1000;
-            setTimeout(() => {
+                setTimeout(() => {
                 if (audio && !audio.paused) {
                     audio.pause();
                     console.log(`🛑 Stopped audio: ${media.name} after exercise duration`);
-                }
+            }
             }, stopTime);
             
             this.activeAudioTracks.push(audio);
@@ -2474,11 +2474,11 @@ class WellnessFramework {
             
             // Stop video when exercise ends
             const stopTime = (videoConfig.exerciseStart + exerciseDuration) * 1000;
-            setTimeout(() => {
+                setTimeout(() => {
                 if (videoElement && !videoElement.paused) {
                     videoElement.pause();
                     console.log(`🛑 Stopped video: ${videoConfig.file} after exercise duration`);
-                }
+            }
             }, stopTime);
             
             this.activeVideoElement = videoElement;
@@ -6623,7 +6623,7 @@ class WellnessFramework {
             if (audioFile.mediaId && this.mediaRegistry && this.mediaRegistry[audioFile.mediaId]) {
                 // Prefer unified desktop/mobile path
                 if (typeof this.playAudioFileMobile === 'function') {
-                    this.playAudioFileMobile(audioFile);
+                this.playAudioFileMobile(audioFile);
                 } else {
                     this.playAudioFile(audioFile);
                 }
@@ -7190,7 +7190,7 @@ class WellnessFramework {
         // Clear any existing slideshow state
         if (this.slideshowTimer) {
             clearTimeout(this.slideshowTimer);
-            this.slideshowTimer = null;
+        this.slideshowTimer = null;
         }
         
         // Reset slideshow state
@@ -7240,15 +7240,15 @@ class WellnessFramework {
             imageLoader.onload = () => {
                 // Double-check slideshow is still active before updating
                 if (this.slideshowTimer || index === 0) {
-                    img.src = mediaFile.file;
+            img.src = mediaFile.file;
                     
                     // Adjust container height based on image aspect ratio
                     this.adjustSlideshowContainer(img);
                     
                     // Set timer for next slide using duration from JSON or default 5 seconds
                     const duration = slide.duration || 5;
-                    this.slideshowTimer = setTimeout(() => {
-                        this.showNextSlide(slideshow, index + 1);
+            this.slideshowTimer = setTimeout(() => {
+                this.showNextSlide(slideshow, index + 1);
                     }, duration * 1000);
                 }
             };
@@ -7601,17 +7601,22 @@ class WellnessFramework {
             isTouchDevice: 'ontouchstart' in window
         });
         
-        // Show button for touch devices or iOS (broader detection)
-        const isTouchDevice = 'ontouchstart' in window;
-        const shouldShowButton = isIOS || isTouchDevice;
+        // Always show button for now to test
+        audioBtn.style.display = 'block';
+        console.log('📱 Audio unlock button shown (always visible for testing)');
         
-        if (shouldShowButton) {
-            audioBtn.style.display = 'block';
-            console.log('📱 Audio unlock button shown (iOS or touch device detected)');
-        } else {
-            audioBtn.style.display = 'none';
-            console.log('📱 Audio unlock button hidden (not iOS or touch device)');
-        }
+        // Log all detection info for debugging
+        console.log('🔍 Detection details:', {
+            userAgent: userAgent,
+            platform: navigator.platform,
+            isIOS: isIOS,
+            isTouchDevice: 'ontouchstart' in window,
+            hasTouchEvents: 'ontouchstart' in window,
+            screenWidth: screen.width,
+            screenHeight: screen.height,
+            innerWidth: window.innerWidth,
+            innerHeight: window.innerHeight
+        });
     }
     
     // Offer to download new AI-generated exercises as JSON
@@ -7712,4 +7717,4 @@ class WellnessFramework {
 }
 
 // Initialize global framework instance after script load
-window.framework = new WellnessFramework();
+    window.framework = new WellnessFramework();
