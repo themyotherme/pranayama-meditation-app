@@ -10,6 +10,7 @@ class WellnessFramework {
         
         // Execution state
         this.isRunning = false;
+        this.isPaused = false;
         this.currentProgramData = null;
         this.currentExerciseIndex = 0;
         this.exerciseTimer = null;
@@ -53,6 +54,9 @@ class WellnessFramework {
         this.currentAudioElements = [];
         this.isAudioPaused = false;
         this.audioPauseTime = 0;
+        
+        // Slideshow management
+        this.slideshowTimer = null;
         
         this.init();
     }
@@ -102,12 +106,37 @@ class WellnessFramework {
             if (!this.audioSystem.audioContext) {
                 this.initializeAudioSystem();
             }
+            
+            // Resume audio context if suspended (iPhone requirement)
+            if (this.audioSystem.audioContext && this.audioSystem.audioContext.state === 'suspended') {
+                this.audioSystem.audioContext.resume().then(() => {
+                    console.log('🎵 Audio context resumed for iPhone');
+                });
+            }
+            
+            // Unlock all audio elements for iPhone
+            const audioElements = document.querySelectorAll('audio');
+            audioElements.forEach(audio => {
+                // Create a promise to unlock audio
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        audio.pause(); // Pause immediately, just to unlock
+                        console.log('📱 Audio element unlocked for iPhone');
+                    }).catch(err => {
+                        console.log('Audio unlock failed:', err.message);
+                    });
+                }
+            });
+            
             document.removeEventListener('click', enableAudio);
             document.removeEventListener('touchstart', enableAudio);
+            document.removeEventListener('touchend', enableAudio);
         };
         
         document.addEventListener('click', enableAudio);
         document.addEventListener('touchstart', enableAudio);
+        document.addEventListener('touchend', enableAudio);
     }
     
     // Show notification function
@@ -236,6 +265,18 @@ class WellnessFramework {
         try {
             console.log('Loading exercises from JSON...');
             const response = await fetch('examples/pranyammeditation-exercises.json?v=' + Date.now() + '&cache=' + Math.random());
+            
+            // Check if response is ok
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
+            // Check if response is actually JSON
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                throw new Error('Response is not JSON format');
+            }
+            
             const data = await response.json();
             console.log('Loaded exercises:', Object.keys(data.exercises || {}));
             console.log('Sample exercise:', data.exercises ? Object.values(data.exercises)[0] : 'No exercises');
@@ -254,8 +295,24 @@ class WellnessFramework {
             console.log('Media registry loaded:', Object.keys(this.mediaRegistry || {}).length, 'media files');
         } catch (error) {
             console.error('Failed to load exercises:', error);
+            
+            // Try to load from localStorage as fallback
+            try {
+                const savedExercises = JSON.parse(localStorage.getItem('customExercises') || '{}');
+                if (Object.keys(savedExercises).length > 0) {
+                    console.log('Loaded exercises from localStorage fallback');
+                    this.exercises = savedExercises;
+                    this.mediaRegistry = {};
+                    return;
+                }
+            } catch (localError) {
+                console.error('Failed to load exercises from localStorage:', localError);
+            }
+            
+            // Fallback to empty objects
             this.exercises = {};
             this.mediaRegistry = {};
+            console.log('Using empty exercises fallback');
         }
     }
     
@@ -263,6 +320,18 @@ class WellnessFramework {
         try {
             console.log('Loading programs from JSON...');
             const response = await fetch('examples/pranyammeditation-programs.json?v=' + Date.now() + '&cache=' + Math.random());
+            
+            // Check if response is ok
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
+            // Check if response is actually JSON
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                throw new Error('Response is not JSON format');
+            }
+            
             const data = await response.json();
             console.log('Loaded programs:', Object.keys(data.programs || {}));
             console.log('Sample program:', data.programs ? Object.values(data.programs)[0] : 'No programs');
@@ -311,9 +380,80 @@ class WellnessFramework {
             console.log('Successfully rendered', programs.length, 'total programs (sorted alphabetically with First Experience first)');
         } catch (error) {
             console.error('Failed to load programs:', error);
+            
+            // Try to load from localStorage as fallback
+            try {
+                const savedPrograms = JSON.parse(localStorage.getItem('savedAIPrograms') || '{}');
+                const customPrograms = JSON.parse(localStorage.getItem('customPrograms') || '{}');
+                
+                // Merge saved programs
+                this.programs = { ...savedPrograms, ...customPrograms };
+                
+                if (Object.keys(this.programs).length > 0) {
+                    console.log('Loaded programs from localStorage fallback');
+                    this.renderProgramsList();
+                    return;
+                }
+            } catch (localError) {
+                console.error('Failed to load from localStorage:', localError);
+            }
+            
+            // If all else fails, show user-friendly error
             const programsList = document.getElementById('programs-list');
-            programsList.innerHTML = '<p style="color: red; padding: 1rem;">Failed to load programs: ' + error.message + '</p>';
+            programsList.innerHTML = `
+                <div style="text-align: center; padding: 2rem; color: #666;">
+                    <h3>📡 Connection Issue</h3>
+                    <p>Unable to load meditation programs. This might be due to:</p>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li>Network connectivity issues</li>
+                        <li>Server temporarily unavailable</li>
+                        <li>Cache needs to be cleared</li>
+                    </ul>
+                    <button onclick="location.reload()" style="background: #4CAF50; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">
+                        🔄 Try Again
+                    </button>
+                    <br><br>
+                    <button onclick="framework.clearCache()" style="background: #FF9800; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">
+                        🗑️ Clear Cache
+                    </button>
+                </div>
+            `;
         }
+    }
+    
+    renderProgramsList() {
+        const programsList = document.getElementById('programs-list');
+        programsList.innerHTML = '';
+        
+        // Filter and sort programs
+        let programs = Object.values(this.programs);
+        
+        // Filter out hidden programs (e.g., test programs)
+        programs = programs.filter(program => {
+            // Show default programs that are not explicitly hidden
+            if (program.hidden !== true) {
+                return true;
+            }
+            return false;
+        });
+        
+        // Sort programs: "First Experience" first, then alphabetically
+        programs.sort((a, b) => {
+            // Put "First Experience" first
+            if (a.name === 'First Experience' && b.name !== 'First Experience') return -1;
+            if (b.name === 'First Experience' && a.name !== 'First Experience') return 1;
+            
+            // Then sort alphabetically
+            return a.name.localeCompare(b.name);
+        });
+        
+        // Render program cards
+        programs.forEach(program => {
+            const programCard = this.createProgramCard(program);
+            programsList.appendChild(programCard);
+        });
+        
+        console.log('Successfully rendered', programs.length, 'total programs (sorted alphabetically with First Experience first)');
     }
     
     createProgramCard(program) {
@@ -1685,37 +1825,67 @@ class WellnessFramework {
     }
     
     pauseProgram() {
-        if (this.exerciseTimer) {
+        if (this.exerciseTimer && !this.isPaused) {
             clearInterval(this.exerciseTimer);
             this.exerciseTimer = null;
+            this.isPaused = true;
             this.stopBreathingCues();
+            
+            // Pause all audio elements
+            this.pauseAllAudioElements();
+            
+            // Pause video elements
+            this.pauseAllVideoElements();
+            
+            // Pause slideshow
+            this.pauseSlideshow();
+            
+            // Store pause time for resume
+            this.pauseStartTime = Date.now();
+            
             document.getElementById('pause-btn').textContent = '▶️ Resume';
             document.getElementById('pause-btn').onclick = () => this.resumeProgram();
+            
+            console.log('⏸️ Program paused');
         }
     }
     
     resumeProgram() {
-        const exerciseRef = this.currentProgramData.exercises[this.currentExerciseIndex];
-        const exercise = this.exercises[exerciseRef.exerciseId];
-        const duration = exerciseRef.duration;
-        
-        // Restart breathing cues if this is a breathing exercise
-        if (exercise.pattern && exercise.pattern.inhale) {
-            this.startBreathingCues(exercise.pattern);
-        }
-        
-        this.exerciseTimer = setInterval(() => {
-            this.elapsedTime++;
-            this.updateTimer(duration - this.elapsedTime);
-            this.updateProgress();
+        if (this.isPaused) {
+            const exerciseRef = this.currentProgramData.exercises[this.currentExerciseIndex];
+            const exercise = this.exercises[exerciseRef.exerciseId];
+            const duration = exerciseRef.duration;
             
-            if (this.elapsedTime >= duration) {
-                this.finishExercise();
+            // Resume all audio elements
+            this.resumeAllAudioElements();
+            
+            // Resume video elements
+            this.resumeAllVideoElements();
+            
+            // Resume slideshow
+            this.resumeSlideshow();
+            
+            // Restart breathing cues if this is a breathing exercise
+            if (exercise.pattern && exercise.pattern.inhale) {
+                this.startBreathingCues(exercise.pattern);
             }
-        }, 1000);
-        
-        document.getElementById('pause-btn').textContent = '⏸️ Pause';
-        document.getElementById('pause-btn').onclick = () => this.pauseProgram();
+            
+            this.isPaused = false;
+            this.exerciseTimer = setInterval(() => {
+                this.elapsedTime++;
+                this.updateTimer(duration - this.elapsedTime);
+                this.updateProgress();
+                
+                if (this.elapsedTime >= duration) {
+                    this.finishExercise();
+                }
+            }, 1000);
+            
+            document.getElementById('pause-btn').textContent = '⏸️ Pause';
+            document.getElementById('pause-btn').onclick = () => this.pauseProgram();
+            
+            console.log('▶️ Program resumed');
+        }
     }
     
     stopProgram() {
@@ -1725,8 +1895,167 @@ class WellnessFramework {
             this.stopBackgroundMusic();
             this.stopAllExerciseMedia();
             this.isRunning = false;
+            this.isPaused = false;
             this.hideExecutionView();
         }
+    }
+    
+    // Pause all audio elements
+    pauseAllAudioElements() {
+        // Pause background music
+        if (this.backgroundMusic && !this.backgroundMusic.paused) {
+            this.backgroundMusic.pause();
+            this.backgroundMusic.dataset.wasPlaying = 'true';
+            this.backgroundMusic.dataset.pauseTime = this.backgroundMusic.currentTime;
+        }
+        
+        // Pause all active audio tracks
+        this.activeAudioTracks.forEach(audio => {
+            if (!audio.paused) {
+                audio.pause();
+                audio.dataset.wasPlaying = 'true';
+                audio.dataset.pauseTime = audio.currentTime;
+            }
+        });
+        
+        // Pause current audio elements
+        this.currentAudioElements.forEach(audio => {
+            if (!audio.paused) {
+                audio.pause();
+                audio.dataset.wasPlaying = 'true';
+                audio.dataset.pauseTime = audio.currentTime;
+            }
+        });
+        
+        // Pause speech synthesis
+        if (window.speechSynthesis.speaking) {
+            window.speechSynthesis.pause();
+        }
+        
+        console.log('🔇 All audio elements paused');
+    }
+    
+    // Resume all audio elements
+    resumeAllAudioElements() {
+        // Resume background music
+        if (this.backgroundMusic && this.backgroundMusic.dataset.wasPlaying === 'true') {
+            this.backgroundMusic.currentTime = parseFloat(this.backgroundMusic.dataset.pauseTime || 0);
+            this.backgroundMusic.play().catch(err => console.log('Could not resume background music:', err.message));
+            delete this.backgroundMusic.dataset.wasPlaying;
+            delete this.backgroundMusic.dataset.pauseTime;
+        }
+        
+        // Resume all active audio tracks
+        this.activeAudioTracks.forEach(audio => {
+            if (audio.dataset.wasPlaying === 'true') {
+                audio.currentTime = parseFloat(audio.dataset.pauseTime || 0);
+                audio.play().catch(err => console.log('Could not resume audio track:', err.message));
+                delete audio.dataset.wasPlaying;
+                delete audio.dataset.pauseTime;
+            }
+        });
+        
+        // Resume current audio elements
+        this.currentAudioElements.forEach(audio => {
+            if (audio.dataset.wasPlaying === 'true') {
+                audio.currentTime = parseFloat(audio.dataset.pauseTime || 0);
+                audio.play().catch(err => console.log('Could not resume audio element:', err.message));
+                delete audio.dataset.wasPlaying;
+                delete audio.dataset.pauseTime;
+            }
+        });
+        
+        // Resume speech synthesis
+        if (window.speechSynthesis.paused) {
+            window.speechSynthesis.resume();
+        }
+        
+        console.log('🔊 All audio elements resumed');
+    }
+    
+    // Pause all video elements
+    pauseAllVideoElements() {
+        const videoElement = document.getElementById('exercise-video');
+        if (videoElement && !videoElement.paused) {
+            videoElement.pause();
+            videoElement.dataset.wasPlaying = 'true';
+            videoElement.dataset.pauseTime = videoElement.currentTime;
+        }
+        
+        // Pause any other video elements
+        const allVideos = document.querySelectorAll('video');
+        allVideos.forEach(video => {
+            if (!video.paused) {
+                video.pause();
+                video.dataset.wasPlaying = 'true';
+                video.dataset.pauseTime = video.currentTime;
+            }
+        });
+        
+        console.log('🎬 All video elements paused');
+    }
+    
+    // Resume all video elements
+    resumeAllVideoElements() {
+        const videoElement = document.getElementById('exercise-video');
+        if (videoElement && videoElement.dataset.wasPlaying === 'true') {
+            videoElement.currentTime = parseFloat(videoElement.dataset.pauseTime || 0);
+            videoElement.play().catch(err => console.log('Could not resume video:', err.message));
+            delete videoElement.dataset.wasPlaying;
+            delete videoElement.dataset.pauseTime;
+        }
+        
+        // Resume any other video elements
+        const allVideos = document.querySelectorAll('video');
+        allVideos.forEach(video => {
+            if (video.dataset.wasPlaying === 'true') {
+                video.currentTime = parseFloat(video.dataset.pauseTime || 0);
+                video.play().catch(err => console.log('Could not resume video:', err.message));
+                delete video.dataset.wasPlaying;
+                delete video.dataset.pauseTime;
+            }
+        });
+        
+        console.log('🎬 All video elements resumed');
+    }
+    
+    // Pause slideshow
+    pauseSlideshow() {
+        // Store current slideshow state
+        const slideshowContainer = document.getElementById('slideshow-container');
+        if (slideshowContainer) {
+            const currentImage = slideshowContainer.querySelector('img');
+            if (currentImage) {
+                slideshowContainer.dataset.pausedImage = currentImage.src;
+                slideshowContainer.dataset.wasSlideshowActive = 'true';
+            }
+        }
+        
+        // Clear any slideshow timers
+        if (this.slideshowTimer) {
+            clearInterval(this.slideshowTimer);
+            this.slideshowTimer = null;
+        }
+        
+        console.log('🖼️ Slideshow paused');
+    }
+    
+    // Resume slideshow
+    resumeSlideshow() {
+        const slideshowContainer = document.getElementById('slideshow-container');
+        if (slideshowContainer && slideshowContainer.dataset.wasSlideshowActive === 'true') {
+            // Restart slideshow with current exercise
+            const exerciseRef = this.currentProgramData.exercises[this.currentExerciseIndex];
+            const exercise = this.exercises[exerciseRef.exerciseId];
+            
+            if (exercise.images && exercise.images.length > 0) {
+                this.startSlideshow(exercise.images);
+            }
+            
+            delete slideshowContainer.dataset.wasSlideshowActive;
+        }
+        
+        console.log('🖼️ Slideshow resumed');
     }
     
     completeProgram() {
@@ -5870,10 +6199,54 @@ class WellnessFramework {
             document.addEventListener('touchstart', enableAudio, { once: true });
             document.addEventListener('click', enableAudio, { once: true });
             
-            console.log('📱 Mobile audio compatibility initialized');
-        } catch (error) {
-            console.error('Mobile audio initialization failed:', error);
+        console.log('📱 Mobile audio compatibility initialized');
+    }
+    
+    // Extract YouTube video ID from URL
+    extractYouTubeId(url) {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[2].length === 11) ? match[2] : null;
+    }
+    
+    // Create YouTube player with iPhone compatibility
+    createYouTubePlayer(videoUrl, containerId) {
+        const container = document.getElementById(containerId);
+        if (!container) return null;
+        
+        // Extract video ID from URL
+        const videoId = this.extractYouTubeId(videoUrl);
+        if (!videoId) {
+            console.error('Invalid YouTube URL:', videoUrl);
+            container.innerHTML = `
+                <div style="padding: 2rem; text-align: center; color: #666;">
+                    <h3>🎬 Invalid Video URL</h3>
+                    <p>Cannot load this YouTube video.</p>
+                </div>
+            `;
+            return null;
         }
+        
+        // Create iframe for YouTube with iPhone compatibility
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=0&controls=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
+        iframe.width = '100%';
+        iframe.height = '100%';
+        iframe.frameBorder = '0';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.id = 'youtube-player';
+        iframe.style.border = 'none';
+        
+        // Add iPhone-specific attributes
+        iframe.setAttribute('playsinline', 'true');
+        iframe.setAttribute('webkit-playsinline', 'true');
+        
+        container.innerHTML = '';
+        container.appendChild(iframe);
+        
+        console.log('📺 YouTube player created for:', videoId);
+        return iframe;
     }
     
     playBell(count = 1, type = 'single') {
@@ -6128,10 +6501,12 @@ class WellnessFramework {
     playAudioFile(audioFile) {
         const mediaData = this.mediaRegistry[audioFile.mediaId];
         if (!mediaData || !mediaData.file) {
-            console.log('Media file not found:', audioFile.mediaId);
+            console.log('❌ Media file not found:', audioFile.mediaId);
+            console.log('Available media files:', Object.keys(this.mediaRegistry));
             return;
         }
         
+        console.log('🎵 Loading audio file:', mediaData.file);
         const audioElement = new Audio(mediaData.file);
         audioElement.volume = (audioFile.volume || 50) / 100;
         audioElement.loop = audioFile.loop || false;
