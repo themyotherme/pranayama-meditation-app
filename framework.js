@@ -6350,37 +6350,78 @@ class WellnessFramework {
     
     // Manual audio unlock function for iPhone
     unlockAudio() {
+        console.log('🔊 Audio unlock button clicked');
+        
         if (this.audioUnlocked) {
             this.showNotification('🔊 Audio already unlocked!', 'info');
             return;
         }
         
-        // Create a silent audio to unlock the system
-        const silentAudio = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=');
-        silentAudio.volume = 0.01;
-        silentAudio.play().then(() => {
-            silentAudio.pause();
-            this.audioUnlocked = true;
-            console.log('📱 iPhone audio system manually unlocked');
-            
-            // Hide header button only after successful unlock
-            const headerBtn = document.getElementById('audio-unlock-btn');
-            if (headerBtn) {
-                headerBtn.style.display = 'none';
-                console.log('🔊 Audio unlock button hidden after successful unlock');
+        // Show loading message
+        this.showNotification('🔊 Unlocking audio...', 'info');
+        
+        // Try multiple methods to unlock audio
+        const unlockMethods = [
+            // Method 1: Silent audio
+            () => {
+                const silentAudio = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=');
+                silentAudio.volume = 0.01;
+                return silentAudio.play();
+            },
+            // Method 2: Audio context resume
+            () => {
+                if (this.audioSystem.audioContext && this.audioSystem.audioContext.state === 'suspended') {
+                    return this.audioSystem.audioContext.resume();
+                }
+                return Promise.resolve();
+            },
+            // Method 3: Create and play a very short audio
+            () => {
+                const audio = new Audio();
+                audio.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=';
+                audio.volume = 0.01;
+                return audio.play();
+            }
+        ];
+        
+        // Try each method
+        let methodIndex = 0;
+        const tryNextMethod = () => {
+            if (methodIndex >= unlockMethods.length) {
+                console.log('❌ All audio unlock methods failed');
+                this.showNotification('❌ Audio unlock failed. Please try starting a program first.', 'error');
+                return;
             }
             
-            // Show success message
-            this.showNotification('🔊 Audio unlocked! MP3 files should now play on iPhone.', 'success');
-            
-            // Refresh the execution view to hide the unlock button
-            if (this.isRunning) {
-                this.showExecutionView();
-            }
-        }).catch(err => {
-            console.log('Manual audio unlock failed:', err.message);
-            this.showNotification('❌ Audio unlock failed. Try tapping the screen first.', 'error');
-        });
+            console.log(`🔊 Trying audio unlock method ${methodIndex + 1}`);
+            unlockMethods[methodIndex]()
+                .then(() => {
+                    console.log(`✅ Audio unlock method ${methodIndex + 1} succeeded`);
+                    this.audioUnlocked = true;
+                    
+                    // Hide header button
+                    const headerBtn = document.getElementById('audio-unlock-btn');
+                    if (headerBtn) {
+                        headerBtn.style.display = 'none';
+                        console.log('🔊 Audio unlock button hidden after successful unlock');
+                    }
+                    
+                    // Show success message
+                    this.showNotification('🔊 Audio unlocked! MP3 files should now play on iPhone.', 'success');
+                    
+                    // Refresh the execution view if running
+                    if (this.isRunning) {
+                        this.showExecutionView();
+                    }
+                })
+                .catch(err => {
+                    console.log(`❌ Audio unlock method ${methodIndex + 1} failed:`, err.message);
+                    methodIndex++;
+                    tryNextMethod();
+                });
+        };
+        
+        tryNextMethod();
     }
     
     playBell(count = 1, type = 'single') {
