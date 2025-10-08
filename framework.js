@@ -2926,6 +2926,12 @@ class WellnessFramework {
             this.ai.setAPIKey(apiKey);
             this.ai.setEnabled(aiEnabled);
             this.ai.setModel(aiModel);
+            console.log('🔧 AI Integration updated:', {
+                enabled: this.ai.enabled,
+                apiKeyLength: this.ai.apiKey?.length || 0,
+                model: this.ai.model,
+                isConfigured: this.ai.isConfigured()
+            });
         }
         
         // Save to localStorage
@@ -3660,6 +3666,24 @@ class WellnessFramework {
         console.log('🚀 Opening AI Program Generator...');
         this.closeMenu();
         
+        // Refresh AI integration from localStorage
+        if (this.ai) {
+            const apiKey = localStorage.getItem('openaiAPIKey') || '';
+            const aiEnabled = localStorage.getItem('aiEnabled') === 'true';
+            const aiModel = localStorage.getItem('aiModel') || 'gpt-3.5-turbo';
+            
+            this.ai.setAPIKey(apiKey);
+            this.ai.setEnabled(aiEnabled);
+            this.ai.setModel(aiModel);
+            
+            console.log('🔄 AI Integration refreshed:', {
+                enabled: this.ai.enabled,
+                apiKeyLength: this.ai.apiKey?.length || 0,
+                model: this.ai.model,
+                isConfigured: this.ai.isConfigured()
+            });
+        }
+        
         // Show the modal first
         const modal = document.getElementById('ai-program-modal');
         if (!modal) {
@@ -3765,6 +3789,14 @@ class WellnessFramework {
         
         // Check if AI is configured
         const useRealAI = this.ai && this.ai.isConfigured();
+        
+        // Debug AI configuration
+        console.log('🔍 AI Debug Info:');
+        console.log('- AI object exists:', !!this.ai);
+        console.log('- AI enabled:', this.ai?.enabled);
+        console.log('- AI API key length:', this.ai?.apiKey?.length || 0);
+        console.log('- AI isConfigured():', this.ai?.isConfigured());
+        console.log('- useRealAI:', useRealAI);
         
         let selectedExercises;
         let aiReasoning = null;
