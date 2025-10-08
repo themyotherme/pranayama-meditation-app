@@ -1389,7 +1389,7 @@ class WellnessFramework {
                 
                 <!-- Video Player -->
                 <div id="video-container" style="max-width: 800px; margin: 1rem auto; display: none;">
-                    <video id="exercise-video" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" controls></video>
+                    <video id="exercise-video" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" controls autoplay muted playsinline webkit-playsinline></video>
                 </div>
                 
                 <!-- YouTube Player -->
@@ -2463,13 +2463,36 @@ class WellnessFramework {
             
             // Always loop video to ensure it continues for the entire exercise
             videoElement.loop = true;
+            
+            // Add iPhone-specific attributes for better autoplay
+            videoElement.setAttribute('autoplay', 'true');
+            videoElement.setAttribute('muted', 'true');
+            videoElement.setAttribute('playsinline', 'true');
+            videoElement.setAttribute('webkit-playsinline', 'true');
+            
             console.log(`🔄 Video will loop: ${videoConfig.file} for exercise duration (${exerciseDuration}s)`);
             
             videoContainer.style.display = 'block';
             
-            // Schedule video to start
+            // Try to play immediately and on schedule
+            const tryPlay = () => {
+                videoElement.play().then(() => {
+                    console.log('✅ Video autoplay started successfully');
+                }).catch(err => {
+                    console.log('❌ Video autoplay prevented:', err.message);
+                    // Try again after a short delay
+                    setTimeout(() => {
+                        videoElement.play().catch(e => console.log('❌ Second autoplay attempt failed:', e.message));
+                    }, 500);
+                });
+            };
+            
+            // Try to play immediately
+            tryPlay();
+            
+            // Also schedule video to start at the specified time
             setTimeout(() => {
-                videoElement.play().catch(err => console.log('Video autoplay prevented:', err.message));
+                tryPlay();
             }, videoConfig.exerciseStart * 1000);
             
             // Stop video when exercise ends
