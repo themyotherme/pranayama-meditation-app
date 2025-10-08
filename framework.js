@@ -6363,10 +6363,11 @@ class WellnessFramework {
             this.audioUnlocked = true;
             console.log('📱 iPhone audio system manually unlocked');
             
-            // Hide header button
+            // Hide header button only after successful unlock
             const headerBtn = document.getElementById('audio-unlock-btn');
             if (headerBtn) {
                 headerBtn.style.display = 'none';
+                console.log('🔊 Audio unlock button hidden after successful unlock');
             }
             
             // Show success message
@@ -7590,17 +7591,18 @@ class WellnessFramework {
         console.log('🔍 Audio button check:', {
             isIOS: isIOS,
             audioUnlocked: this.audioUnlocked,
-            buttonExists: !!audioBtn
+            buttonExists: !!audioBtn,
+            userAgent: navigator.userAgent
         });
         
-        if (isIOS && !this.audioUnlocked) {
-            // Show the button for iPhone users who haven't unlocked audio
+        // Always show button on iOS devices, regardless of unlock status
+        if (isIOS) {
             audioBtn.style.display = 'block';
-            console.log('📱 iPhone audio unlock button shown in header');
+            console.log('📱 iPhone audio unlock button shown in header (iOS detected)');
         } else {
-            // Hide the button for non-iOS or already unlocked
+            // Hide the button for non-iOS
             audioBtn.style.display = 'none';
-            console.log('📱 Audio unlock button hidden (not iOS or already unlocked)');
+            console.log('📱 Audio unlock button hidden (not iOS device)');
         }
     }
     
