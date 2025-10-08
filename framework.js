@@ -3787,7 +3787,13 @@ class WellnessFramework {
             return;
         }
         
-        // Check if AI is configured
+        // Check if AI is configured - force refresh from localStorage
+        if (this.ai) {
+            const apiKey = localStorage.getItem('openaiAPIKey') || '';
+            const aiEnabled = localStorage.getItem('aiEnabled') === 'true';
+            this.ai.setAPIKey(apiKey);
+            this.ai.setEnabled(aiEnabled);
+        }
         const useRealAI = this.ai && this.ai.isConfigured();
         
         // Debug AI configuration
