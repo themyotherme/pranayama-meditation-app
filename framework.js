@@ -7582,7 +7582,16 @@ class WellnessFramework {
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
         const audioBtn = document.getElementById('audio-unlock-btn');
         
-        if (!audioBtn) return;
+        if (!audioBtn) {
+            console.log('❌ Audio unlock button not found in header');
+            return;
+        }
+        
+        console.log('🔍 Audio button check:', {
+            isIOS: isIOS,
+            audioUnlocked: this.audioUnlocked,
+            buttonExists: !!audioBtn
+        });
         
         if (isIOS && !this.audioUnlocked) {
             // Show the button for iPhone users who haven't unlocked audio
@@ -7591,6 +7600,7 @@ class WellnessFramework {
         } else {
             // Hide the button for non-iOS or already unlocked
             audioBtn.style.display = 'none';
+            console.log('📱 Audio unlock button hidden (not iOS or already unlocked)');
         }
     }
     
