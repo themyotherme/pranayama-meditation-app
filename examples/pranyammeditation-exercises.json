@@ -419,7 +419,8 @@
           "exerciseStart": 0,
           "fileStart": 57,
           "playDuration": 300,
-          "volume": 70
+          "volume": 70,
+          "autoplay": true
         },
         {
           "file": null,
@@ -1039,7 +1040,8 @@
           "exerciseStart": 0,
           "fileStart": 57,
           "playDuration": 300,
-          "volume": 80
+          "volume": 80,
+          "autoplay": true
         },
         {
           "file": "https://www.youtube.com/watch?v=lIQrUZLyATo",

@@ -2474,26 +2474,40 @@ class WellnessFramework {
             
             videoContainer.style.display = 'block';
             
-            // Try to play immediately and on schedule
-            const tryPlay = () => {
-                videoElement.play().then(() => {
-                    console.log('✅ Video autoplay started successfully');
-                }).catch(err => {
-                    console.log('❌ Video autoplay prevented:', err.message);
-                    // Try again after a short delay
-                    setTimeout(() => {
-                        videoElement.play().catch(e => console.log('❌ Second autoplay attempt failed:', e.message));
-                    }, 500);
-                });
-            };
+            // Check if autoplay is enabled (default: true for backward compatibility)
+            const shouldAutoplay = videoConfig.autoplay !== false;
             
-            // Try to play immediately
-            tryPlay();
-            
-            // Also schedule video to start at the specified time
-            setTimeout(() => {
+            if (shouldAutoplay) {
+                // Try to play immediately and on schedule
+                const tryPlay = () => {
+                    videoElement.play().then(() => {
+                        console.log('✅ Video autoplay started successfully');
+                    }).catch(err => {
+                        console.log('❌ Video autoplay prevented:', err.message);
+                        // Try again after a short delay
+                        setTimeout(() => {
+                            videoElement.play().catch(e => console.log('❌ Second autoplay attempt failed:', e.message));
+                        }, 500);
+                    });
+                };
+                
+                // Try to play immediately
                 tryPlay();
-            }, videoConfig.exerciseStart * 1000);
+                
+                // Also schedule video to start at the specified time
+                setTimeout(() => {
+                    tryPlay();
+                }, videoConfig.exerciseStart * 1000);
+            } else {
+                console.log('⏸️ Video autoplay disabled - user must start manually');
+                // For manual play, ensure the video starts from the correct time when user clicks play
+                videoElement.addEventListener('play', () => {
+                    if (videoConfig.fileStart && videoConfig.fileStart > 0) {
+                        videoElement.currentTime = videoConfig.fileStart;
+                        console.log(`⏰ Video started at ${videoConfig.fileStart}s as specified`);
+                    }
+                });
+            }
             
             // Stop video when exercise ends
             const stopTime = (videoConfig.exerciseStart + exerciseDuration) * 1000;
@@ -2525,9 +2539,11 @@ class WellnessFramework {
                 videoId = videoConfig.file.split('youtu.be/')[1].split('?')[0];
             }
             
-            // Build YouTube embed URL with start time
+            // Build YouTube embed URL with start time and autoplay setting
             const startTime = videoConfig.fileStart || 0;
-            const embedUrl = `https://www.youtube.com/embed/${videoId}?start=${startTime}&autoplay=1&rel=0`;
+            const shouldAutoplay = videoConfig.autoplay !== false;
+            const autoplayParam = shouldAutoplay ? '1' : '0';
+            const embedUrl = `https://www.youtube.com/embed/${videoId}?start=${startTime}&autoplay=${autoplayParam}&rel=0`;
             
             youtubeContainer.style.display = 'block';
             
