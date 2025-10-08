@@ -940,13 +940,33 @@
         .mt-2 { margin-top: 0.5rem; }
         .mt-3 { margin-top: 0.75rem; }
         .mt-4 { margin-top: 1rem; }
+        
+        /* Mobile audio unlock button styles */
+        @media (max-width: 768px) {
+            .audio-unlock-btn {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                position: relative !important;
+                z-index: 1001 !important;
+                background: rgba(76, 175, 80, 0.95) !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 20px !important;
+                padding: 0.5rem 1rem !important;
+                font-size: 0.8rem !important;
+                margin-right: 0.5rem !important;
+                cursor: pointer !important;
+                transition: all 0.3s ease !important;
+            }
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-content">
             <button class="hamburger-menu" id="hamburger-btn">☰</button>
-            <button class="audio-unlock-btn" id="audio-unlock-btn" onclick="framework.unlockAudio()" style="background: rgba(76, 175, 80, 0.9); color: white; border: none; border-radius: 20px; padding: 0.5rem 1rem; font-size: 0.8rem; margin-right: 0.5rem; cursor: pointer; transition: all 0.3s ease;">
+            <button class="audio-unlock-btn" id="audio-unlock-btn" onclick="framework.unlockAudio()" style="background: rgba(76, 175, 80, 0.9); color: white; border: none; border-radius: 20px; padding: 0.5rem 1rem; font-size: 0.8rem; margin-right: 0.5rem; cursor: pointer; transition: all 0.3s ease; z-index: 1001; position: relative; display: block !important; visibility: visible !important;">
                 🔊 Unlock Audio
             </button>
             <div class="logo">
@@ -1465,6 +1485,6 @@
 
 
     <script src="ai-integration.js?v=1.1"></script>
-    <script src="framework.js?v=5.4"></script>
+    <script src="framework.js?v=5.5"></script>
 </body>
 </html>

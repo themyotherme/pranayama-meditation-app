@@ -7603,6 +7603,10 @@ class WellnessFramework {
         
         // Always show button for now to test
         audioBtn.style.display = 'block';
+        audioBtn.style.visibility = 'visible';
+        audioBtn.style.opacity = '1';
+        audioBtn.style.position = 'relative';
+        audioBtn.style.zIndex = '1001';
         console.log('📱 Audio unlock button shown (always visible for testing)');
         
         // Log all detection info for debugging
