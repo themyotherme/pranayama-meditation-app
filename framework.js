@@ -54,7 +54,6 @@ class WellnessFramework {
         this.currentAudioElements = [];
         this.isAudioPaused = false;
         this.audioPauseTime = 0;
-        this.audioUnlocked = false; // Track if audio has been unlocked
         
         // Slideshow management
         this.slideshowTimer = null;
@@ -97,8 +96,6 @@ class WellnessFramework {
             this.isInitialized = true;
             console.log('Wellness Framework initialized successfully');
             
-            // Add iPhone audio unlock button if needed
-            this.addAudioUnlockButton();
         } catch (error) {
             console.error('Framework initialization failed:', error);
         }
@@ -106,42 +103,17 @@ class WellnessFramework {
     
     // Setup audio system to work on first user interaction
     setupAudioInteraction() {
-        const enableAudio = () => {
-            if (this.audioUnlocked) return; // Already unlocked
-            
-            if (!this.audioSystem.audioContext) {
-                this.initializeAudioSystem();
-            }
-            
-            // Resume audio context if suspended (iPhone requirement)
-            if (this.audioSystem.audioContext && this.audioSystem.audioContext.state === 'suspended') {
-                this.audioSystem.audioContext.resume().then(() => {
-                    console.log('🎵 Audio context resumed for iPhone');
-                });
-            }
-            
-            // Create a silent audio to unlock the system
-            const silentAudio = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=');
-            silentAudio.volume = 0.01;
-            silentAudio.play().then(() => {
-                silentAudio.pause();
-                this.audioUnlocked = true;
-                console.log('📱 iPhone audio system unlocked - ONE TIME ONLY');
-                
-                // Show success message
-                this.showNotification('🔊 Audio unlocked! You can now start exercises.', 'success');
-            }).catch(err => {
-                console.log('Audio unlock failed:', err.message);
-            });
-            
-            document.removeEventListener('click', enableAudio);
-            document.removeEventListener('touchstart', enableAudio);
-            document.removeEventListener('touchend', enableAudio);
-        };
+        // Audio system setup for mobile compatibility
+        if (!this.audioSystem.audioContext) {
+            this.initializeAudioSystem();
+        }
         
-        document.addEventListener('click', enableAudio);
-        document.addEventListener('touchstart', enableAudio);
-        document.addEventListener('touchend', enableAudio);
+        // Resume audio context if suspended
+        if (this.audioSystem.audioContext && this.audioSystem.audioContext.state === 'suspended') {
+            this.audioSystem.audioContext.resume().then(() => {
+                console.log('🎵 Audio context resumed for mobile devices');
+            });
+        }
     }
     
     // Show notification function
@@ -1083,6 +1055,9 @@ class WellnessFramework {
         const exercisesContainer = document.getElementById('program-detail-exercises');
         exercisesContainer.innerHTML = '';
         
+        // Check if this is a customizable program (Universal Program)
+        const isCustomizable = program.isCustomizable || programId === 'universal_program';
+        
         program.exercises.forEach((exerciseRef, index) => {
             // Handle both string IDs and object references
             const exerciseId = typeof exerciseRef === 'string' ? exerciseRef : exerciseRef.exerciseId;
@@ -1090,13 +1065,25 @@ class WellnessFramework {
             const exerciseName = exercise ? exercise.name : exerciseId;
             const exerciseDuration = exercise ? exercise.duration : 5; // Default 5 minutes if not found
             const exerciseDurationText = `${exerciseDuration}m`;
+            const isRequired = exerciseRef.isRequired || false;
+            
+            // Get feature icons for this exercise
+            const featureIcons = this.getExerciseFeatureIcons(exercise);
             
             const exerciseItem = document.createElement('div');
             exerciseItem.style.cssText = 'display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: #f7fafc; border-radius: 6px; border: 1px solid #e2e8f0;';
+            
+            // Create checkbox if customizable and not required
+            const checkboxHtml = isCustomizable && !isRequired ? 
+                `<input type="checkbox" class="exercise-checkbox" data-exercise-id="${exerciseId}" checked style="margin-right: 0.5rem; transform: scale(1.2);" onchange="framework.updateProgramDuration()">` : 
+                (isRequired ? `<span style="color: #667eea; margin-right: 0.5rem; font-weight: bold;">★</span>` : '');
+            
             exerciseItem.innerHTML = `
                 <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    ${checkboxHtml}
                     <span style="background: #667eea; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold;">${index + 1}</span>
                     <span style="color: #2d3748; font-weight: 500;">${exerciseName}</span>
+                    <span style="display: flex; gap: 0.25rem; margin-left: 0.5rem;">${featureIcons}</span>
                 </div>
                 <span style="color: #718096; font-size: 0.875rem;">${exerciseDurationText}</span>
             `;
@@ -1326,6 +1313,24 @@ class WellnessFramework {
             return;
         }
         
+        // Handle selected exercises for Universal Program
+        if (this.selectedExercises && this.selectedExercises.length > 0) {
+            console.log('🌟 Using selected exercises for Universal Program');
+            const originalExercises = this.currentProgramData.exercises;
+            const filteredExercises = originalExercises.filter(exerciseRef => {
+                const exerciseId = typeof exerciseRef === 'string' ? exerciseRef : exerciseRef.exerciseId;
+                return this.selectedExercises.includes(exerciseId);
+            });
+            
+            // Create a modified program with only selected exercises
+            this.currentProgramData = {
+                ...this.currentProgramData,
+                exercises: filteredExercises
+            };
+            
+            console.log(`🌟 Universal Program: ${filteredExercises.length} exercises selected out of ${originalExercises.length}`);
+        }
+        
         // Scale duration if custom duration provided
         if (customDuration && customDuration > 0) {
             const originalTotalDuration = this.currentProgramData.exercises.reduce((sum, ex) => sum + ex.duration, 0);
@@ -1387,20 +1392,26 @@ class WellnessFramework {
             <div class="exercise-display" style="margin: 3rem 0; text-align: center;">
                 <h1 id="exercise-name" style="font-size: 2.5rem; font-weight: 700; color: #667eea; margin-bottom: 1rem;">Loading...</h1>
                 
+                <!-- Media Container - Handles both video and slideshow -->
+                <div id="media-container" style="max-width: 800px; margin: 1rem auto; display: none;">
                 <!-- Video Player -->
-                <div id="video-container" style="max-width: 800px; margin: 1rem auto; display: none;">
-                    <video id="exercise-video" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" controls autoplay muted playsinline webkit-playsinline></video>
+                    <div id="video-container" style="width: 100%; display: none; position: relative;">
+                        <button onclick="framework.closeVideo()" style="position: absolute; top: 8px; right: 8px; z-index: 100; background: rgba(0, 0, 0, 0.7); color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 18px; font-weight: bold; display: flex; align-items: center; justify-content: center; transition: all 0.2s;" onmouseover="this.style.background='rgba(220, 53, 69, 0.9)'" onmouseout="this.style.background='rgba(0, 0, 0, 0.7)'" title="Close video">×</button>
+                        <video id="exercise-video" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" controls autoplay muted playsinline webkit-playsinline></video>
                 </div>
                 
                 <!-- YouTube Player -->
-                <div id="youtube-container" style="max-width: 800px; margin: 1rem auto; display: none;">
-                    <iframe id="youtube-player" style="width: 100%; height: 450px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                
-                <!-- Slideshow Container -->
-                <div id="slideshow-container" style="max-width: 600px; margin: 1rem auto; display: none; position: relative; background: #f8f9fa;">
-                    <div id="slideshow-image-wrapper" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; background: #f8f9fa;">
-                        <img id="slideshow-image" src="" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+                    <div id="youtube-container" style="width: 100%; display: none; position: relative;">
+                        <button onclick="framework.closeYouTube()" style="position: absolute; top: 8px; right: 8px; z-index: 100; background: rgba(0, 0, 0, 0.7); color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 18px; font-weight: bold; display: flex; align-items: center; justify-content: center; transition: all 0.2s;" onmouseover="this.style.background='rgba(220, 53, 69, 0.9)'" onmouseout="this.style.background='rgba(0, 0, 0, 0.7)'" title="Close video">×</button>
+                        <iframe id="youtube-player" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                    <!-- Slideshow Container -->
+                    <div id="slideshow-container" style="width: 100%; display: none; position: relative; background: #f8f9fa; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <button onclick="framework.closeSlideshow()" style="position: absolute; top: 8px; right: 8px; z-index: 100; background: rgba(0, 0, 0, 0.7); color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 18px; font-weight: bold; display: flex; align-items: center; justify-content: center; transition: all 0.2s;" onmouseover="this.style.background='rgba(220, 53, 69, 0.9)'" onmouseout="this.style.background='rgba(0, 0, 0, 0.7)'" title="Close slideshow">×</button>
+                        <div id="slideshow-image-wrapper" style="width: 100%; display: flex; align-items: center; justify-content: center; background: #f8f9fa;">
+                            <img id="slideshow-image" src="" style="max-width: 100%; max-height: 100%; object-fit: contain;" />
+                        </div>
                     </div>
                 </div>
                 
@@ -1436,14 +1447,6 @@ class WellnessFramework {
                 <button class="btn btn-danger" id="stop-btn" onclick="framework.stopProgram()" style="padding: 0.75rem 1.5rem;">⏹️ Stop</button>
             </div>
             
-            ${!this.audioUnlocked ? `
-            <div style="text-align: center; margin-top: 1rem; padding: 1rem; background: #f0f8ff; border-radius: 8px; border: 2px dashed #4CAF50;">
-                <p style="margin: 0 0 1rem 0; color: #666;">📱 iPhone Audio Unlock Required</p>
-                <button onclick="framework.unlockAudio()" style="background: #4CAF50; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-size: 1rem;">
-                    🔊 Tap to Unlock Audio (One Time Only)
-                </button>
-            </div>
-            ` : ''}
         `;
         
         mainContainer.appendChild(executionView);
@@ -2239,6 +2242,47 @@ class WellnessFramework {
         console.log('🛩️ PA System: All media resumed after instructions');
     }
     
+    // Duck (reduce) all audio volume when voice is speaking
+    duckAudioForVoice(shouldDuck) {
+        const duckVolume = 0.15; // Reduce to 15% when speaking
+        
+        // Duck background music
+        if (this.backgroundMusic) {
+            this.backgroundMusic.volume = shouldDuck ? duckVolume : (this.backgroundMusic.dataset.originalVolume || 0.15);
+            if (!this.backgroundMusic.dataset.originalVolume && !shouldDuck) {
+                this.backgroundMusic.dataset.originalVolume = this.backgroundMusic.volume;
+            }
+        }
+        
+        // Duck all active audio tracks
+        this.activeAudioTracks.forEach(audio => {
+            if (audio && !audio.paused) {
+                if (shouldDuck) {
+                    audio.dataset.originalVolume = audio.volume;
+                    audio.volume = Math.min(audio.volume * duckVolume, duckVolume);
+                } else if (audio.dataset.originalVolume) {
+                    audio.volume = parseFloat(audio.dataset.originalVolume);
+                    delete audio.dataset.originalVolume;
+                }
+            }
+        });
+        
+        // Duck current audio elements
+        this.currentAudioElements.forEach(audio => {
+            if (audio && !audio.paused) {
+                if (shouldDuck) {
+                    audio.dataset.originalVolume = audio.volume;
+                    audio.volume = Math.min(audio.volume * duckVolume, duckVolume);
+                } else if (audio.dataset.originalVolume) {
+                    audio.volume = parseFloat(audio.dataset.originalVolume);
+                    delete audio.dataset.originalVolume;
+                }
+            }
+        });
+        
+        console.log(shouldDuck ? '🔇 Audio ducked for breathing cue (15%)' : '🔊 Audio restored to normal volume');
+    }
+    
     startBreathingCues(pattern) {
         if (!this.voiceEnabled || !pattern || !('speechSynthesis' in window)) {
             return;
@@ -2257,11 +2301,24 @@ class WellnessFramework {
         const speakPhase = (phase) => {
             if (!this.isRunning) return;
             
-            // Voice narration
+            // 🔊 DUCK ALL AUDIO: Reduce volume of all background audio to 20% while speaking
+            this.duckAudioForVoice(true);
+            
+            // Voice narration - LOUDER and CLEARER
             const utterance = new SpeechSynthesisUtterance(phase);
             utterance.rate = this.voiceSpeed;
-            utterance.volume = this.voiceVolume * 0.8;
+            utterance.volume = 1.0; // MAXIMUM VOLUME for breathing cues
             utterance.pitch = phase === 'inhale' ? 1.2 : (phase === 'hold' ? 1.0 : 0.8);
+            
+            // Restore audio volume after speaking
+            utterance.onend = () => {
+                this.duckAudioForVoice(false);
+            };
+            
+            // Also restore after timeout (backup in case onend doesn't fire)
+            setTimeout(() => {
+                this.duckAudioForVoice(false);
+            }, 1500);
             
             window.speechSynthesis.cancel(); // Cancel previous to avoid overlap
             window.speechSynthesis.speak(utterance);
@@ -2292,7 +2349,7 @@ class WellnessFramework {
             }
             
             this.currentBreathPhase = phase;
-            console.log('Breathing cue:', phase);
+            console.log('🔊 Breathing cue (LOUD):', phase);
         };
         
         // Start with inhale
@@ -2474,6 +2531,9 @@ class WellnessFramework {
             
             videoContainer.style.display = 'block';
             
+            // Update layout when video is shown
+            this.updateMediaLayout();
+            
             // Check if autoplay is enabled (default: true for backward compatibility)
             const shouldAutoplay = videoConfig.autoplay !== false;
             
@@ -2485,7 +2545,7 @@ class WellnessFramework {
                     }).catch(err => {
                         console.log('❌ Video autoplay prevented:', err.message);
                         // Try again after a short delay
-                        setTimeout(() => {
+            setTimeout(() => {
                             videoElement.play().catch(e => console.log('❌ Second autoplay attempt failed:', e.message));
                         }, 500);
                     });
@@ -2497,7 +2557,7 @@ class WellnessFramework {
                 // Also schedule video to start at the specified time
                 setTimeout(() => {
                     tryPlay();
-                }, videoConfig.exerciseStart * 1000);
+            }, videoConfig.exerciseStart * 1000);
             } else {
                 console.log('⏸️ Video autoplay disabled - user must start manually');
                 // For manual play, ensure the video starts from the correct time when user clicks play
@@ -2546,6 +2606,9 @@ class WellnessFramework {
             const embedUrl = `https://www.youtube.com/embed/${videoId}?start=${startTime}&autoplay=${autoplayParam}&rel=0`;
             
             youtubeContainer.style.display = 'block';
+            
+            // Update layout when YouTube video is shown
+            this.updateMediaLayout();
             
             // Schedule to set the iframe src
             setTimeout(() => {
@@ -5079,6 +5142,71 @@ class WellnessFramework {
     }
 
     // ============================================
+    // EXERCISE FEATURE ICONS AND DURATION CALCULATION
+    // ============================================
+    
+    // Get feature icons for an exercise
+    getExerciseFeatureIcons(exercise) {
+        if (!exercise) return '';
+        
+        const icons = [];
+        
+        // Audio icon
+        if (exercise.audioFiles && exercise.audioFiles.length > 0) {
+            icons.push('🎵');
+        }
+        
+        // Video icon
+        if (exercise.videoSources && exercise.videoSources.length > 0) {
+            icons.push('🎬');
+        }
+        
+        // Images/Slideshow icon
+        if (exercise.imageSlideshow && exercise.imageSlideshow.length > 0) {
+            icons.push('🖼️');
+        }
+        
+        // Voice/Narration icon
+        if (exercise.voiceEnabled) {
+            icons.push('🗣️');
+        }
+        
+        // Breathing pattern icon
+        if (exercise.pattern && (exercise.pattern.inhale > 0 || exercise.pattern.exhale > 0)) {
+            icons.push('🫁');
+        }
+        
+        return icons.join(' ');
+    }
+    
+    // Update program duration based on selected exercises
+    updateProgramDuration() {
+        const checkboxes = document.querySelectorAll('.exercise-checkbox:checked');
+        let totalDuration = 0;
+        let selectedCount = 0;
+        
+        checkboxes.forEach(checkbox => {
+            const exerciseId = checkbox.dataset.exerciseId;
+            const exercise = this.exercises[exerciseId];
+            if (exercise) {
+                totalDuration += exercise.duration;
+                selectedCount++;
+            }
+        });
+        
+        // Update duration display
+        const durationElement = document.getElementById('program-detail-total-duration');
+        const countElement = document.getElementById('program-detail-exercise-count');
+        const durationInput = document.getElementById('program-detail-duration');
+        
+        if (durationElement) durationElement.textContent = `${totalDuration} min`;
+        if (countElement) countElement.textContent = selectedCount;
+        if (durationInput) durationInput.value = totalDuration;
+        
+        console.log(`📊 Updated program duration: ${selectedCount} exercises, ${totalDuration} minutes`);
+    }
+    
+    // ============================================
     // MEDITATION BELL SYSTEM
     // ============================================
     
@@ -6387,81 +6515,6 @@ class WellnessFramework {
         return iframe;
     }
     
-    // Manual audio unlock function for iPhone
-    unlockAudio() {
-        console.log('🔊 Audio unlock button clicked');
-        
-        if (this.audioUnlocked) {
-            this.showNotification('🔊 Audio already unlocked!', 'info');
-            return;
-        }
-        
-        // Show loading message
-        this.showNotification('🔊 Unlocking audio...', 'info');
-        
-        // Try multiple methods to unlock audio
-        const unlockMethods = [
-            // Method 1: Silent audio
-            () => {
-                const silentAudio = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=');
-                silentAudio.volume = 0.01;
-                return silentAudio.play();
-            },
-            // Method 2: Audio context resume
-            () => {
-                if (this.audioSystem.audioContext && this.audioSystem.audioContext.state === 'suspended') {
-                    return this.audioSystem.audioContext.resume();
-                }
-                return Promise.resolve();
-            },
-            // Method 3: Create and play a very short audio
-            () => {
-                const audio = new Audio();
-                audio.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=';
-                audio.volume = 0.01;
-                return audio.play();
-            }
-        ];
-        
-        // Try each method
-        let methodIndex = 0;
-        const tryNextMethod = () => {
-            if (methodIndex >= unlockMethods.length) {
-                console.log('❌ All audio unlock methods failed');
-                this.showNotification('❌ Audio unlock failed. Please try starting a program first.', 'error');
-                return;
-            }
-            
-            console.log(`🔊 Trying audio unlock method ${methodIndex + 1}`);
-            unlockMethods[methodIndex]()
-                .then(() => {
-                    console.log(`✅ Audio unlock method ${methodIndex + 1} succeeded`);
-                    this.audioUnlocked = true;
-                    
-                    // Hide header button
-                    const headerBtn = document.getElementById('audio-unlock-btn');
-                    if (headerBtn) {
-                        headerBtn.style.display = 'none';
-                        console.log('🔊 Audio unlock button hidden after successful unlock');
-                    }
-                    
-                    // Show success message
-                    this.showNotification('🔊 Audio unlocked! MP3 files should now play on iPhone.', 'success');
-                    
-                    // Refresh the execution view if running
-                    if (this.isRunning) {
-                        this.showExecutionView();
-                    }
-                })
-                .catch(err => {
-                    console.log(`❌ Audio unlock method ${methodIndex + 1} failed:`, err.message);
-                    methodIndex++;
-                    tryNextMethod();
-                });
-        };
-        
-        tryNextMethod();
-    }
     
     playBell(count = 1, type = 'single') {
         try {
@@ -6872,8 +6925,12 @@ class WellnessFramework {
         if (currentIndex >= exercises.length) {
             // Program complete - stop all media and play final bell
             this.stopAllMedia();
+            
+            // Play continuous bell (like old school bell)
             this.playBell(0, 'continuous');
-            this.showBellNotification('🎉 Program complete! Thank you for your practice.');
+            
+            // Show thank you message with continuous bell
+            this.showBellNotification('🔔 Thank you for your practice! Session complete.');
             
             // Hide execution modal
             this.hideProgramExecution();
@@ -6885,6 +6942,19 @@ class WellnessFramework {
             this.isRunning = false;
             this.currentProgramData = null;
             this.currentExerciseIndex = 0;
+            this.selectedExercises = null; // Reset selected exercises
+            return;
+        }
+        
+        // Welcome message for first exercise (single bell ring)
+        if (currentIndex === 0) {
+            this.playBell(1, 'single');
+            this.showBellNotification('🔔 Welcome! Let\'s begin your practice session.');
+            
+            // Small delay before starting first exercise
+            setTimeout(() => {
+                this.executeExerciseWithAudio(exercises, currentIndex);
+            }, 2000);
             return;
         }
         
@@ -7057,8 +7127,25 @@ class WellnessFramework {
         // Get the custom duration from the input
         const customDuration = parseInt(document.getElementById('program-detail-duration').value);
         
+        // For Universal Program, get selected exercises
+        let selectedExercises = null;
+        if (programId === 'universal_program') {
+            const checkboxes = document.querySelectorAll('.exercise-checkbox:checked');
+            selectedExercises = Array.from(checkboxes).map(cb => cb.dataset.exerciseId);
+            
+            if (selectedExercises.length === 0) {
+                this.showNotification('❌ Please select at least one exercise', 'error');
+                return;
+            }
+            
+            console.log(`🌟 Universal Program: ${selectedExercises.length} exercises selected`);
+        }
+        
         // Close detail modal
         this.closeProgramDetail();
+        
+        // Store selected exercises for execution
+        this.selectedExercises = selectedExercises;
         
         // Use the same execution flow as double-click (with progress bars)
         this.startProgram(customDuration);
@@ -7285,6 +7372,9 @@ class WellnessFramework {
         const container = document.getElementById('slideshow-container');
         if (container) {
             container.style.display = 'block';
+            
+            // Update layout when slideshow is shown
+            this.updateMediaLayout();
         }
         
         // Start the slideshow
@@ -7658,49 +7748,211 @@ class WellnessFramework {
     }
     
     // Show/hide header audio unlock button for iPhone users
-    addAudioUnlockButton() {
-        // Check if we're on iPhone/iOS - use multiple detection methods
-        const userAgent = navigator.userAgent;
-        const isIOS = /iPad|iPhone|iPod/.test(userAgent) || 
-                      /iPhone|iPad|iPod|iOS/.test(userAgent) ||
-                      (navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform));
+    
+    // Close video player
+    closeVideo() {
+        const videoContainer = document.getElementById('video-container');
+        const videoElement = document.getElementById('exercise-video');
         
-        const audioBtn = document.getElementById('audio-unlock-btn');
+        if (videoContainer && videoElement) {
+            videoElement.pause();
+            videoElement.src = '';
+            videoContainer.style.display = 'none';
+            console.log('📺 Video closed by user');
+            
+            // Update layout after closing
+            this.updateMediaLayout();
+            this.showNotification('📺 Video closed', 'info');
+        }
+    }
+    
+    // Close YouTube player
+    closeYouTube() {
+        const youtubeContainer = document.getElementById('youtube-container');
+        const youtubePlayer = document.getElementById('youtube-player');
         
-        if (!audioBtn) {
-            console.log('❌ Audio unlock button not found in header');
-            return;
+        if (youtubeContainer && youtubePlayer) {
+            youtubePlayer.src = '';
+            youtubeContainer.style.display = 'none';
+            console.log('📺 YouTube video closed by user');
+            
+            // Update layout after closing
+            this.updateMediaLayout();
+            this.showNotification('📺 YouTube video closed', 'info');
+        }
+    }
+    
+    // Close slideshow
+    closeSlideshow() {
+        const slideshowContainer = document.getElementById('slideshow-container');
+        
+        if (slideshowContainer) {
+            // Stop slideshow timer
+            if (this.slideshowTimer) {
+                clearInterval(this.slideshowTimer);
+                this.slideshowTimer = null;
+            }
+            
+            slideshowContainer.style.display = 'none';
+            console.log('🖼️ Slideshow closed by user');
+            
+            // Update layout after closing
+            this.updateMediaLayout();
+            this.showNotification('🖼️ Slideshow closed', 'info');
+        }
+    }
+    
+    // Check if media container should be visible
+    updateMediaContainerVisibility() {
+        const mediaContainer = document.getElementById('media-container');
+        const videoContainer = document.getElementById('video-container');
+        const youtubeContainer = document.getElementById('youtube-container');
+        const slideshowContainer = document.getElementById('slideshow-container');
+        
+        if (!mediaContainer) return;
+        
+        const hasVideo = (videoContainer && videoContainer.style.display !== 'none') || 
+                        (youtubeContainer && youtubeContainer.style.display !== 'none');
+        const hasSlideshow = slideshowContainer && slideshowContainer.style.display !== 'none';
+        
+        if (hasVideo || hasSlideshow) {
+            mediaContainer.style.display = 'block';
+        } else {
+            mediaContainer.style.display = 'none';
+            console.log('🚫 All media closed - hiding media container');
+        }
+    }
+    
+    // Close video player
+    closeVideo() {
+        console.log('❌ Closing video player');
+        const videoContainer = document.getElementById('video-container');
+        const videoElement = document.getElementById('exercise-video');
+        
+        if (videoContainer) {
+            videoContainer.style.display = 'none';
         }
         
-        console.log('🔍 Audio button check:', {
-            isIOS: isIOS,
-            audioUnlocked: this.audioUnlocked,
-            buttonExists: !!audioBtn,
-            userAgent: userAgent,
-            platform: navigator.platform,
-            isTouchDevice: 'ontouchstart' in window
-        });
+        if (videoElement) {
+            videoElement.pause();
+            videoElement.src = '';
+            videoElement.currentTime = 0;
+        }
         
-        // Always show button for now to test
-        audioBtn.style.display = 'block';
-        audioBtn.style.visibility = 'visible';
-        audioBtn.style.opacity = '1';
-        audioBtn.style.position = 'relative';
-        audioBtn.style.zIndex = '1001';
-        console.log('📱 Audio unlock button shown (always visible for testing)');
+        this.updateMediaLayout();
+        this.showNotification('📺 Video closed', 'info');
+    }
+    
+    // Close YouTube player
+    closeYouTube() {
+        console.log('❌ Closing YouTube player');
+        const youtubeContainer = document.getElementById('youtube-container');
+        const youtubePlayer = document.getElementById('youtube-player');
         
-        // Log all detection info for debugging
-        console.log('🔍 Detection details:', {
-            userAgent: userAgent,
-            platform: navigator.platform,
-            isIOS: isIOS,
-            isTouchDevice: 'ontouchstart' in window,
-            hasTouchEvents: 'ontouchstart' in window,
-            screenWidth: screen.width,
-            screenHeight: screen.height,
-            innerWidth: window.innerWidth,
-            innerHeight: window.innerHeight
-        });
+        if (youtubeContainer) {
+            youtubeContainer.style.display = 'none';
+        }
+        
+        if (youtubePlayer) {
+            youtubePlayer.src = '';
+        }
+        
+        this.updateMediaLayout();
+        this.showNotification('📺 YouTube video closed', 'info');
+    }
+    
+    // Close slideshow
+    closeSlideshow() {
+        console.log('❌ Closing slideshow');
+        const slideshowContainer = document.getElementById('slideshow-container');
+        
+        if (slideshowContainer) {
+            slideshowContainer.style.display = 'none';
+        }
+        
+        // Stop slideshow timer if running
+        if (this.slideshowTimer) {
+            clearInterval(this.slideshowTimer);
+            this.slideshowTimer = null;
+        }
+        
+        this.updateMediaLayout();
+        this.showNotification('🖼️ Slideshow closed', 'info');
+    }
+    
+    // Manage media layout for simultaneous video and slideshow display
+    updateMediaLayout() {
+        const mediaContainer = document.getElementById('media-container');
+        const videoContainer = document.getElementById('video-container');
+        const youtubeContainer = document.getElementById('youtube-container');
+        const slideshowContainer = document.getElementById('slideshow-container');
+        
+        if (!mediaContainer) return;
+        
+        // Check what media is active
+        const hasVideo = (videoContainer && videoContainer.style.display !== 'none') || 
+                        (youtubeContainer && youtubeContainer.style.display !== 'none');
+        const hasSlideshow = slideshowContainer && slideshowContainer.style.display !== 'none';
+        
+        console.log('🎬 Media layout check:', { hasVideo, hasSlideshow });
+        
+        if (hasVideo && hasSlideshow) {
+            // Both active - split screen layout
+            console.log('📺 Both video and slideshow active - using split layout');
+            
+            // Show media container
+            mediaContainer.style.display = 'block';
+            
+            // Set video to 60% height
+            if (videoContainer && videoContainer.style.display !== 'none') {
+                videoContainer.style.height = '60vh';
+                videoContainer.style.maxHeight = '400px';
+                videoContainer.querySelector('video').style.height = '100%';
+            }
+            if (youtubeContainer && youtubeContainer.style.display !== 'none') {
+                youtubeContainer.style.height = '60vh';
+                youtubeContainer.style.maxHeight = '400px';
+                youtubeContainer.querySelector('iframe').style.height = '100%';
+            }
+            
+            // Set slideshow to 40% height
+            slideshowContainer.style.height = '40vh';
+            slideshowContainer.style.maxHeight = '300px';
+            slideshowContainer.style.marginTop = '0.5rem';
+            slideshowContainer.querySelector('#slideshow-image-wrapper').style.height = '100%';
+            
+        } else if (hasVideo) {
+            // Only video - full size
+            console.log('📺 Only video active - using full layout');
+            
+            mediaContainer.style.display = 'block';
+            
+            if (videoContainer && videoContainer.style.display !== 'none') {
+                videoContainer.style.height = 'auto';
+                videoContainer.style.maxHeight = 'none';
+                videoContainer.querySelector('video').style.height = 'auto';
+            }
+            if (youtubeContainer && youtubeContainer.style.display !== 'none') {
+                youtubeContainer.style.height = '450px';
+                youtubeContainer.style.maxHeight = 'none';
+                youtubeContainer.querySelector('iframe').style.height = '100%';
+            }
+            
+        } else if (hasSlideshow) {
+            // Only slideshow - full size
+            console.log('🖼️ Only slideshow active - using full layout');
+            
+            mediaContainer.style.display = 'block';
+            slideshowContainer.style.height = 'auto';
+            slideshowContainer.style.maxHeight = 'none';
+            slideshowContainer.style.marginTop = '0';
+            slideshowContainer.querySelector('#slideshow-image-wrapper').style.height = '300px';
+            
+        } else {
+            // No media - hide container
+            console.log('🚫 No media active - hiding container');
+            mediaContainer.style.display = 'none';
+        }
     }
     
     // Offer to download new AI-generated exercises as JSON
@@ -7801,4 +8053,4 @@ class WellnessFramework {
 }
 
 // Initialize global framework instance after script load
-    window.framework = new WellnessFramework();
+window.framework = new WellnessFramework();

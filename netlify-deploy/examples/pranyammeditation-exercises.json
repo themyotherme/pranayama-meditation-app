@@ -1764,17 +1764,17 @@
       ],
       "videoSources": [
         {
-          "file": null,
+          "file": "https://https://www.youtube.com/watch?v=YD6MN1SvjAc",
           "exerciseStart": 0,
-          "fileStart": 0,
-          "playDuration": 99999,
+          "fileStart": 10,
+          "playDuration": 40,
           "volume": 80
         },
         {
-          "file": null,
-          "exerciseStart": 0,
-          "fileStart": 0,
-          "playDuration": 99999,
+          "file": "https://www.youtube.com/shorts/d3YUGzXa2gY",
+          "exerciseStart": 50,
+          "fileStart": 10,
+          "playDuration": 300,
           "volume": 80
         }
       ],

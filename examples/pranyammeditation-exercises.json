@@ -2442,6 +2442,113 @@
       ],
       "notes": "Powerful welcome message to inspire and motivate practitioners"
     },
+    "test_all_features": {
+      "id": "test_all_features",
+      "name": "🧪 Test All Features",
+      "description": "Comprehensive test exercise with video, audio, images, voice, and breathing pattern - ALL features enabled!",
+      "type": "breathing",
+      "duration": 3,
+      "isDefault": true,
+      "safetyLevel": "beginner",
+      "pattern": {
+        "inhale": 4,
+        "hold": 2,
+        "exhale": 6,
+        "bpm": 60,
+        "metronome": true
+      },
+      "instructions": "This is a comprehensive test exercise showcasing ALL features: YouTube video with autoplay, multiple audio tracks, image slideshow with transitions, voice guidance, breathing pattern with metronome, and close buttons. Perfect for testing the complete media system!",
+      "benefits": "Tests all app features: video autoplay, audio layering, slideshow transitions, voice synthesis, breathing cues, pause/resume, and close buttons",
+      "audioFiles": [
+        {
+          "mediaId": "ravi_shankar_sitar",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 180,
+          "volume": 15,
+          "isBackgroundMusic": true
+        },
+        {
+          "mediaId": "meditation_music",
+          "exerciseStart": 0,
+          "fileStart": 0,
+          "playDuration": 180,
+          "volume": 60
+        },
+        {
+          "mediaId": "om_chanting",
+          "exerciseStart": 30,
+          "fileStart": 0,
+          "playDuration": 150,
+          "volume": 50
+        }
+      ],
+      "videoSources": [
+        {
+          "file": "https://www.youtube.com/watch?v=Im6bppEZLjc",
+          "exerciseStart": 0,
+          "fileStart": 57,
+          "playDuration": 180,
+          "volume": 70,
+          "autoplay": true
+        }
+      ],
+      "voiceEnabled": true,
+      "voiceLanguage": "en-US",
+      "voiceRate": 0.9,
+      "captions": false,
+      "tags": [
+        "test",
+        "comprehensive",
+        "all-features",
+        "demo"
+      ],
+      "contraindications": [],
+      "cues": [
+        "Welcome to the comprehensive feature test!",
+        "You should see a YouTube video playing above",
+        "Below the video, images are transitioning smoothly",
+        "Listen to the layered audio: sitar, meditation music, and OM chanting",
+        "Breathing pattern: Inhale 4, Hold 2, Exhale 6",
+        "Try clicking the X buttons to close video or slideshow",
+        "Test the pause and resume buttons",
+        "Notice how the layout adjusts when you close media",
+        "All features are working together harmoniously!"
+      ],
+      "imageSlideshow": [
+        {
+          "mediaId": "om_chanting_1",
+          "startTime": 0,
+          "duration": 20,
+          "overlap": 1
+        },
+        {
+          "mediaId": "om_chanting_2",
+          "startTime": 19,
+          "duration": 20,
+          "overlap": 1
+        },
+        {
+          "mediaId": "om_chanting_3",
+          "startTime": 38,
+          "duration": 20,
+          "overlap": 1
+        },
+        {
+          "mediaId": "om_chanting_4",
+          "startTime": 57,
+          "duration": 20,
+          "overlap": 1
+        },
+        {
+          "mediaId": "om_chanting_5",
+          "startTime": 76,
+          "duration": 104,
+          "overlap": 1
+        }
+      ],
+      "notes": "🧪 COMPREHENSIVE TEST EXERCISE - Tests video autoplay, audio layering, slideshow transitions, voice cues, breathing pattern, close buttons, pause/resume, and split-screen layout. Duration: 3 minutes."
+    },
     "laughter_meditation": {
       "id": "laughter_meditation",
       "name": "Laughter Meditation",

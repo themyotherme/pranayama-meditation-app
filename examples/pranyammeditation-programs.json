@@ -1,5 +1,29 @@
 {
   "programs": {
+    "test_all_features_program": {
+      "id": "test_all_features_program",
+      "name": "🧪 Test All Features",
+      "description": "Comprehensive test program - YouTube video autoplay, audio layers, slideshow, voice, breathing, close buttons, pause/resume",
+      "duration": 3,
+      "isDefault": true,
+      "isRecommended": true,
+      "exercises": [
+        {
+          "exerciseId": "test_all_features",
+          "duration": 180,
+          "name": "🧪 Test All Features",
+          "type": "breathing"
+        }
+      ],
+      "tags": [
+        "test",
+        "comprehensive",
+        "demo",
+        "all-features"
+      ],
+      "difficulty": "beginner",
+      "benefits": "Tests all app features in one place: video with autoplay, multiple audio tracks, image slideshow with transitions, voice synthesis, breathing pattern with metronome, close buttons (X), pause/resume functionality, and split-screen layout adjustment."
+    },
     "first_time_user": {
       "id": "first_time_user",
       "name": "🌅 1st Experience",
@@ -793,6 +817,77 @@
           "duration": 30
         }
       ]
+    },
+    "universal_program": {
+      "id": "universal_program",
+      "name": "🌟 Universal Program",
+      "description": "Complete collection of all exercises - customize by selecting which ones to include",
+      "type": "custom",
+      "duration": 1800,
+      "isDefault": true,
+      "isRecommended": true,
+      "isCustomizable": true,
+      "experienceLevel": "all",
+      "safetyLevel": "beginner",
+      "exercises": [
+        {
+          "exerciseId": "welcome",
+          "duration": 30,
+          "name": "Welcome",
+          "type": "welcome",
+          "isRequired": true
+        },
+        {
+          "exerciseId": "silence",
+          "duration": 120,
+          "name": "Sacred Invocation",
+          "type": "silence"
+        },
+        {
+          "exerciseId": "om_chanting",
+          "duration": 180,
+          "name": "OM Chanting",
+          "type": "chanting"
+        },
+        {
+          "exerciseId": "mindfulness_meditation",
+          "duration": 600,
+          "name": "Mindfulness Meditation",
+          "type": "meditation"
+        },
+        {
+          "exerciseId": "anulom_vilom",
+          "duration": 300,
+          "name": "Anulom Vilom",
+          "type": "breathing"
+        },
+        {
+          "exerciseId": "bhramari",
+          "duration": 360,
+          "name": "Bhramari",
+          "type": "breathing"
+        },
+        {
+          "exerciseId": "laughter_therapy",
+          "duration": 300,
+          "name": "Laughter Therapy",
+          "type": "breathing"
+        },
+        {
+          "exerciseId": "sanskrit_closing",
+          "duration": 30,
+          "name": "Sacred Sanskrit Closing",
+          "type": "closing",
+          "isRequired": true
+        }
+      ],
+      "tags": [
+        "universal",
+        "complete",
+        "customizable",
+        "all-exercises"
+      ],
+      "notes": "🌟 UNIVERSAL PROGRAM - Includes all exercises. Use checkboxes to customize your selection. Welcome and Thank You messages are always included."
     }
   }
 }
