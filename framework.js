@@ -3791,8 +3791,18 @@ class WellnessFramework {
         if (this.ai) {
             const apiKey = localStorage.getItem('openaiAPIKey') || '';
             const aiEnabled = localStorage.getItem('aiEnabled') === 'true';
+            const aiModel = localStorage.getItem('aiModel') || 'gpt-3.5-turbo';
+            
             this.ai.setAPIKey(apiKey);
             this.ai.setEnabled(aiEnabled);
+            this.ai.setModel(aiModel);
+            
+            console.log('🔧 AI Integration refreshed:', {
+                apiKey: apiKey ? `${apiKey.substring(0, 10)}...` : 'none',
+                enabled: aiEnabled,
+                model: aiModel,
+                isConfigured: this.ai.isConfigured()
+            });
         }
         const useRealAI = this.ai && this.ai.isConfigured();
         
@@ -3902,6 +3912,9 @@ class WellnessFramework {
             statusDiv.style.borderColor = '#f59e0b';
             statusDiv.querySelector('p').style.color = '#92400e';
             statusDiv.querySelector('p').textContent = 'ℹ️ Using Smart Logic (not AI). Go to Settings → AI Integration to add your OpenAI API key and enable AI features for true AI generation!';
+            
+            // Show notification to user
+            this.showNotification('⚠️ AI not configured! Using rule-based selection. Go to Settings to enable AI features.', 'warning');
             
             selectedExercises = this.selectExercisesForGoal('custom', duration, level, userInput);
         }
