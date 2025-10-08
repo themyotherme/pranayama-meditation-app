@@ -3868,6 +3868,15 @@ class WellnessFramework {
                     });
                     
                     localStorage.setItem('aiGeneratedExercises', JSON.stringify(aiExercises));
+                    
+                    // Show notification with download option
+                    this.showNotification(
+                        `🎉 AI created ${aiResult.newExercises.length} new custom exercise(s)! They're saved in your browser.`, 
+                        'success'
+                    );
+                    
+                    // Offer to download new exercises as JSON
+                    this.offerDownloadNewExercises(aiResult.newExercises);
                 }
                 
                 // Validate that all exercises now exist (including newly created ones)
@@ -7556,6 +7565,101 @@ class WellnessFramework {
         setTimeout(() => {
             this.executeExerciseWithMantras(exercises, currentIndex + 1);
         }, exercise.duration * 1000);
+    }
+    
+    // Offer to download new AI-generated exercises as JSON
+    offerDownloadNewExercises(newExercises) {
+        // Get all AI exercises from localStorage
+        const allAIExercises = JSON.parse(localStorage.getItem('aiGeneratedExercises') || '{}');
+        
+        // Create download button in a modal
+        const modal = document.createElement('div');
+        modal.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            z-index: 10001;
+            max-width: 500px;
+            width: 90%;
+        `;
+        
+        modal.innerHTML = `
+            <h3 style="margin: 0 0 1rem 0; color: #1a202c;">🎉 New Custom Exercises Created!</h3>
+            <p style="margin-bottom: 1rem; color: #4a5568; line-height: 1.6;">
+                AI just created <strong>${newExercises.length} new exercise(s)</strong> specifically for your goal!
+                <br><br>
+                These exercises are now available in your app. Would you like to download them as JSON 
+                to add to your permanent exercise library?
+            </p>
+            <div style="margin-bottom: 1rem; padding: 1rem; background: #f0f9ff; border-radius: 8px;">
+                ${newExercises.map(ex => `
+                    <div style="margin-bottom: 0.5rem;">
+                        <strong style="color: #0284c7;">✨ ${ex.name}</strong>
+                        <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.25rem;">
+                            ${ex.description}
+                            ${ex.pattern ? `<br>Pattern: ${ex.pattern.inhale}:${ex.pattern.hold || 0}:${ex.pattern.exhale}` : ''}
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+            <div style="display: flex; gap: 1rem;">
+                <button id="download-exercises-btn" class="btn btn-primary" style="flex: 1;">
+                    📥 Download JSON
+                </button>
+                <button id="close-download-modal" class="btn btn-secondary" style="flex: 1;">
+                    Later
+                </button>
+            </div>
+        `;
+        
+        // Add backdrop
+        const backdrop = document.createElement('div');
+        backdrop.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 10000;
+        `;
+        
+        document.body.appendChild(backdrop);
+        document.body.appendChild(modal);
+        
+        // Download button handler
+        document.getElementById('download-exercises-btn').onclick = () => {
+            // Create JSON file with all AI exercises
+            const jsonData = JSON.stringify(allAIExercises, null, 2);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `ai-generated-exercises-${Date.now()}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            this.showNotification('📥 Exercises downloaded! You can now add them to your exercise library.', 'success');
+            backdrop.remove();
+            modal.remove();
+        };
+        
+        // Close button handler
+        document.getElementById('close-download-modal').onclick = () => {
+            backdrop.remove();
+            modal.remove();
+        };
+        
+        // Click backdrop to close
+        backdrop.onclick = () => {
+            backdrop.remove();
+            modal.remove();
+        };
     }
     
 }
